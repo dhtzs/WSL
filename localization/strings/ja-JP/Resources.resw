@@ -117,6 +117,22 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <!--
+    Localization Glossary — Technical Terms
+    ========================================
+    The following technical terms appear in many strings throughout this file.
+    Per-string <comment> elements provide guidance for each occurrence, but
+    this glossary serves as a central reference for developers and reviewers.
+
+    "mount"   — Making a disk/filesystem accessible. Translate per locale or keep "mount".
+    "VHD"     — Virtual Hard Disk. Do not translate (file format name).
+    "tar"     — File archive format. Do not translate (file format name).
+    "swap"    — Virtual memory swap space. Translate per locale or keep "swap".
+    "sparse"  — Storage term: file uses disk space only for written data. Translate per locale.
+    "DNS"     — Domain Name System. Do not translate (protocol acronym).
+    "proxy"   — Network proxy server. Translate per locale standard networking term.
+    "safe mode" — Minimal/diagnostic startup mode. Use standard OS term per locale.
+  -->
   <data name="AppName" xml:space="preserve">
     <value>Linux 用 Windows サブシステム</value>
   </data>
@@ -137,24 +153,27 @@ WSL2 でディスクを強制的に停止してデタッチするには、'wsl.e
   </data>
   <data name="MessageDiskAlreadyMounted" xml:space="preserve">
     <value>そのボリュームは WSL2 内で既にマウントされています。</value>
+    <comment>"mount" is a technical term meaning to make a disk/filesystem accessible. Use the standard technical term in your locale, or keep "mount" if commonly used.</comment>
   </data>
   <data name="MessageDiskMountNameAlreadyExists" xml:space="preserve">
     <value>その名前のディスクは既にマウントされています。ディスクのマウントを解除するか、新しい名前を選択してやり直してください。</value>
+    <comment>"mount" is a technical term meaning to make a disk/filesystem accessible. Use the standard technical term in your locale, or keep "mount" if commonly used.</comment>
   </data>
   <data name="MessageDiskMountNameInvalid" xml:space="preserve">
     <value>指定されたマウント名に無効な '/' 文字が含まれています。無効な文字を含めずに再試行してください。</value>
+    <comment>"mount" is a technical term meaning to make a disk/filesystem accessible. Use the standard technical term in your locale, or keep "mount" if commonly used.</comment>
   </data>
   <data name="MessageDiskMounted" xml:space="preserve">
     <value>ディスクは '/mnt/wsl/{}' として正常にマウントされました。
 注: /etc/wsl.conf で automount.root 設定を変更した場合、場所は異なります。
 ディスクのマウントを解除してデタッチするには、'wsl.exe {} {}' を実行します。</value>
-    <comment>{FixedPlaceholder="{}"}Command line arguments, file names and string inserts should not be translated</comment>
+    <comment>{FixedPlaceholder="{}"}Command line arguments, file names and string inserts should not be translated. "mount" is a technical term meaning to make a disk/filesystem accessible. Use the standard technical term in your locale, or keep "mount" if commonly used.</comment>
   </data>
   <data name="MessageDiskMountFailed" xml:space="preserve">
     <value>ディスクがアタッチされましたが、マウントできませんでした: {}。
 詳細については、WSL2 内で 'dmesg' を実行してください。
 ディスクをデタッチするには、'wsl.exe {} {}' を実行します。</value>
-    <comment>{FixedPlaceholder="{}"}Command line arguments, file names and string inserts should not be translated</comment>
+    <comment>{FixedPlaceholder="{}"}Command line arguments, file names and string inserts should not be translated. "mount" is a technical term meaning to make a disk/filesystem accessible. Use the standard technical term in your locale, or keep "mount" if commonly used.</comment>
   </data>
   <data name="MessageDistributionListOnline" xml:space="preserve">
     <value>インストールできる有効なディストリビューションの一覧を次に示します。
@@ -177,6 +196,7 @@ WSL2 でディスクを強制的に停止してデタッチするには、'wsl.e
   </data>
   <data name="MessageElevationNeededToMountDisk" xml:space="preserve">
     <value>ディスクをマウントするには、管理者アクセス権が必要です。</value>
+    <comment>"mount" is a technical term meaning to make a disk/filesystem accessible. Use the standard technical term in your locale, or keep "mount" if commonly used.</comment>
   </data>
   <data name="MessageExportFailed" xml:space="preserve">
     <value>ディストリビューションのエクスポートに失敗しました。</value>
@@ -218,9 +238,6 @@ WSL2 でディスクを強制的に停止してデタッチするには、'wsl.e
     <value>ディストリビューション名 '{}' が無効です。
 有効なディストリビューションの一覧を取得するには、'wsl.exe --list --online' を使用します。</value>
     <comment>{FixedPlaceholder="{}"}{Locked="--list "}{Locked="--online'"}Command line arguments, file names and string inserts should not be translated</comment>
-  </data>
-  <data name="MessageInstanceTerminated" xml:space="preserve">
-    <value>Linux 用 Windows サブシステムインスタンスが終了しました。</value>
   </data>
   <data name="MessageInvalidCommandLine" xml:space="preserve">
     <value>無効なコマンド ライン引数: {}
@@ -312,7 +329,7 @@ WSL2 でディスクを強制的に停止してデタッチするには、'wsl.e
   </data>
   <data name="MessageUserVhdAlreadyAttached" xml:space="preserve">
     <value>VHD は wsl.exe --mount, を介して既にマウントされています。起動する前に、ディスクのマウントを解除してください。</value>
-    <comment>{Locked="--mount,"}Command line arguments, file names and string inserts should not be translated</comment>
+    <comment>{Locked="--mount,"}Command line arguments, file names and string inserts should not be translated. {Locked="VHD"}"VHD" (Virtual Hard Disk) is a technical format name and should not be translated. "mount" is a technical term meaning to make a disk/filesystem accessible. Use the standard technical term in your locale, or keep "mount" if commonly used.</comment>
   </data>
   <data name="MessageWsl1NotSupported" xml:space="preserve">
     <value>WSL1 は、現在のマシン構成ではサポートされていません。
@@ -611,7 +628,7 @@ Linux 用 Windows サブシステムでディストリビューションを管�
 "}{Locked="--version,"}{Locked="--export "}{Locked="--format "}{Locked="--import "}{Locked="--version "}{Locked="--vhd
 "}{Locked="--import-in-place "}{Locked="--list,"}{Locked="--all
 "}{Locked="--running
-"}{Locked="--quiet,"}{Locked="--verbose,"}{Locked="--online,"}{Locked="--install'"}{Locked="--set-default,"}{Locked="--set-version "}{Locked="--terminate,"}{Locked="--unregister "}Command line arguments, file names and string inserts should not be translated</comment>
+"}{Locked="--quiet,"}{Locked="--verbose,"}{Locked="--online,"}{Locked="--install'"}{Locked="--set-default,"}{Locked="--set-version "}{Locked="--terminate,"}{Locked="--unregister "}Command line arguments, file names and string inserts should not be translated. {Locked="tar"}"tar" is a file archive format name and should not be translated. {Locked="VHD"}"VHD" (Virtual Hard Disk) is a technical format name and should not be translated. "mount" is a technical term meaning to make a disk/filesystem accessible. Use the standard technical term in your locale, or keep "mount" if commonly used. "sparse" is a technical storage term meaning the file only uses disk space for written data. Use the technical term in your locale.</comment>
   </data>
   <data name="MessagePackageVersions" xml:space="preserve">
     <value>WSL バージョン: {}
@@ -635,7 +652,7 @@ Windows バージョン: {}</value>
   </data>
   <data name="MessageCustomKernelModulesNotFound" xml:space="preserve">
     <value>{} にあるカスタム カーネル モジュール VHD が見つかりませんでした: '{}'。</value>
-    <comment>{FixedPlaceholder="{}"}Command line arguments, file names and string inserts should not be translated</comment>
+    <comment>{FixedPlaceholder="{}"}Command line arguments, file names and string inserts should not be translated. {Locked="VHD"}"VHD" (Virtual Hard Disk) is a technical format name and should not be translated.</comment>
   </data>
   <data name="MessageCustomSystemDistroError" xml:space="preserve">
     <value>{} で指定されたカスタム システムディストリビューションが見つからなかったか、正しい形式ではありません。</value>
@@ -696,7 +713,7 @@ Windows バージョン: {}</value>
   </data>
   <data name="MessageWslMountNotSupportedOnArm" xml:space="preserve">
     <value>ARM64 で wsl.exe --mount するには、Windows バージョン 27653 以降が必要です。</value>
-    <comment>{Locked="--mount "}Command line arguments, file names and string inserts should not be translated</comment>
+    <comment>{Locked="--mount "}Command line arguments, file names and string inserts should not be translated. "mount" is a technical term meaning to make a disk/filesystem accessible. Use the standard technical term in your locale, or keep "mount" if commonly used.</comment>
   </data>
   <data name="MessageUpdateNotNeeded" xml:space="preserve">
     <value>Linux 用 Windows サブシステムの最新バージョンは既にインストールされています。</value>
@@ -728,7 +745,7 @@ Windows バージョン: {}</value>
     <value>ブリッジ ネットワークを使用するには、wsl2.vmSwitch を設定する必要があります。</value>
   </data>
   <data name="MessageCouldFetchDistributionList" xml:space="preserve">
-    <value>'{}' からリスト ディストリビューションをフェッチできませんでした。{}</value>
+    <value>'{}' から配布リストをフェッチできませんでした。{}</value>
     <comment>{FixedPlaceholder="{}"}Command line arguments, file names and string inserts should not be translated</comment>
   </data>
   <data name="MessageFailedToAttachDisk" xml:space="preserve">
@@ -749,6 +766,11 @@ Windows Update または {} 経由で必要な更新プログラムをインス�
   </data>
   <data name="MessageAdministratorAccessRequiredForDebugShell" xml:space="preserve">
     <value>デバッグ シェルを実行するには、wsl.exe を管理者として実行する必要があります。</value>
+  </data>
+  <data name="MessageAdminProtectionEnabled" xml:space="preserve">
+    <value>Windows Admin Protection が有効になり、ディストリビューションが別のアカウントに登録されている可能性があります。
+Admin Protection の詳細については、https://aka.ms/apdevguide をご覧ください</value>
+    <comment>{Locked="Windows Admin Protection"}{Locked="Admin Protection"}{Locked="https://aka.ms/apdevguide"}Command line arguments, file names and string inserts should not be translated</comment>
   </data>
   <data name="MessageInstallProcessFailed" xml:space="preserve">
     <value>ディストリビューション '{}' のインストール プロセスが次の終了コードで失敗しました: {}。</value>
@@ -809,7 +831,7 @@ Windows Update または {} 経由で必要な更新プログラムをインス�
     <value>EventViewer を開く</value>
   </data>
   <data name="MessageDistributionNameNeeded" xml:space="preserve">
-    <value>このディストリビューションには既定の名前が含まれていません。--name を使用して、ディストリビューション名を選択します。</value>
+    <value>このディストリビューションには既定の名前が含まれていません。--name を使用してディストリビューション名を選択します。</value>
     <comment>{Locked="--name "}Command line arguments, file names and string inserts should not be translated</comment>
   </data>
   <data name="MessageArgumentsNotValidTogether" xml:space="preserve">
@@ -826,6 +848,7 @@ Windows Update または {} 経由で必要な更新プログラムをインス�
   </data>
   <data name="MessageUsingLegacyDistribution" xml:space="preserve">
     <value>レガシの配布登録を使用しています。代わりに tar ベースの配布を使用することを検討してください。</value>
+    <comment>{Locked="tar"}"tar" is a file archive format name and should not be translated.</comment>
   </data>
   <data name="MessageLegacyDistributionVersionArgNotSupported" xml:space="preserve">
     <value>レガシディストリビューションの登録では、--version 引数はサポートされていません。</value>
@@ -857,6 +880,10 @@ Windows Update または {} 経由で必要な更新プログラムをインス�
   </data>
   <data name="MessagedFailedToCreateSwapVhd" xml:space="preserve">
     <value>'{}' にスワップ ディスクを作成できませんでした: {}</value>
+    <comment>{FixedPlaceholder="{}"}Command line arguments, file names and string inserts should not be translated. "swap" refers to virtual memory swap space. This is a technical term; use the standard OS term in your locale or keep "swap".</comment>
+  </data>
+  <data name="MessageFailedToCreateDisk" xml:space="preserve">
+    <value>ディスク '{}' を作成できませんでした: {}</value>
     <comment>{FixedPlaceholder="{}"}Command line arguments, file names and string inserts should not be translated</comment>
   </data>
   <data name="MessageNestedVirtualizationNotSupported" xml:space="preserve">
@@ -872,6 +899,7 @@ Windows Update または {} 経由で必要な更新プログラムをインス�
   </data>
   <data name="MessageSafeModeEnabled" xml:space="preserve">
     <value>セーフ モードが有効 - 多くの機能が無効になります</value>
+    <comment>"safe mode" refers to a minimal/diagnostic startup mode. Use the standard OS term for safe mode in your locale.</comment>
   </data>
   <data name="MessageMirroredNetworkingNotSupportedReason" xml:space="preserve">
     <value>ミラー化されたネットワーク モードはサポートされていません: {}
@@ -885,29 +913,39 @@ NAT ネットワークにフォールバックしています。</value>
     <value>Windows バージョン {}.{} には必要な機能がありません</value>
     <comment>{FixedPlaceholder="{}"}Command line arguments, file names and string inserts should not be translated</comment>
   </data>
+  <data name="MessageMirroredNetworkingNotSupportedIpv6Disabled" xml:space="preserve">
+    <value>IPv6 が、サポートされていない方法でホスト上で無効になっています (HKLM\SYSTEM\CurrentControlSet\Services\Tcpip6\Parameters DisabledComponents=0xff)</value>
+    <comment>{Locked="HKLM\SYSTEM\CurrentControlSet\Services\Tcpip6\Parameters"}{Locked="DisabledComponents"}{Locked="0xff"}</comment>
+  </data>
   <data name="MessageHyperVFirewallNotSupported" xml:space="preserve">
     <value>Hyper-V ファイアウォールはサポートされていません</value>
   </data>
   <data name="MessageDnsTunnelingNotSupported" xml:space="preserve">
     <value>DNS トンネリングはサポートされていません</value>
+    <comment>{Locked="DNS"}"DNS" (Domain Name System) should not be translated.</comment>
   </data>
   <data name="MessageLocalhostForwardingNotSupportedMirroredMode" xml:space="preserve">
     <value>ミラー化されたネットワーク モードを使用している場合、wsl2.localhostForwarding 設定は無効です</value>
   </data>
   <data name="MessageHttpProxyChangeDetected" xml:space="preserve">
     <value>HTTP プロキシの変更がホストで検出されました。変更を適用するには、WSL を再起動してください。</value>
+    <comment>"proxy" refers to a network proxy server. Use the standard networking term in your locale.</comment>
   </data>
   <data name="MessageProxyLocalhostSettingsDropped" xml:space="preserve">
     <value>ローカルホスト プロキシ構成が検出されましたが、WSL にミラーリングされませんでした。NAT モードの WSL は、ローカルホスト プロキシをサポートしません。</value>
+    <comment>"proxy" refers to a network proxy server. Use the standard networking term in your locale.</comment>
   </data>
   <data name="MessageProxyV6SettingsDropped" xml:space="preserve">
     <value>IPv6 プロキシ構成が検出されましたが、WSL にミラーリングされませんでした。NAT モードの WSL は IPv6 をサポートしません。</value>
+    <comment>"proxy" refers to a network proxy server. Use the standard networking term in your locale.</comment>
   </data>
   <data name="MessageProxyLoopbackV6SettingsDropped" xml:space="preserve">
     <value>ローカルホスト IPv6 プロキシ構成が検出されましたが、WSL にミラーリングされませんでした。WSL はローカルホスト IPv6 プロキシをサポートしません。</value>
+    <comment>"proxy" refers to a network proxy server. Use the standard networking term in your locale.</comment>
   </data>
   <data name="MessageProxyUnexpectedSettingsDropped" xml:space="preserve">
     <value>プロキシ設定を解決しようとしたときに予期しないエラーが発生しました。プロキシ設定は WSL にミラーリングされませんでした。</value>
+    <comment>"proxy" refers to a network proxy server. Use the standard networking term in your locale.</comment>
   </data>
   <data name="MessageRegistryError" xml:space="preserve">
     <value>レジストリへのアクセス中にエラーが発生しました。パス: '{}'エラー: {}</value>
@@ -950,10 +988,20 @@ NAT ネットワークにフォールバックしています。</value>
   </data>
   <data name="MessageWSLMountDisabled" xml:space="preserve">
     <value>wsl.exe --mount はコンピューター ポリシーによって無効にされています。</value>
-    <comment>{Locked="--mount "}Command line arguments, file names and string inserts should not be translated</comment>
+    <comment>{Locked="--mount "}Command line arguments, file names and string inserts should not be translated. "mount" is a technical term meaning to make a disk/filesystem accessible. Use the standard technical term in your locale, or keep "mount" if commonly used.</comment>
   </data>
   <data name="MessageWSL1Disabled" xml:space="preserve">
     <value>WSL1 はコンピューター ポリシーによって無効にされています。</value>
+  </data>
+  <data name="MessageWSLContainerDisabled" xml:space="preserve">
+    <value>WSL コンテナーは、コンピューター ポリシーによって無効になっています。</value>
+  </data>
+  <data name="MessageRegistryBlockedByPolicy" xml:space="preserve">
+    <value>コンテナー イメージ レジストリ '{}' はコンピューター ポリシーによってブロックされています。</value>
+    <comment>{FixedPlaceholder="{}"}Command line arguments, file names and string inserts should not be translated</comment>
+  </data>
+  <data name="MessageImageBuildBlockedByPolicy" xml:space="preserve">
+    <value>コンテナー レジストリの許可リストがコンピューター ポリシーによって構成されているため、コンテナー イメージのビルドがブロックされています。イメージ ビルドでは、任意のレジストリから基本イメージがプルされる可能性があり、許可リストに確実に制限することはできません。</value>
   </data>
   <data name="MessageUpgradeToWSL2" xml:space="preserve">
     <value>WSL2 にアップグレードするには、'wsl.exe --set-version {} 2' を実行してください。</value>
@@ -964,6 +1012,10 @@ NAT ネットワークにフォールバックしています。</value>
   </data>
   <data name="MessageUpdateFailed" xml:space="preserve">
     <value>更新に失敗しました (終了コード: {})。</value>
+    <comment>{FixedPlaceholder="{}"}Command line arguments, file names and string inserts should not be translated</comment>
+  </data>
+  <data name="MessageUninstallNoArguments" xml:space="preserve">
+    <value>{} は引数を取りません。ディストリビューションの登録を解除するには、代わりに {} を使用してください。</value>
     <comment>{FixedPlaceholder="{}"}Command line arguments, file names and string inserts should not be translated</comment>
   </data>
   <data name="MessageUninstallFailed" xml:space="preserve">
@@ -1009,7 +1061,7 @@ NAT ネットワークにフォールバックしています。</value>
   </data>
   <data name="MessageVhdInUse" xml:space="preserve">
     <value>VHD が現在使用中のため、操作を完了できませんでした。WSL の使用を強制的に停止するには: wsl.exe --shutdown</value>
-    <comment>{Locked="--shutdown"}Command line arguments, file names and string inserts should not be translated</comment>
+    <comment>{Locked="--shutdown"}Command line arguments, file names and string inserts should not be translated. {Locked="VHD"}"VHD" (Virtual Hard Disk) is a technical format name and should not be translated.</comment>
   </data>
   <data name="MessageInvalidBoolean" xml:space="preserve">
     <value>{} は有効なブール値 &lt;true|false&gt; ではありません</value>
@@ -1017,6 +1069,7 @@ NAT ネットワークにフォールバックしています。</value>
   </data>
   <data name="MessageSparseVhdWsl2Only" xml:space="preserve">
     <value>スパース VHD は WSL2 のみでサポートされています。</value>
+    <comment>{Locked="VHD"}"VHD" (Virtual Hard Disk) is a technical format name and should not be translated. "sparse" is a technical storage term meaning the file only uses disk space for written data. Use the technical term in your locale.</comment>
   </data>
   <data name="MessageLocalSystemNotSupported" xml:space="preserve">
     <value>ローカル システムとして WSL を実行することはサポートされていません。</value>
@@ -1066,7 +1119,7 @@ NAT ネットワークにフォールバックしています。</value>
   </data>
   <data name="MessagePassVhdFlag" xml:space="preserve">
     <value>これは VHD ファイルのようです。--vhd を使用して、tar ではなく VHD をインポートします。</value>
-    <comment>{Locked="--vhd "}Command line arguments, file names and string inserts should not be translated</comment>
+    <comment>{Locked="--vhd "}Command line arguments, file names and string inserts should not be translated. {Locked="tar"}"tar" is a file archive format name and should not be translated. {Locked="VHD"}"VHD" (Virtual Hard Disk) is a technical format name and should not be translated.</comment>
   </data>
   <data name="MessageDistroStoreInstallFailed" xml:space="preserve">
     <value>Microsoft Storeから {} をインストールできませんでした: {}
@@ -1114,23 +1167,26 @@ WSL を修復するには任意のキーを押すか、取り消すには CTRL-C
   </data>
   <data name="MessageDnsTunnelingDisabled" xml:space="preserve">
     <value>グローバル セキュア アクセス クライアントとの互換性に関する現在の問題により、DNS トンネリングは無効です。</value>
+    <comment>{Locked="DNS"}"DNS" (Domain Name System) should not be translated.</comment>
   </data>
   <data name="MessageSparseVhdDisabled" xml:space="preserve">
     <value>スパース VHD のサポートは、データの破損の可能性があるため、現在無効になっています。
 ディストリビューションでスパース VHD を強制的に使用するには、次を実行してください。
 wsl.exe --manage &lt;DistributionName&gt; --set-sparse true --allow-unsafe</value>
-    <comment>{Locked="--manage "}{Locked="--set-sparse "}{Locked="--allow-unsafe"}Command line arguments, file names and string inserts should not be translated</comment>
+    <comment>{Locked="--manage "}{Locked="--set-sparse "}{Locked="--allow-unsafe"}Command line arguments, file names and string inserts should not be translated. {Locked="VHD"}"VHD" (Virtual Hard Disk) is a technical format name and should not be translated. "sparse" is a technical storage term meaning the file only uses disk space for written data. Use the technical term in your locale.</comment>
   </data>
   <data name="MessageDrvfsMountFailed" xml:space="preserve">
     <value>{} をマウントできませんでした。詳細については dmesg を参照してください。</value>
-    <comment>{FixedPlaceholder="{}"}Command line arguments, file names and string inserts should not be translated</comment>
+    <comment>{FixedPlaceholder="{}"}Command line arguments, file names and string inserts should not be translated. "mount" is a technical term meaning to make a disk/filesystem accessible. Use the standard technical term in your locale, or keep "mount" if commonly used.</comment>
   </data>
   <data name="MessageFstabMountFailed" xml:space="preserve">
     <value>マウント -a による /etc/fstab の処理に失敗しました。</value>
+    <comment>"mount" is a technical term meaning to make a disk/filesystem accessible. Use the standard technical term in your locale, or keep "mount" if commonly used.</comment>
   </data>
   <data name="MessageReadOnlyDistro" xml:space="preserve">
     <value>ディストリビューション ディスクのマウント中にエラーが発生しました。フォールバックとして読み取り専用でマウントされました。
 次の回復手順を参照してください: https://aka.ms/wsldiskmountrecovery</value>
+    <comment>"mount" is a technical term meaning to make a disk/filesystem accessible. Use the standard technical term in your locale, or keep "mount" if commonly used.</comment>
   </data>
   <data name="MessageFailedToTranslate" xml:space="preserve">
     <value>翻訳に失敗しました '{}'</value>
@@ -1169,28 +1225,35 @@ wsl.exe --manage &lt;DistributionName&gt; --set-sparse true --allow-unsafe</valu
   </data>
   <data name="Settings_AutoProxy.Header" xml:space="preserve">
     <value>オート プロキシが有効</value>
+    <comment>"proxy" refers to a network proxy server. Use the standard networking term in your locale.</comment>
   </data>
   <data name="Settings_AutoProxy.Description" xml:space="preserve">
     <value>WSL で Windows の HTTP プロキシ情報を使用できるようにします。</value>
+    <comment>"proxy" refers to a network proxy server. Use the standard networking term in your locale.</comment>
   </data>
   <data name="Settings_AutoProxyToggleSwitch.AutomationProperties.Name" xml:space="preserve">
     <value>オート プロキシが有効です。</value>
+    <comment>"proxy" refers to a network proxy server. Use the standard networking term in your locale.</comment>
   </data>
   <data name="Settings_AutoProxyToggleSwitch.AutomationProperties.HelpText" xml:space="preserve">
     <value>WSL で Windows の HTTP プロキシ情報を使用できるようにします。</value>
+    <comment>"proxy" refers to a network proxy server. Use the standard networking term in your locale.</comment>
   </data>
   <data name="Settings_BestEffortDNS.Header" xml:space="preserve">
     <value>ベスト エフォート DNS 解析を使用する</value>
+    <comment>{Locked="DNS"}"DNS" (Domain Name System) should not be translated.</comment>
   </data>
   <data name="Settings_BestEffortDNS.Description" xml:space="preserve">
     <value>wsl2.dnsTunneling が true に設定されている場合にのみ適用されます。true に設定すると、Windows は DNS 要求から質問を抽出し、不明なレコードを無視して解決を試みます。</value>
-    <comment>{Locked="wsl2.dnsTunneling"}.wslconfig property key names should not be translated</comment>
+    <comment>{Locked="wsl2.dnsTunneling"}{Locked="DNS"}.wslconfig property key names should not be translated. "DNS" (Domain Name System) should not be translated.</comment>
   </data>
   <data name="Settings_BestEffortDNSToggleSwitch.AutomationProperties.Name" xml:space="preserve">
     <value>ベスト エフォート DNS 解析を使用します。</value>
+    <comment>{Locked="DNS"}"DNS" (Domain Name System) should not be translated.</comment>
   </data>
   <data name="Settings_BestEffortDNSToggleSwitch.AutomationProperties.HelpText" xml:space="preserve">
     <value>wsl2.dnsTunneling が true に設定されている場合にのみ適用されます。true に設定すると、Windows は DNS 要求から質問を抽出し、不明なレコードを無視して解決を試みます。</value>
+    <comment>{Locked="DNS"}"DNS" (Domain Name System) should not be translated.</comment>
   </data>
   <data name="Settings_CustomKernelPath.Header" xml:space="preserve">
     <value>カスタム カーネル</value>
@@ -1212,6 +1275,7 @@ wsl.exe --manage &lt;DistributionName&gt; --set-sparse true --allow-unsafe</valu
   </data>
   <data name="Settings_CustomKernelModulesPath.Description" xml:space="preserve">
     <value>カスタム Linux カーネル モジュール VHD への Windows 絶対パス。</value>
+    <comment>{Locked="VHD"}"VHD" (Virtual Hard Disk) is a technical format name and should not be translated.</comment>
   </data>
   <data name="Settings_CustomKernelModulesPathBrowseButton.Content" xml:space="preserve">
     <value>カーネル モジュールを参照する</value>
@@ -1221,6 +1285,7 @@ wsl.exe --manage &lt;DistributionName&gt; --set-sparse true --allow-unsafe</valu
   </data>
   <data name="Settings_CustomKernelModulesPathTextBox.AutomationProperties.HelpText" xml:space="preserve">
     <value>カスタム Linux カーネル モジュール VHD への Windows 絶対パス。</value>
+    <comment>{Locked="VHD"}"VHD" (Virtual Hard Disk) is a technical format name and should not be translated.</comment>
   </data>
   <data name="Settings_CustomSystemDistroPath.Header" xml:space="preserve">
     <value>カスタム システム ディストリビューション</value>
@@ -1230,7 +1295,7 @@ wsl.exe --manage &lt;DistributionName&gt; --set-sparse true --allow-unsafe</valu
   </data>
   <data name="Settings_CustomSystemDistroPathDescription.Text" xml:space="preserve">
     <value>カスタム システム ディストリビューションとして読み込む VHD へのパスを指定します。このパスは、主に WSL の GUI アプリを強化するために使用されます。[システム ディストリビューションの詳細については、こちらを参照してください]。</value>
-    <comment>{Locked="["}{Locked="]"}The text in between the delimiters [ ] is made into a hyperlink in code, and the delimiters are removed</comment>
+    <comment>{Locked="["}{Locked="]"}{Locked="VHD"}The text in between the delimiters [ ] is made into a hyperlink in code, and the delimiters are removed. "VHD" (Virtual Hard Disk) is a technical format name and should not be translated.</comment>
   </data>
   <data name="Settings_CustomSystemDistroPathDescription.NavigateUri" xml:space="preserve">
     <value>https://aka.ms/wslgsystemdistro</value>
@@ -1241,6 +1306,7 @@ wsl.exe --manage &lt;DistributionName&gt; --set-sparse true --allow-unsafe</valu
   </data>
   <data name="Settings_CustomSystemDistroPathTextBox.AutomationProperties.HelpText" xml:space="preserve">
     <value>カスタム システム ディストリビューションとして読み込む VHD へのパスを指定します。このパスは、主に WSL の GUI アプリを強化するために使用されます。</value>
+    <comment>{Locked="VHD"}"VHD" (Virtual Hard Disk) is a technical format name and should not be translated.</comment>
   </data>
   <data name="Settings_DebugConsole.Header" xml:space="preserve">
     <value>デバッグ コンソールを有効にする</value>
@@ -1255,19 +1321,23 @@ wsl.exe --manage &lt;DistributionName&gt; --set-sparse true --allow-unsafe</valu
     <value>WSL 2 ディストリビューション インスタンスの開始時に診断メッセージの内容を表示する出力コンソール ウィンドウを有効にするブール値です。</value>
   </data>
   <data name="Settings_DefaultVHDSize.Header" xml:space="preserve">
-    <value>既定の仮想ハード ディスクのサイズ</value>
+    <value>既定の VHD のサイズ</value>
+    <comment>{Locked="VHD"}"VHD" (Virtual Hard Disk) is a technical format name and should not be translated.</comment>
   </data>
   <data name="Settings_DefaultVHDSize.Description" xml:space="preserve">
     <value>新しく作成されたディストリビューションのみの展開可能な WSL 仮想ハード ディスク (VHD) の既定の最大サイズです。</value>
+    <comment>{Locked="VHD"}"VHD" (Virtual Hard Disk) is a technical format name and should not be translated.</comment>
   </data>
   <data name="Settings_DefaultVHDSizeResetButton.Content" xml:space="preserve">
     <value>サイズのリセット</value>
   </data>
   <data name="Settings_DefaultVHDSizeTextBox.AutomationProperties.Name" xml:space="preserve">
-    <value>既定の仮想ハード ディスクのサイズ</value>
+    <value>既定の VHD のサイズ</value>
+    <comment>{Locked="VHD"}"VHD" (Virtual Hard Disk) is a technical format name and should not be translated.</comment>
   </data>
   <data name="Settings_DefaultVHDSizeTextBox.AutomationProperties.HelpText" xml:space="preserve">
     <value>新しく作成されたディストリビューションに対してのみ展開可能な WSL 仮想ハード ディスク (VHD) の既定の最大サイズ (MB 単位) です。</value>
+    <comment>{Locked="VHD"}"VHD" (Virtual Hard Disk) is a technical format name and should not be translated.</comment>
   </data>
   <data name="Settings_DeveloperPageTitle.Text" xml:space="preserve">
     <value>開発者</value>
@@ -1287,28 +1357,35 @@ wsl.exe --manage &lt;DistributionName&gt; --set-sparse true --allow-unsafe</valu
   </data>
   <data name="Settings_DNSProxy.Header" xml:space="preserve">
     <value>DNS プロキシが有効</value>
+    <comment>{Locked="DNS"}"DNS" (Domain Name System) should not be translated. "proxy" refers to a network proxy server. Use the standard networking term in your locale.</comment>
   </data>
   <data name="Settings_DNSProxy.Description" xml:space="preserve">
     <value>wsl2.networkingMode が NAT に設定されている場合にのみ適用されます。Linux の DNS サーバーをホスト上の NAT に構成するよう WSL に通知するブール値です。false に設定すると、DNS サーバーが Windows から Linux にミラーされます。</value>
-    <comment>{Locked="wsl2.networkingMode"}.wslconfig property key names should not be translated</comment>
+    <comment>{Locked="wsl2.networkingMode"}{Locked="DNS"}.wslconfig property key names should not be translated. "DNS" (Domain Name System) should not be translated.</comment>
   </data>
   <data name="Settings_DNSProxyToggleSwitch.AutomationProperties.Name" xml:space="preserve">
     <value>DNS プロキシが有効です。</value>
+    <comment>{Locked="DNS"}"DNS" (Domain Name System) should not be translated. "proxy" refers to a network proxy server. Use the standard networking term in your locale.</comment>
   </data>
   <data name="Settings_DNSProxyToggleSwitch.AutomationProperties.HelpText" xml:space="preserve">
     <value>wsl2.networkingMode が NAT に設定されている場合にのみ適用されます。Linux の DNS サーバーをホスト上の NAT に構成するよう WSL に通知するブール値です。false に設定すると、DNS サーバーが Windows から Linux にミラーされます。</value>
+    <comment>{Locked="DNS"}"DNS" (Domain Name System) should not be translated.</comment>
   </data>
   <data name="Settings_DNSTunneling.Header" xml:space="preserve">
     <value>DNS トンネリングが有効</value>
+    <comment>{Locked="DNS"}"DNS" (Domain Name System) should not be translated.</comment>
   </data>
   <data name="Settings_DNSTunneling.Description" xml:space="preserve">
     <value>DNS 要求を WSL から Windows にプロキシする方法を変更します。</value>
+    <comment>{Locked="DNS"}"DNS" (Domain Name System) should not be translated.</comment>
   </data>
   <data name="Settings_DNSTunnelingToggleSwitch.AutomationProperties.Name" xml:space="preserve">
     <value>DNS トンネリングが有効です。</value>
+    <comment>{Locked="DNS"}"DNS" (Domain Name System) should not be translated.</comment>
   </data>
   <data name="Settings_DNSTunnelingToggleSwitch.AutomationProperties.HelpText" xml:space="preserve">
     <value>DNS 要求を WSL から Windows にプロキシする方法を変更します。</value>
+    <comment>{Locked="DNS"}"DNS" (Domain Name System) should not be translated.</comment>
   </data>
   <data name="Settings_FileSystemPageTitle.Text" xml:space="preserve">
     <value>ファイル システム</value>
@@ -1384,19 +1461,22 @@ wsl.exe --manage &lt;DistributionName&gt; --set-sparse true --allow-unsafe</valu
   </data>
   <data name="Settings_InitialAutoProxyTimeout.Header" xml:space="preserve">
     <value>初期のオートプロキシ タイムアウト</value>
+    <comment>"proxy" refers to a network proxy server. Use the standard networking term in your locale.</comment>
   </data>
   <data name="Settings_InitialAutoProxyTimeout.Description" xml:space="preserve">
     <value>wsl2.autoProxy が true に設定されている場合にのみ適用されます。WSL コンテナーの開始時に WSL が HTTP プロキシ情報の取得を待機する時間 (ミリ秒) を構成します。この時間が経過した後にプロキシ設定が解決された場合、取得したプロキシ設定を使用するには、WSL インスタンスを再起動する必要があります。</value>
-    <comment>{Locked="wsl2.autoProxy"}.wslconfig property key names should not be translated</comment>
+    <comment>{Locked="wsl2.autoProxy"}.wslconfig property key names should not be translated. "proxy" refers to a network proxy server. Use the standard networking term in your locale.</comment>
   </data>
   <data name="Settings_InitialAutoProxyTimeoutResetButton.Content" xml:space="preserve">
     <value>タイムアウトのリセット</value>
   </data>
   <data name="Settings_InitialAutoProxyTimeoutTextBox.AutomationProperties.Name" xml:space="preserve">
     <value>初期のオートプロキシ タイムアウト</value>
+    <comment>"proxy" refers to a network proxy server. Use the standard networking term in your locale.</comment>
   </data>
   <data name="Settings_InitialAutoProxyTimeoutTextBox.AutomationProperties.HelpText" xml:space="preserve">
     <value>wsl2.autoProxy が true に設定されている場合にのみ適用されます。WSL コンテナーの開始時に WSL が HTTP プロキシ情報の取得を待機する時間をミリ秒単位で構成します。この時間が経過した後にプロキシ設定が解決された場合、取得したプロキシ設定を使用するには、WSL インスタンスを再起動する必要があります。</value>
+    <comment>"proxy" refers to a network proxy server. Use the standard networking term in your locale.</comment>
   </data>
   <data name="Settings_KernelCommandLine.Header" xml:space="preserve">
     <value>カーネル コマンド ライン</value>
@@ -1572,6 +1652,7 @@ WSL で Docker デスクトップを使用するいくつかの利点を以下�
 • 同じ Docker デーモンとイメージを使用して、WSL または Windows で Docker コマンドを実行できます。
 • WSL での Windows ドライブの自動マウントを使用して、Windows と Linux の間でファイルとフォルダーをシームレスに共有できます。
 • WSL の相互運用性のおかげで、好みの Windows ツールとエディターを使用して Linux のコードとファイルを操作できます。また、その逆も可能です。</value>
+    <comment>"mount" is a technical term meaning to make a disk/filesystem accessible. Use the standard technical term in your locale, or keep "mount" if commonly used.</comment>
  </data>
   <data name="Settings_OOBEDockerDesktopIntegration.Title" xml:space="preserve">
     <value>Docker Desktop の統合</value>
@@ -1739,15 +1820,19 @@ VS Code 自体のコマンド パレットから、より多くの VS Code リ�
   </data>
   <data name="Settings_SafeMode.Header" xml:space="preserve">
     <value>セーフ モードを有効にする</value>
+    <comment>"safe mode" refers to a minimal/diagnostic startup mode. Use the standard OS term for safe mode in your locale.</comment>
   </data>
   <data name="Settings_SafeMode.Description" xml:space="preserve">
     <value>WSL を "セーフ モード" で実行すると、多くの機能が無効になり、無効な状態のディストリビューションの回復に使用されます。</value>
+    <comment>"safe mode" refers to a minimal/diagnostic startup mode. Use the standard OS term for safe mode in your locale.</comment>
   </data>
   <data name="Settings_SafeModeToggleSwitch.AutomationProperties.Name" xml:space="preserve">
     <value>セーフ モードを有効にします。</value>
+    <comment>"safe mode" refers to a minimal/diagnostic startup mode. Use the standard OS term for safe mode in your locale.</comment>
   </data>
   <data name="Settings_SafeModeToggleSwitch.AutomationProperties.HelpText" xml:space="preserve">
     <value>WSL を "セーフ モード" で実行すると、多くの機能が無効になり、無効な状態のディストリビューションの回復に使用されます。</value>
+    <comment>"safe mode" refers to a minimal/diagnostic startup mode. Use the standard OS term for safe mode in your locale.</comment>
   </data>
   <data name="Settings_Shell_About.Content" xml:space="preserve">
     <value>バージョン情報</value>
@@ -1811,46 +1896,59 @@ VS Code 自体のコマンド パレットから、より多くの VS Code リ�
     <comment>{Locked}Uri to Microsoft WSL issues</comment>
   </data>
   <data name="Settings_SparseVHD.Header" xml:space="preserve">
-    <value>スパース仮想ハード ディスクを既定で有効にする</value>
+    <value>スパース VHD を既定で有効にする</value>
+    <comment>{Locked="VHD"}"VHD" (Virtual Hard Disk) is a technical format name and should not be translated. "sparse" is a technical storage term meaning the file only uses disk space for written data. Use the technical term in your locale.</comment>
   </data>
   <data name="Settings_SparseVHD.Description" xml:space="preserve">
     <value>新しく作成された VHD は、有効にすると自動的にスパースに設定されます。</value>
+    <comment>{Locked="VHD"}"VHD" (Virtual Hard Disk) is a technical format name and should not be translated. "sparse" is a technical storage term meaning the file only uses disk space for written data. Use the technical term in your locale.</comment>
   </data>
   <data name="Settings_SparseVHDToggleSwitch.AutomationProperties.Name" xml:space="preserve">
-    <value>スパース仮想ハード ディスクを既定で有効にします。</value>
+    <value>スパース VHD を既定で有効にします。</value>
+    <comment>{Locked="VHD"}"VHD" (Virtual Hard Disk) is a technical format name and should not be translated. "sparse" is a technical storage term meaning the file only uses disk space for written data. Use the technical term in your locale.</comment>
   </data>
   <data name="Settings_SparseVHDToggleSwitch.AutomationProperties.HelpText" xml:space="preserve">
     <value>新しく作成された VHD は、有効にすると自動的にスパースに設定されます。</value>
+    <comment>{Locked="VHD"}"VHD" (Virtual Hard Disk) is a technical format name and should not be translated. "sparse" is a technical storage term meaning the file only uses disk space for written data. Use the technical term in your locale.</comment>
   </data>
   <data name="Settings_SwapFilePath.Header" xml:space="preserve">
     <value>ページ ファイルの場所</value>
+    <comment>"swap" refers to virtual memory swap space. This is a technical term; use the standard OS term in your locale or keep "swap".</comment>
   </data>
   <data name="Settings_SwapFilePath.Description" xml:space="preserve">
     <value>スワップ仮想ハード ディスクへの Windows の絶対パス。</value>
+    <comment>"swap" refers to virtual memory swap space. This is a technical term; use the standard OS term in your locale or keep "swap".</comment>
   </data>
   <data name="Settings_SwapFilePathBrowseButton.Content" xml:space="preserve">
     <value>スワップ ファイルの参照</value>
+    <comment>"swap" refers to virtual memory swap space. This is a technical term; use the standard OS term in your locale or keep "swap".</comment>
   </data>
   <data name="Settings_SwapFilePathTextBox.AutomationProperties.Name" xml:space="preserve">
     <value>ページ ファイルの場所</value>
+    <comment>"swap" refers to virtual memory swap space. This is a technical term; use the standard OS term in your locale or keep "swap".</comment>
   </data>
   <data name="Settings_SwapFilePathTextBox.AutomationProperties.HelpText" xml:space="preserve">
     <value>スワップ仮想ハード ディスクへの Windows の絶対パス。</value>
+    <comment>"swap" refers to virtual memory swap space. This is a technical term; use the standard OS term in your locale or keep "swap".</comment>
   </data>
   <data name="Settings_SwapSize.Header" xml:space="preserve">
     <value>スワップ サイズ</value>
+    <comment>"swap" refers to virtual memory swap space. This is a technical term; use the standard OS term in your locale or keep "swap".</comment>
   </data>
   <data name="Settings_SwapSize.Description" xml:space="preserve">
     <value>WSL 2 VM に追加するスワップ領域の量 (スワップ ファイルがない場合は 0)。スワップ ストレージは、メモリの需要がハードウェア デバイスの制限を超えたときに使用されるディスク ベースの RAM です。</value>
+    <comment>"swap" refers to virtual memory swap space. This is a technical term; use the standard OS term in your locale or keep "swap".</comment>
   </data>
   <data name="Settings_SwapSizeResetButton.Content" xml:space="preserve">
     <value>サイズのリセット</value>
   </data>
   <data name="Settings_SwapSizeTextBox.AutomationProperties.Name" xml:space="preserve">
     <value>スワップ サイズ</value>
+    <comment>"swap" refers to virtual memory swap space. This is a technical term; use the standard OS term in your locale or keep "swap".</comment>
   </data>
   <data name="Settings_SwapSizeTextBox.AutomationProperties.HelpText" xml:space="preserve">
     <value>WSL 2 VM に追加するスワップ領域のサイズ (MB 単位)。スワップ ファイルがない場合は 0。スワップ ストレージは、メモリ要求がハードウェア デバイスの制限を超えたときに使用されるディスク ベースの RAM です。</value>
+    <comment>"swap" refers to virtual memory swap space. This is a technical term; use the standard OS term in your locale or keep "swap".</comment>
   </data>
   <data name="Settings_Virtio.Header" xml:space="preserve">
     <value>VirtIO を有効にする</value>
@@ -1863,6 +1961,7 @@ VS Code 自体のコマンド パレットから、より多くの VS Code リ�
   </data>
   <data name="Settings_Virtio9p.Description" xml:space="preserve">
     <value>virtio トランスポートを使用して、ホストから 9P ファイルシステムへのマウントを有効にします。</value>
+    <comment>"mount" is a technical term meaning to make a disk/filesystem accessible. Use the standard technical term in your locale, or keep "mount" if commonly used.</comment>
   </data>
   <data name="Settings_VMIdleTimeout.Header" xml:space="preserve">
     <value>VM アイドル タイムアウト</value>
@@ -1878,5 +1977,1121 @@ VS Code 自体のコマンド パレットから、より多くの VS Code リ�
   </data>
   <data name="Settings_VMIdleTimeoutTextBox.AutomationProperties.HelpText" xml:space="preserve">
     <value>VM がシャットダウンされるまでのアイドル時間 (ミリ秒) です。</value>
+  </data>
+  <data name="Settings_ApplyChangesButton.Content" xml:space="preserve">
+    <value>変更の適用</value>
+  </data>
+  <data name="Settings_ApplyChangesDialogTitle" xml:space="preserve">
+    <value>WSL のシャットダウンが必要です</value>
+  </data>
+  <data name="Settings_ApplyChangesDialogDescription" xml:space="preserve">
+    <value>WSL 設定の変更を完了するには、WSL のシャットダウンと再起動が必要です。シャットダウンすると、アクティブな WSL セッションがすべて終了します。</value>
+  </data>
+  <data name="Settings_ApplyChangesDialogShutdownButton" xml:space="preserve">
+    <value>WSL を今すぐシャットダウン</value>
+  </data>
+  <data name="Settings_ApplyChangesDialogLaterButton" xml:space="preserve">
+    <value>後で</value>
+  </data>
+  <data name="Settings_ApplyChangesDialogFailedTitle" xml:space="preserve">
+    <value>変更を適用できません</value>
+  </data>
+  <data name="Settings_ApplyChangesDialogCloseButton" xml:space="preserve">
+    <value>閉じる</value>
+  </data>
+  <data name="Settings_ApplyChangesDialogCommitFailed" xml:space="preserve">
+    <value>保留中の設定変更を保存できませんでした。エラー コード: {0}</value>
+    <comment>{Locked="{0}"}Format placeholder for Win32 error code</comment>
+  </data>
+  <data name="Settings_ApplyChangesDialogShutdownFailed" xml:space="preserve">
+    <value>設定は保存されましたが、WSL のシャットダウンに失敗しました: {0}</value>
+    <comment>{Locked="{0}"}Format placeholder for exception message</comment>
+  </data>
+  <data name="Settings_BooleanTrueText" xml:space="preserve">
+    <value>オン</value>
+  </data>
+  <data name="Settings_BooleanFalseText" xml:space="preserve">
+    <value>オフ</value>
+  </data>
+  <data name="Settings_OOBEVSIntegration.Title" xml:space="preserve">
+    <value>Visual Studio から WSL 上で動作するアプリをビルド、実行、デバッグ、プロファイル</value>
+  </data>
+  <data name="Settings_OOBEVSIntegration.Description" xml:space="preserve">
+    <value>Visual Studio から WSL 上でアプリを実行およびデバッグします</value>
+  </data>
+  <data name="Settings_OOBEVSIntegration_VSForDotNetLink.Content" xml:space="preserve">
+    <value>.NET 開発者向けの Visual Studio での WSL に関する詳細情報</value>
+  </data>
+  <data name="Settings_OOBEVSIntegration_VSForDotNetLink.NavigateUri" xml:space="preserve">
+    <value>https://learn.microsoft.com/visualstudio/debugger/debug-dotnet-core-in-wsl-2</value>
+    <comment>{locked}Uri should redirect to the correct locale for the browser</comment>
+  </data>
+  <data name="Settings_OOBEVSIntegration_VSForCppLink.Content" xml:space="preserve">
+    <value>C++ 開発者向けの Visual Studio と WSL に関する詳細情報</value>
+  </data>
+  <data name="Settings_OOBEVSIntegration_VSForCppLink.NavigateUri" xml:space="preserve">
+    <value>https://learn.microsoft.com/cpp/linux/?view=msvc-170</value>
+    <comment>{locked}Uri should redirect to the correct locale for the browser</comment>
+  </data>
+  <data name="Settings_OOBEVSIntegration_Description.Text" xml:space="preserve">
+    <value>Linux 用 Windows サブシステム (WSL) を使うと、Visual Studio を離れることなく、.NET Core アプリやクロスプラットフォームの C++ アプリを Linux 上で簡単に実行しデバッグできます。クロスプラットフォーム開発者の場合は、より多くのターゲット環境をテストする簡単な方法として、これを使用できます。</value>
+  </data>
+  <data name="Settings_OOBEVSIntegration_Title.Text" xml:space="preserve">
+    <value>Visual Studio 統合</value>
+  </data>
+  <data name="Settings_Shell_VSIntegration.Content" xml:space="preserve">
+    <value>Visual Studio 統合</value>
+  </data>
+  <data name="MessageWslcUsage" xml:space="preserve">
+    <value>wslc - WSL コンテナー CLI
+使用:
+  wslc --help</value>
+    <comment>{Locked="--help"}Command line arguments, file names and string inserts should not be translated</comment>
+  </data>
+  <data name="MessageWslcSessionNotFound" xml:space="preserve">
+    <value>セッションが見つかりません: '{}'</value>
+    <comment>{FixedPlaceholder="{}"}Command line arguments, file names and string inserts should not be translated</comment>
+  </data>
+  <data name="MessageInvalidIp" xml:space="preserve">
+    <value>IP アドレス '{}' が無効です</value>
+    <comment>{FixedPlaceholder="{}"}Command line arguments, file names and string inserts should not be translated</comment>
+  </data>
+  <data name="MessageWslcOpenSessionFailed" xml:space="preserve">
+    <value>OpenSessionByName('{}') が失敗しました</value>
+    <comment>{FixedPlaceholder="{}"}Command line arguments, file names and string inserts should not be translated</comment>
+  </data>
+  <data name="MessageWslcNoSessionsFound" xml:space="preserve">
+    <value>WSLC セッションが見つかりません。</value>
+  </data>
+  <data name="MessageWslcSessionsFound" xml:space="preserve">
+    <value>{} WSLC セッション{} が見つかりました:</value>
+    <comment>{FixedPlaceholder="{}"}{FixedPlaceholder="{}"}Command line arguments, file names and string inserts should not be translated</comment>
+  </data>
+  <data name="MessageWslcTerminateSessionFailed" xml:space="preserve">
+    <value>セッションの終了に失敗しました: '{}'</value>
+    <comment>{FixedPlaceholder="{}"}Command line arguments, file names and string inserts should not be translated</comment>
+  </data>
+  <data name="MessageWslcDefaultSessionNotFound" xml:space="preserve">
+    <value>既定のセッションが見つかりません</value>
+  </data>
+  <data name="MessageWslcOpenDefaultSessionFailed" xml:space="preserve">
+    <value>既定のセッションを開けませんでした</value>
+  </data>
+  <data name="MessageWslcTerminateDefaultSessionFailed" xml:space="preserve">
+    <value>既定のセッション終了に失敗しました</value>
+  </data>
+  <data name="MessageWslcShellExited" xml:space="preserve">
+    <value>{} が次の値で終了しました: {}</value>
+    <comment>{FixedPlaceholder="{}"}{FixedPlaceholder="{}"}Command line arguments, file names and string inserts should not be translated</comment>
+  </data>
+  <data name="MessageWslcCreatedSession" xml:space="preserve">
+    <value>作成されたセッション: '{}'</value>
+    <comment>{FixedPlaceholder="{}"}Command line arguments, file names and string inserts should not be translated</comment>
+  </data>
+  <data name="MessageWslcHeaderId" xml:space="preserve">
+    <value>ID</value>
+  </data>
+  <data name="MessageWslcHeaderCreatorPid" xml:space="preserve">
+    <value>作成者 PID</value>
+  </data>
+  <data name="MessageWslcHeaderDisplayName" xml:space="preserve">
+    <value>表示名</value>
+  </data>
+  <data name="MessageWslcUnknownCommand" xml:space="preserve">
+    <value>不明なコマンド: '{}'</value>
+    <comment>{FixedPlaceholder="{}"}Command line arguments, file names and string inserts should not be translated</comment>
+  </data>
+  <data name="MessageWslcCannotRemoveRunningContainer" xml:space="preserve">
+    <value>コンテナー '{}' は実行中のため、削除できません。削除する前にコンテナーを停止するか、強制削除 (-f) を使用してください。</value>
+    <comment>{FixedPlaceholder="{}"}Command line arguments, file names and string inserts should not be translated</comment>
+  </data>
+  <data name="MessageWslcContainerNotRunning" xml:space="preserve">
+    <value>コンテナー '{}' が実行されていません。</value>
+    <comment>{FixedPlaceholder="{}"}Command line arguments, file names and string inserts should not be translated</comment>
+  </data>
+  <data name="MessageWslcContainerIpAddressNotSupported" xml:space="preserve">
+    <value>ContainerIpAddress はまだサポートされていません。</value>
+    <comment>{Locked="ContainerIpAddress"}Command line arguments, file names and string inserts should not be translated</comment>
+  </data>
+  <data name="MessageWslcContainerIsRunning" xml:space="preserve">
+    <value>コンテナー '{}' は実行中です。</value>
+    <comment>{FixedPlaceholder="{}"}Command line arguments, file names and string inserts should not be translated</comment>
+  </data>
+  <data name="MessageWslcContainerModeNoAdditionalNetworks" xml:space="preserve">
+    <value>コンテナー ネットワーク モードでは、追加のネットワークは許可されていません。</value>
+  </data>
+  <data name="MessageWslcContainerModeNoPorts" xml:space="preserve">
+    <value>ポート マッピングは、コンテナー ネットワーク モードではサポートされていません。ポートはターゲット コンテナーによって所有されます。</value>
+  </data>
+  <data name="MessageWslcContainerModeRequiresTarget" xml:space="preserve">
+    <value>コンテナー ネットワーク モードにはターゲット コンテナー名が必要です。</value>
+  </data>
+  <data name="MessageWslcContainerModeTargetNotFound" xml:space="preserve">
+    <value>ターゲット コンテナー '{}' が見つかりません。</value>
+    <comment>{FixedPlaceholder="{}"}Command line arguments, file names and string inserts should not be translated</comment>
+  </data>
+  <data name="MessageWslcContainerNotFound" xml:space="preserve">
+    <value>コンテナー '{}' が見つかりません。</value>
+    <comment>{FixedPlaceholder="{}"}Command line arguments, file names and string inserts should not be translated</comment>
+  </data>
+  <data name="MessageWslcContainerNetworkNameRequired" xml:space="preserve">
+    <value>カスタム ネットワークの種類にはコンテナー ネットワーク名が必要です。</value>
+  </data>
+  <data name="MessageWslcNetworkNameRequired" xml:space="preserve">
+    <value>ネットワーク名を空にすることはできません。</value>
+  </data>
+  <data name="WSLCCLI_UnrecognizedCommandError" xml:space="preserve">
+    <value>認識されないコマンド: '{}'</value>
+    <comment>{FixedPlaceholder="{}"}Command line arguments, file names and string inserts should not be translated</comment>
+  </data>
+  <data name="WSLCCLI_RequiredArgumentError" xml:space="preserve">
+    <value>必須の引数が指定されていません: '{}'</value>
+    <comment>{FixedPlaceholder="{}"}Command line arguments, file names and string inserts should not be translated</comment>
+  </data>
+  <data name="WSLCCLI_TooManyArgumentsError" xml:space="preserve">
+    <value>引数に指定された回数が許容回数を超えています: '{}'</value>
+    <comment>{FixedPlaceholder="{}"}Command line arguments, file names and string inserts should not be translated</comment>
+  </data>
+  <data name="WSLCCLI_HelpArgDescription" xml:space="preserve">
+    <value>選択したコマンドに関するヘルプを表示</value>
+  </data>
+  <data name="WSLCCLI_MultipleExclusiveArgumentsProvided" xml:space="preserve">
+    <value>複数の相互排他的引数が指定されました: '{}'</value>
+    <comment>{FixedPlaceholder="{}"}Command line arguments, file names and string inserts should not be translated</comment>
+  </data>
+  <data name="WSLCCLI_DependencyArgumentMissing" xml:space="preserve">
+    <value>引数 {} は {} でのみ使用できます</value>
+    <comment>{FixedPlaceholder="{}"}{FixedPlaceholder="{}"}Command line arguments, file names and string inserts should not be translated</comment>
+  </data>
+  <data name="WSLCCLI_Usage" xml:space="preserve">
+    <value>使用: {} {}</value>
+    <comment>{FixedPlaceholder="{}"}{FixedPlaceholder="{}"}Command line arguments, file names and string inserts should not be translated</comment>
+  </data>
+  <data name="WSLCCLI_Command" xml:space="preserve">
+    <value>コマンド</value>
+  </data>
+  <data name="WSLCCLI_Options" xml:space="preserve">
+    <value>オプション</value>
+  </data>
+  <data name="WSLCCLI_AvailableCommandAliases" xml:space="preserve">
+    <value>次のコマンド エイリアスを使用できます:</value>
+  </data>
+  <data name="WSLCCLI_AvailableCommands" xml:space="preserve">
+    <value>使用できるコマンドは次のとおりです:</value>
+  </data>
+  <data name="WSLCCLI_AvailableSubcommands" xml:space="preserve">
+    <value>次のサブコマンドを使用できます。</value>
+  </data>
+  <data name="WSLCCLI_AvailableOptions" xml:space="preserve">
+    <value>次のオプションを使用できます。</value>
+  </data>
+  <data name="WSLCCLI_AvailableArguments" xml:space="preserve">
+    <value>次の引数を使用できます。</value>
+  </data>
+  <data name="WSLCCLI_HelpForDetails" xml:space="preserve">
+    <value>特定のコマンドの詳細については、そのコマンドにヘルプ引数を渡します。</value>
+  </data>
+  <data name="WSLCCLI_InvalidNameError" xml:space="preserve">
+    <value>現在のコマンドの引数名が認識されませんでした: '{}'</value>
+    <comment>{FixedPlaceholder="{}"}Command line arguments, file names and string inserts should not be translated</comment>
+  </data>
+  <data name="WSLCCLI_CommandRequiresAdmin" xml:space="preserve">
+    <value>このコマンドを実行するには、管理者権限が必要です。</value>
+  </data>
+  <data name="WSLCCLI_SessionIdArgDescription" xml:space="preserve">
+    <value>使用するセッションを指定する</value>
+  </data>
+  <data name="WSLCCLI_AttachArgDescription" xml:space="preserve">
+    <value>コンテナーの stdout/stderr にアタッチする</value>
+  </data>
+  <data name="WSLCCLI_InteractiveArgDescription" xml:space="preserve">
+    <value>stdin にアタッチして開いたままにする</value>
+  </data>
+  <data name="WSLCCLI_PortArgDescription" xml:space="preserve">
+    <value>使用するポートを指定する</value>
+  </data>
+  <data name="WSLCCLI_ContainerIdArgDescription" xml:space="preserve">
+    <value>コンテナー ID</value>
+  </data>
+  <data name="WSLCCLI_MissingArgumentError" xml:space="preserve">
+    <value>引数の値がありません: '{}'</value>
+    <comment>{FixedPlaceholder="{}"}Command line arguments, file names and string inserts should not be translated</comment>
+  </data>
+  <data name="WSLCCLI_InvalidAliasError" xml:space="preserve">
+    <value>引数の別名が現在のコマンドに対して認識されませんでした: '{}'</value>
+    <comment>{FixedPlaceholder="{}"}Command line arguments, file names and string inserts should not be translated</comment>
+  </data>
+  <data name="WSLCCLI_InvalidArgumentSpecifierError" xml:space="preserve">
+     <value>無効な引数指定子: '{}'</value>
+     <comment>{FixedPlaceholder="{}"}Command line arguments, file names and string inserts should not be translated</comment>
+  </data>
+  <data name="WSLCCLI_AdjoinedNotFoundError" xml:space="preserve">
+     <value>隣接フラグ エイリアスが見つかりません: '{}'</value>
+     <comment>{FixedPlaceholder="{}"}Command line arguments, file names and string inserts should not be translated</comment>
+  </data>
+  <data name="WSLCCLI_AdjoinedNotFlagError" xml:space="preserve">
+     <value>隣接エイリアスがフラグではありません: '{}'</value>
+     <comment>{FixedPlaceholder="{}"}Command line arguments, file names and string inserts should not be translated</comment>
+  </data>
+  <data name="WSLCCLI_SingleCharAfterDashError" xml:space="preserve">
+     <value>無効な引数指定子: '{}'</value>
+     <comment>{FixedPlaceholder="{}"}Command line arguments, file names and string inserts should not be translated</comment>
+  </data>
+  <data name="WSLCCLI_FlagContainAdjoinedError" xml:space="preserve">
+     <value>フラグ引数に隣接する値を含めることはできません: '{}'</value>
+     <comment>{FixedPlaceholder="{}"}Command line arguments, file names and string inserts should not be translated</comment>
+  </data>
+  <data name="WSLCCLI_ExtraPositionalError" xml:space="preserve">
+     <value>必要なものが見つからないときに位置指定引数が見つかりました: '{}'</value>
+     <comment>{FixedPlaceholder="{}"}Command line arguments, file names and string inserts should not be translated</comment>
+  </data>
+  <data name="WSLCCLI_MissingArgumentNameError" xml:space="preserve">
+     <value>以下に引数名がありません: '{}'</value>
+     <comment>{FixedPlaceholder="{}"}Command line arguments, file names and string inserts should not be translated</comment>
+  </data>
+  <data name="WSLCCLI_FailedResolvingForwardError" xml:space="preserve">
+     <value>次の引数で始まる転送された引数を解決できませんでした: '{}'</value>
+     <comment>{FixedPlaceholder="{}"}Command line arguments, file names and string inserts should not be translated</comment>
+  </data>
+  <data name="WSLCCLI_CommandHasNoForwardArgumentsError" xml:space="preserve">
+     <value>無効な余分な引数が見つかりました: '{}'</value>
+     <comment>{FixedPlaceholder="{}"}Command line arguments, file names and string inserts should not be translated</comment>
+  </data>
+  <data name="WSLCCLI_ValueMustBeLastInAliasChainError" xml:space="preserve">
+     <value>値を持つエイリアス引数は、エイリアス チェーンの最後に指定する必要があります: '{}'</value>
+     <comment>{FixedPlaceholder="{}"}Command line arguments, file names and string inserts should not be translated</comment>
+  </data>
+  <data name="WSLCCLI_CopyrightHeader" xml:space="preserve">
+     <value>Copyright (c) Microsoft Corporation.All rights reserved.
+この製品に関するプライバシー情報については、https://aka.ms/privacy にアクセスしてください。</value>
+     <comment>Copyright notice and privacy link</comment>
+  </data>
+  <data name="MessageWslcInvalidImage" xml:space="preserve">
+    <value>無効な画像: '{}'</value>
+    <comment>{FixedPlaceholder="{}"}Command line arguments, file names and string inserts should not be translated</comment>
+  </data>
+  <data name="MessageWslcInvalidName" xml:space="preserve">
+    <value>無効な名前です: '{}'</value>
+    <comment>{FixedPlaceholder="{}"}Command line arguments, file names and string inserts should not be translated</comment>
+  </data>
+  <data name="MessagePathNotAbsolute" xml:space="preserve">
+    <value>パスが絶対パスではありません: '{}'</value>
+    <comment>{FixedPlaceholder="{}"}Command line arguments, file names and string inserts should not be translated</comment>
+  </data>
+  <data name="MessageWslcVolumeNotFound" xml:space="preserve">
+    <value>ボリュームが見つかりません: '{}'</value>
+    <comment>{FixedPlaceholder="{}"}Command line arguments, file names and string inserts should not be translated</comment>
+  </data>
+  <data name="MessageWslcImageNotFound" xml:space="preserve">
+    <value>イメージ '{}' が見つかりません。</value>
+    <comment>{FixedPlaceholder="{}"}Command line arguments, file names and string inserts should not be translated</comment>
+  </data>
+  <data name="MessageWslcMissingVolumeOption" xml:space="preserve">
+    <value>必須のオプションがありません: '{}'</value>
+    <comment>{FixedPlaceholder="{}"}Command line arguments, file names and string inserts should not be translated</comment>
+  </data>
+  <data name="MessageWslcInvalidVolumeOption" xml:space="preserve">
+    <value>オプション '{}' の値が無効です: '{}'</value>
+    <comment>{FixedPlaceholder="{}"}Command line arguments, file names and string inserts should not be translated</comment>
+  </data>
+  <data name="MessageWslcUnknownVolumeOption" xml:space="preserve">
+    <value>不明なオプションです: '{}'</value>
+    <comment>{FixedPlaceholder="{}"}Command line arguments, file names and string inserts should not be translated</comment>
+  </data>
+  <data name="MessageWslcInvalidVolumeType" xml:space="preserve">
+    <value>サポートされていないボリュームの種類: '{}'</value>
+    <comment>{FixedPlaceholder="{}"}Command line arguments, file names and string inserts should not be translated</comment>
+  </data>
+  <data name="MessageWslcUnsupportedVolumeDriverOpts" xml:space="preserve">
+    <value>サポートされていないボリューム ドライバー オプション: {}</value>
+    <comment>{FixedPlaceholder="{}"}Command line arguments, file names and string inserts should not be translated</comment>
+  </data>
+  <data name="MessageWslcVolumeInUse" xml:space="preserve">
+    <value>ボリューム '{}' は使用中です。</value>
+    <comment>{FixedPlaceholder="{}"}Command line arguments, file names and string inserts should not be translated</comment>
+  </data>
+  <data name="MessageWslcNetworkNotFound" xml:space="preserve">
+    <value>ネットワークが見つかりません: '{}'</value>
+    <comment>{FixedPlaceholder="{}"}Command line arguments, file names and string inserts should not be translated</comment>
+  </data>
+  <data name="MessageWslcInvalidNetworkDriver" xml:space="preserve">
+    <value>サポートされていないネットワーク ドライバー: '{}'</value>
+    <comment>{FixedPlaceholder="{}"}Command line arguments, file names and string inserts should not be translated</comment>
+  </data>
+  <data name="MessageWslcNetworkInUse" xml:space="preserve">
+    <value>ネットワーク '{}' にはアクティブなエンドポイントがあります。</value>
+    <comment>{FixedPlaceholder="{}"}Command line arguments, file names and string inserts should not be translated</comment>
+  </data>
+  <data name="MessageWslcNetworkAlreadyExists" xml:space="preserve">
+    <value>ネットワーク '{}' は既に存在します。</value>
+    <comment>{FixedPlaceholder="{}"}Command line arguments, file names and string inserts should not be translated</comment>
+  </data>
+  <data name="MessageWslcAdditionalNetworksRequirePrimary" xml:space="preserve">
+    <value>プライマリ ネットワーク モードが 'host' または 'none' の場合、追加のネットワークは許可されません。</value>
+    <comment>{Locked="host"}{Locked="none"}Command line arguments, file names and string inserts should not be translated</comment>
+  </data>
+  <data name="MessageWslcDuplicateNetwork" xml:space="preserve">
+    <value>重複するネットワーク: '{}'</value>
+    <comment>{FixedPlaceholder="{}"}Command line arguments, file names and string inserts should not be translated</comment>
+  </data>
+  <data name="MessageWslcFailedToMountVolume" xml:space="preserve">
+    <value>ボリューム '{}' を作成できませんでした: {}</value>
+    <comment>{FixedPlaceholder="{}"}Command line arguments, file names and string inserts should not be translated</comment>
+  </data>
+  <data name="MessageWslcPortInUse" xml:space="preserve">
+    <value>ポート {} は既に使用されているため、コンテナー {} を開始できません</value>
+    <comment>{FixedPlaceholder="{}"}Command line arguments, file names and string inserts should not be translated</comment>
+  </data>
+  <data name="MessageWslcBothDockerAndContainerFileFound" xml:space="preserve">
+    <value>Dockerfile と Containerfile の両方が見つかりました。-f を使用して使用するファイルを選択してください</value>
+    <comment>{FixedPlaceholder="Dockerfile"}{FixedPlaceholder="Containerfile"}{FixedPlaceholder="-f"}Command line arguments, file names and string inserts should not be translated</comment>
+  </data>
+  <data name="MessageWslcFailedToOpenFile" xml:space="preserve">
+    <value>'{}' を開けませんでした: {}</value>
+    <comment>{FixedPlaceholder="{}"}Command line arguments, file names and string inserts should not be translated</comment>
+  </data>
+  <data name="MessageWslcImportPipeNotSupported" xml:space="preserve">
+    <value>パイプからのインポートはサポートされていません。ファイルから stdin をリダイレクトしてください。</value>
+  </data>
+  <data name="MessageWslcBuildFileNotFound" xml:space="preserve">
+    <value>'{}' に Containerfile または Dockerfile が見つかりませんでした</value>
+    <comment>{FixedPlaceholder="{}"}Command line arguments, file names and string inserts should not be translated</comment>
+  </data>
+  <data name="MessageWslcSessionStorageNotFound" xml:space="preserve">
+    <value>'{}' に WSLC セッションが見つかりません</value>
+    <comment>{FixedPlaceholder="{}"}Command line arguments, file names and string inserts should not be translated</comment>
+  </data>
+  <data name="MessageWslcTagImageInvalidFormat" xml:space="preserve">
+    <value>イメージ タグの形式が無効です: '{}'。必要な形式は 'name:tag' です</value>
+    <comment>{FixedPlaceholder="{}"}Command line arguments, file names and string inserts should not be translated</comment>
+  </data>
+  <data name="WSLCCLI_RootCommandDesc" xml:space="preserve">
+    <value>WSLC は、Linux 用 Windows サブシステム のコンテナー CLI ツールです。</value>
+    <comment>{Locked="WSLC"}Product names should not be translated</comment>
+  </data>
+  <data name="WSLCCLI_RootCommandLongDesc" xml:space="preserve">
+    <value>WSLC はLinux 用 Windows サブシステム Container CLI ツールです。これにより、コマンド ラインから WSL コンテナーの管理と対話が可能になります。</value>
+    <comment>{Locked="WSLC"}{Locked="WSL"}Product names should not be translated</comment>
+  </data>
+  <data name="WSLCCLI_ContainerCommandDesc" xml:space="preserve">
+    <value>コンテナーを管理します。</value>
+  </data>
+  <data name="WSLCCLI_ContainerCommandLongDesc" xml:space="preserve">
+    <value>コンテナーの作成、開始、停止、削除など、WSL コンテナーのライフサイクルを管理します。</value>
+    <comment>{Locked="WSL"}Product names should not be translated</comment>
+  </data>
+  <data name="WSLCCLI_ContainerAttachDesc" xml:space="preserve">
+    <value>コンテナーにアタッチします。</value>
+  </data>
+  <data name="WSLCCLI_ContainerAttachLongDesc" xml:space="preserve">
+    <value>コンテナーにアタッチします。</value>
+  </data>
+  <data name="WSLCCLI_ContainerCreateDesc" xml:space="preserve">
+    <value>コンテナーを作成します。</value>
+  </data>
+  <data name="WSLCCLI_ContainerCreateLongDesc" xml:space="preserve">
+    <value>コンテナーを作成します。</value>
+  </data>
+  <data name="WSLCCLI_ContainerExecDesc" xml:space="preserve">
+    <value>実行中のコンテナーでコマンドを実行します。</value>
+  </data>
+  <data name="WSLCCLI_ContainerExecLongDesc" xml:space="preserve">
+    <value>実行中のコンテナーでコマンドを実行します。</value>
+  </data>
+  <data name="WSLCCLI_ContainerInspectDesc" xml:space="preserve">
+    <value>コンテナーを検査します。</value>
+  </data>
+  <data name="WSLCCLI_ContainerInspectLongDesc" xml:space="preserve">
+    <value>コンテナーに関する詳細情報を表示します。</value>
+  </data>
+  <data name="WSLCCLI_ContainerKillDesc" xml:space="preserve">
+    <value>コンテナーを中止します。</value>
+  </data>
+  <data name="WSLCCLI_ContainerKillLongDesc" xml:space="preserve">
+    <value>コンテナーを中止します。</value>
+  </data>
+  <data name="WSLCCLI_ContainerListDesc" xml:space="preserve">
+    <value>コンテナーを一覧表示します。</value>
+  </data>
+  <data name="WSLCCLI_ContainerListLongDesc" xml:space="preserve">
+    <value>コンテナーを一覧表示します。既定では、実行中のコンテナーのみが表示されます。すべてのコンテナーを含めるには --all を使用します。</value>
+    <comment>{Locked="--all "}Command line arguments, file names and string inserts should not be translated</comment>
+  </data>
+  <data name="WSLCCLI_ContainerLogsDesc" xml:space="preserve">
+    <value>コンテナー ログを表示します。</value>
+  </data>
+  <data name="WSLCCLI_ContainerLogsLongDesc" xml:space="preserve">
+    <value>コンテナーのログを表示します。</value>
+  </data>
+  <data name="WSLCCLI_ContainerRemoveDesc" xml:space="preserve">
+    <value>コンテナーを削除します。</value>
+  </data>
+  <data name="WSLCCLI_ContainerRemoveLongDesc" xml:space="preserve">
+    <value>コンテナーを削除します。</value>
+  </data>
+  <data name="WSLCCLI_ContainerRunDesc" xml:space="preserve">
+    <value>コンテナーを実行します。</value>
+  </data>
+  <data name="WSLCCLI_ContainerRunLongDesc" xml:space="preserve">
+    <value>コンテナーを実行します。デフォルトでは、コンテナーはフォアグラウンドで開始されます。--detach を使用してバックグラウンドで実行します。</value>
+    <comment>{Locked="--detach "}Command line arguments, file names and string inserts should not be translated</comment>
+  </data>
+  <data name="WSLCCLI_ContainerStartDesc" xml:space="preserve">
+    <value>コンテナーを開始します。</value>
+  </data>
+  <data name="WSLCCLI_ContainerStartLongDesc" xml:space="preserve">
+    <value>コンテナーを開始します。</value>
+  </data>
+  <data name="WSLCCLI_ContainerStatsDesc" xml:space="preserve">
+    <value>コンテナーのリソース使用状況の統計を表示します。</value>
+  </data>
+  <data name="WSLCCLI_ContainerStatsLongDesc" xml:space="preserve">
+    <value>実行中のコンテナーのリソース使用量 (CPU、メモリ、ネットワーク I/O、ブロック I/O、PID) のスナップショットを表示します。</value>
+  </data>
+  <data name="WSLCCLI_ContainerStopDesc" xml:space="preserve">
+    <value>コンテナーを停止します。</value>
+  </data>
+  <data name="WSLCCLI_ContainerStopLongDesc" xml:space="preserve">
+    <value>コンテナーを停止します。</value>
+  </data>
+  <data name="WSLCCLI_ImageCommandDesc" xml:space="preserve">
+    <value>イメージを管理します。</value>
+  </data>
+  <data name="WSLCCLI_ImageCommandLongDesc" xml:space="preserve">
+    <value>コンテナー イメージ (ビルド、プル、一覧表示、削除など) を管理します。</value>
+  </data>
+  <data name="WSLCCLI_ImageBuildDesc" xml:space="preserve">
+    <value>Dockerfile からイメージをビルドします。</value>
+    <comment>{Locked="Dockerfile"}Command line arguments should not be translated</comment>
+  </data>
+  <data name="WSLCCLI_ImageBuildLongDesc" xml:space="preserve">
+    <value>Dockerfile とビルド コンテキスト ディレクトリからイメージをビルドします。</value>
+    <comment>{Locked="Dockerfile"}Command line arguments should not be translated</comment>
+  </data>
+  <data name="WSLCCLI_ImageInspectDesc" xml:space="preserve">
+    <value>イメージを検査します。</value>
+  </data>
+  <data name="WSLCCLI_ImageInspectLongDesc" xml:space="preserve">
+    <value>イメージを検査します。</value>
+  </data>
+  <data name="WSLCCLI_ImageImportDesc" xml:space="preserve">
+    <value>tarball から画像をインポートします。</value>
+  </data>
+  <data name="WSLCCLI_ImageImportLongDesc" xml:space="preserve">
+    <value>tarball の内容をインポートして、ファイルシステム イメージを作成します。必要に応じて、イメージにリポジトリとタグ名のタグを付けます。</value>
+  </data>
+  <data name="WSLCCLI_ImageListDesc" xml:space="preserve">
+    <value>イメージを一覧表示します。</value>
+  </data>
+  <data name="WSLCCLI_ImageListLongDesc" xml:space="preserve">
+    <value>イメージを一覧表示します。</value>
+  </data>
+  <data name="WSLCCLI_ImageLoadDesc" xml:space="preserve">
+    <value>イメージを読み込みます。</value>
+  </data>
+  <data name="WSLCCLI_ImageLoadLongDesc" xml:space="preserve">
+    <value>イメージを読み込みます。</value>
+  </data>
+  <data name="WSLCCLI_ImagePullDesc" xml:space="preserve">
+    <value>イメージをプルします。</value>
+  </data>
+  <data name="WSLCCLI_ImagePullLongDesc" xml:space="preserve">
+    <value>イメージをプルします。</value>
+  </data>
+  <data name="WSLCCLI_ImagePruneAllArgDescription" xml:space="preserve">
+    <value>ダングリング イメージだけでなく、未使用のイメージをすべて削除します。</value>
+  </data>
+  <data name="WSLCCLI_ImagePruneDeleted" xml:space="preserve">
+    <value>削除済み: {}</value>
+    <comment>{FixedPlaceholder="{}"}Command line arguments, file names and string inserts should not be translated</comment>
+  </data>
+  <data name="WSLCCLI_ImagePruneDesc" xml:space="preserve">
+    <value>未使用のイメージを削除します。</value>
+  </data>
+  <data name="WSLCCLI_ImagePruneLongDesc" xml:space="preserve">
+    <value>すべてのダングリング イメージを削除します。--all が指定されている場合、どのコンテナーにも使用されていないすべてのイメージを削除します。</value>
+    <comment>{Locked="--all "}Command line arguments, file names and string inserts should not be translated</comment>
+  </data>
+  <data name="WSLCCLI_ImagePruneSpaceReclaimed" xml:space="preserve">
+    <value>解放された領域の合計: {:.2f} MB</value>
+    <comment>{FixedPlaceholder="{:.2f}"}Command line arguments, file names and string inserts should not be translated</comment>
+  </data>
+  <data name="WSLCCLI_ImagePruneUntagged" xml:space="preserve">
+    <value>タグなし: {}</value>
+    <comment>{FixedPlaceholder="{}"}Command line arguments, file names and string inserts should not be translated</comment>
+  </data>
+  <data name="WSLCCLI_ImagePushDesc" xml:space="preserve">
+    <value>イメージをレジストリにアップロードします。</value>
+  </data>
+  <data name="WSLCCLI_ImagePushLongDesc" xml:space="preserve">
+    <value>イメージをレジストリにアップロードします。</value>
+  </data>
+  <data name="WSLCCLI_ImageRemoveDesc" xml:space="preserve">
+    <value>イメージを削除します。</value>
+  </data>
+  <data name="WSLCCLI_ImageRemoveLongDesc" xml:space="preserve">
+    <value>イメージを削除します。</value>
+  </data>
+  <data name="WSLCCLI_ImageSaveDesc" xml:space="preserve">
+    <value>イメージを保存します。</value>
+  </data>
+  <data name="WSLCCLI_ImageSaveLongDesc" xml:space="preserve">
+    <value>イメージを保存します。</value>
+  </data>
+  <data name="WSLCCLI_LoginDesc" xml:space="preserve">
+    <value>レジストリにログインします。</value>
+  </data>
+  <data name="WSLCCLI_LoginLongDesc" xml:space="preserve">
+    <value>レジストリにログインします。サーバーが指定されていない場合、デフォルトはセッションによって定義されます。</value>
+  </data>
+  <data name="WSLCCLI_LogoutDesc" xml:space="preserve">
+    <value>レジストリからログアウトします。</value>
+  </data>
+  <data name="WSLCCLI_LogoutLongDesc" xml:space="preserve">
+    <value>レジストリからログアウトします。サーバーが指定されていない場合、デフォルトはセッションによって定義されます。</value>
+  </data>
+  <data name="WSLCCLI_LoginSucceeded" xml:space="preserve">
+    <value>ログインに成功しました</value>
+  </data>
+  <data name="WSLCCLI_LogoutSucceeded" xml:space="preserve">
+    <value>{} のログイン資格情報を削除しています</value>
+    <comment>{FixedPlaceholder="{}"}Command line arguments, file names and string inserts should not be translated</comment>
+  </data>
+  <data name="WSLCCLI_LogoutNotFound" xml:space="preserve">
+    <value>{} にログインしていません</value>
+    <comment>{FixedPlaceholder="{}"}Command line arguments, file names and string inserts should not be translated</comment>
+  </data>
+  <data name="WSLCCLI_CredentialFileCorrupt" xml:space="preserve">
+    <value>資格情報ファイル '{}' を解析できませんでした: ファイルが壊れている可能性があります。</value>
+    <comment>{FixedPlaceholder="{}"}Command line arguments, file names and string inserts should not be translated</comment>
+  </data>
+  <data name="MessageWslcFailedToWriteFile" xml:space="preserve">
+    <value>'{}' を書き込みできませんでした: {}</value>
+    <comment>{FixedPlaceholder="{}"}Command line arguments, file names and string inserts should not be translated</comment>
+  </data>
+  <data name="WSLCCLI_LoginServerArgDescription" xml:space="preserve">
+    <value>サーバー</value>
+  </data>
+  <data name="WSLCCLI_LoginUsernameArgDescription" xml:space="preserve">
+    <value>ユーザー名</value>
+  </data>
+  <data name="WSLCCLI_LoginPasswordArgDescription" xml:space="preserve">
+    <value>パスワードまたは個人用アクセス トークン (PAT)</value>
+    <comment>{Locked="PAT"}Acronym should not be translated</comment>
+  </data>
+  <data name="WSLCCLI_LoginPasswordStdinArgDescription" xml:space="preserve">
+    <value>stdin からパスワードまたは個人用アクセス トークン (PAT) を取得する</value>
+    <comment>{Locked="PAT"}{Locked="stdin"}Technical terms should not be translated</comment>
+  </data>
+  <data name="WSLCCLI_LoginPasswordAndStdinMutuallyExclusive" xml:space="preserve">
+    <value>--password と --password-stdin は相互に排他的です</value>
+    <comment>{Locked="--password "}{Locked="--password-stdin "}Command line arguments, file names and string inserts should not be translated</comment>
+  </data>
+  <data name="WSLCCLI_LoginPasswordStdinRequiresUsername" xml:space="preserve">
+    <value>--password-stdin と共に --username を指定する必要があります</value>
+    <comment>{Locked="--username "}{Locked="--password-stdin"}Command line arguments, file names and string inserts should not be translated</comment>
+  </data>
+  <data name="WSLCCLI_LoginUsernamePrompt" xml:space="preserve">
+    <value>ユーザー名:</value>
+  </data>
+  <data name="WSLCCLI_LoginPasswordPrompt" xml:space="preserve">
+    <value>パスワード:</value>
+  </data>
+  <data name="WSLCCLI_RegistryCommandDesc" xml:space="preserve">
+    <value>レジストリ資格情報を管理します。</value>
+  </data>
+  <data name="WSLCCLI_RegistryCommandLongDesc" xml:space="preserve">
+    <value>コンテナー レジストリへのログインとログアウトなど、レジストリ資格情報を管理します。</value>
+  </data>
+  <data name="WSLCCLI_SystemCommandDesc" xml:space="preserve">
+    <value>システムレベルのコマンド</value>
+  </data>
+  <data name="WSLCCLI_SystemCommandLongDesc" xml:space="preserve">
+    <value>システムレベルの管理コマンド。</value>
+  </data>
+  <data name="WSLCCLI_ImageTagDesc" xml:space="preserve">
+    <value>イメージにタグを付けます。</value>
+  </data>
+  <data name="WSLCCLI_ImageTagLongDesc" xml:space="preserve">
+    <value>イメージにタグを付けます。</value>
+  </data>
+  <data name="WSLCCLI_SessionCommandDesc" xml:space="preserve">
+    <value>セッションを管理します。</value>
+  </data>
+  <data name="WSLCCLI_SessionCommandLongDesc" xml:space="preserve">
+    <value>アクティブなセッションの一覧表示や対話型シェルの起動など、WSL コンテナー セッションを管理します。</value>
+    <comment>{Locked="WSL"}Product names should not be translated</comment>
+  </data>
+  <data name="WSLCCLI_SessionListDesc" xml:space="preserve">
+    <value>セッションを一覧表示します。</value>
+  </data>
+  <data name="WSLCCLI_SessionListLongDesc" xml:space="preserve">
+    <value>アクティブなセッションを一覧表示します。</value>
+  </data>
+  <data name="WSLCCLI_SessionShellDesc" xml:space="preserve">
+    <value>セッションにアタッチします。</value>
+  </data>
+  <data name="WSLCCLI_SessionShellLongDesc" xml:space="preserve">
+    <value>アクティブなセッションにアタッチします。セッション ID が指定されていない場合は、既定のセッション wslc が使用されます。</value>
+    <comment>{Locked="wslc"}Command line arguments should not be translated</comment>
+  </data>
+  <data name="WSLCCLI_SessionTerminateDesc" xml:space="preserve">
+    <value>セッションを終了します。</value>
+  </data>
+  <data name="WSLCCLI_SessionTerminateLongDesc" xml:space="preserve">
+    <value>アクティブなセッションを終了します。セッションが指定されていない場合、既定のセッションは終了します。</value>
+  </data>
+  <data name="WSLCCLI_SessionEnterDesc" xml:space="preserve">
+    <value>一時的なセッションを入力します。</value>
+  </data>
+  <data name="WSLCCLI_SessionEnterLongDesc" xml:space="preserve">
+    <value>指定されたストレージ パスを使用して非永続的セッションを作成し、それにシェルを開きます。シェルの終了時にセッションが削除されます。名前が指定されていない場合、GUID が生成され、stderr に印刷されます。</value>
+    <comment>{Locked="GUID"}{Locked="stderr"}Technical terms should not be translated</comment>
+  </data>
+  <data name="WSLCCLI_SessionEnterNameArgDescription" xml:space="preserve">
+    <value>セッションの名前。指定しない場合、GUID が生成されます。</value>
+    <comment>{Locked="GUID"}Technical terms should not be translated</comment>
+  </data>
+  <data name="WSLCCLI_SettingsCommandDesc" xml:space="preserve">
+    <value>既定のエディターで設定ファイルを開きます。</value>
+  </data>
+  <data name="WSLCCLI_SettingsCommandLongDesc" xml:space="preserve">
+    <value>.yaml ファイルの wslc ユーザー設定ファイルをシステムの既定のエディターで開きます。
+初回実行時に、既定ですべての設定がコメントアウトされたファイルを作成します。</value>
+    <comment>{Locked="wslc"}{Locked=".yaml"}Command line arguments should not be translated</comment>
+  </data>
+  <data name="WSLCCLI_SettingsResetDesc" xml:space="preserve">
+    <value>設定を組み込みの既定値にリセットします。</value>
+  </data>
+  <data name="WSLCCLI_SettingsResetLongDesc" xml:space="preserve">
+    <value>コメント出力された既定のテンプレートで設定ファイルを上書きします。</value>
+  </data>
+  <data name="WSLCCLI_SettingsResetConfirm" xml:space="preserve">
+    <value>設定が既定値にリセットされました。</value>
+  </data>
+  <data name="WSLCCLI_VersionDesc" xml:space="preserve">
+    <value>バージョン情報を表示します。</value>
+  </data>
+  <data name="WSLCCLI_VersionLongDesc" xml:space="preserve">
+    <value>このツールのバージョン情報を表示します。</value>
+  </data>
+  <data name="WSLCCLI_AllArgDescription" xml:space="preserve">
+    <value>状態に関係なくすべてを表示します。</value>
+  </data>
+  <data name="WSLCCLI_BuildArgDescription" xml:space="preserve">
+    <value>ビルド時の変数を設定します (KEY=VALUE)</value>
+    <comment>{Locked="KEY=VALUE"}Command line arguments should not be translated</comment>
+  </data>
+  <data name="WSLCCLI_BuildPullArgDescription" xml:space="preserve">
+    <value>常に新しいバージョンのイメージのプルを試みます</value>
+  </data>
+  <data name="WSLCCLI_BuildTargetArgDescription" xml:space="preserve">
+    <value>ビルドするターゲット ビルド ステージを設定します</value>
+  </data>
+  <data name="WSLCCLI_CommandArgDescription" xml:space="preserve">
+    <value>実行するコマンド</value>
+  </data>
+  <data name="WSLCCLI_ForceArgDescription" xml:space="preserve">
+    <value>実行中であってもコンテナーを削除します</value>
+  </data>
+  <data name="WSLCCLI_DetachArgDescription" xml:space="preserve">
+    <value>コンテナーをデタッチ モードで実行します</value>
+  </data>
+  <data name="WSLCCLI_EntrypointArgDescription" xml:space="preserve">
+    <value>コンテナー初期化プロセスの実行可能ファイルを指定します</value>
+  </data>
+  <data name="WSLCCLI_EnvArgDescription" xml:space="preserve">
+    <value>環境変数の Key=Value のペア</value>
+    <comment>{Locked="Key=Value"}Command line arguments should not be translated</comment>
+  </data>
+  <data name="WSLCCLI_EnvFileArgDescription" xml:space="preserve">
+    <value>環境変数の key=value のペアを含むファイル</value>
+    <comment>{Locked="key=value"}Command line arguments should not be translated</comment>
+  </data>
+  <data name="WSLCCLI_FileArgDescription" xml:space="preserve">
+    <value>Dockerfile へのパス (stdin から読み取るには "-" を使用します)</value>
+    <comment>{Locked="Dockerfile"}{Locked="stdin"}{Locked="-"}Command line arguments should not be translated</comment>
+  </data>
+  <data name="WSLCCLI_FilterArgDescription" xml:space="preserve">
+    <value>指定された条件に基づいて出力をフィルター処理する</value>
+  </data>
+  <data name="WSLCCLI_InvalidFilterError" xml:space="preserve">
+    <value>'-f、--filter' フラグの引数 "{}" が無効です: フィルターの形式が正しくありません (名前=値が必要です)</value>
+    <comment>{FixedPlaceholder="{}"}{Locked="--filter'"}Command line arguments, file names and string inserts should not be translated</comment>  </data>
+  <data name="WSLCCLI_FollowArgDescription" xml:space="preserve">
+    <value>ログ出力をフォローします</value>
+  </data>
+  <data name="WSLCCLI_FormatArgDescription" xml:space="preserve">
+    <value>出力の書式設定 (json または table) (既定値: table)</value>
+    <comment>{Locked="json"}{Locked="table"}Command line arguments should not be translated</comment>
+  </data>
+  <data name="WSLCCLI_ForwardArgsDescription" xml:space="preserve">
+    <value>コンテナーの初期化プロセスに渡す引数</value>
+  </data>
+  <data name="WSLCCLI_GpusArgDescription" xml:space="preserve">
+    <value>Add GPU devices to the container ('all' to pass all GPUs)</value>
+    <comment>{Locked="all"}</comment>
+  </data>
+  <data name="WSLCCLI_GpusInvalidValue" xml:space="preserve">
+    <value>無効な {} 値: '{}'。'all' のみがサポートされています。</value>
+    <comment>{FixedPlaceholder="{}"}Command line arguments, file names and string inserts should not be translated</comment>
+  </data>
+  <data name="WSLCCLI_ImageForceArgDescription" xml:space="preserve">
+    <value>使用中であってもイメージを削除します</value>
+  </data>
+  <data name="WSLCCLI_ImageIdArgDescription" xml:space="preserve">
+    <value>イメージ名</value>
+  </data>
+  <data name="WSLCCLI_ImportFileArgDescription" xml:space="preserve">
+    <value>stdin から読み取るには、ファイルまたは - を指定します</value>
+  </data>
+  <data name="WSLCCLI_InputArgDescription" xml:space="preserve">
+    <value>イメージを含む tar アーカイブ ファイルへのパスを指定します</value>
+  </data>
+  <data name="WSLCCLI_LabelArgDescription" xml:space="preserve">
+    <value>オブジェクトにメタデータを設定します</value>
+  </data>
+  <data name="WSLCCLI_LabelKeyEmptyError" xml:space="preserve">
+    <value>ラベル キーを空にすることはできません</value>
+  </data>
+  <data name="WSLCCLI_LastArgDescription" xml:space="preserve">
+    <value>最後に作成された n 個のコンテナーを表示する (すべての状態を含む)</value>
+  </data>
+  <data name="WSLCCLI_LatestArgDescription" xml:space="preserve">
+    <value>最後に作成されたコンテナーを表示する (すべての状態を含む)</value>
+  </data>
+  <data name="WSLCCLI_HostnameArgDescription" xml:space="preserve">
+    <value>コンテナー ホスト名</value>
+  </data>
+  <data name="WSLCCLI_NameArgDescription" xml:space="preserve">
+    <value>コンテナーの名前</value>
+  </data>
+  <data name="WSLCCLI_NoCacheArgDescription" xml:space="preserve">
+    <value>イメージのビルド時にキャッシュを使用しない</value>
+  </data>
+  <data name="WSLCCLI_NoPruneArgDescription" xml:space="preserve">
+    <value>タグのない親は削除しないでください</value>
+  </data>
+  <data name="WSLCCLI_NoTruncArgDescription" xml:space="preserve">
+    <value>出力を切り捨てないでください</value>
+  </data>
+  <data name="WSLCCLI_OutputArgDescription" xml:space="preserve">
+    <value>保存されたイメージのパス</value>
+  </data>
+  <data name="WSLCCLI_PathArgDescription" xml:space="preserve">
+    <value>ビルド コンテキスト ディレクトリへのパス</value>
+  </data>
+  <data name="WSLCCLI_PublishArgDescription" xml:space="preserve">
+    <value>コンテナーからホストへのポートを公開します</value>
+  </data>
+  <data name="WSLCCLI_PublishAllArgDescription" xml:space="preserve">
+    <value>公開されているすべてのポートをランダム ホスト ポートに発行する</value>
+  </data>
+  <data name="WSLCCLI_QuietArgDescription" xml:space="preserve">
+    <value>コンテナー ID のみを出力します</value>
+  </data>
+  <data name="WSLCCLI_RemoveArgDescription" xml:space="preserve">
+    <value>コンテナーを停止後に削除します</value>
+  </data>
+  <data name="WSLCCLI_StopSignalArgDescription" xml:space="preserve">
+    <value>コンテナーを停止するシグナル</value>
+  </data>
+  <data name="WSLCCLI_ShmSizeArgDescription" xml:space="preserve">
+    <value>/dev/shm のサイズ (例: 64M、1G)</value>
+    <comment>{Locked="/dev/shm"}Command line arguments should not be translated</comment>
+  </data>
+  <data name="WSLCCLI_SessionIdPositionalArgDescription" xml:space="preserve">
+    <value>セッション ID</value>
+  </data>
+  <data name="WSLCCLI_SessionStoragePositionalArgDescription" xml:space="preserve">
+    <value>セッション ストレージ パス</value>
+  </data>
+  <data name="WSLCCLI_SignalArgDescription" xml:space="preserve">
+    <value>送信するシグナル</value>
+  </data>
+  <data name="WSLCCLI_SourceArgDescription" xml:space="preserve">
+    <value>image-name[:tag] 形式の現在または既存のイメージ参照</value>
+  </data>
+  <data name="WSLCCLI_TagArgDescription" xml:space="preserve">
+    <value>ビルドされたイメージのタグ</value>
+  </data>
+  <data name="WSLCCLI_TailArgDescription" xml:space="preserve">
+    <value>ログの末尾から表示する行数</value>
+  </data>
+  <data name="WSLCCLI_TargetArgDescription" xml:space="preserve">
+    <value>image-name[:tag] 形式の新しいイメージ参照</value>
+  </data>
+  <data name="WSLCCLI_TimeArgDescription" xml:space="preserve">
+    <value>実行するまでの待機時間 (秒) (既定値 5)</value>
+  </data>
+  <data name="WSLCCLI_TTYArgDescription" xml:space="preserve">
+    <value>コンテナー プロセスで TTY を開きます。</value>
+    <comment>{Locked="TTY"}Command line arguments should not be translated</comment>
+  </data>
+  <data name="WSLCCLI_VerboseArgDescription" xml:space="preserve">
+    <value>詳細な説明を出力します</value>
+  </data>
+  <data name="WSLCCLI_VersionArgDescription" xml:space="preserve">
+    <value>このツールのバージョン情報を表示します</value>
+  </data>
+  <data name="WSLCCLI_VolumeArgDescription" xml:space="preserve">
+    <value>ボリュームをコンテナーにバインド マウントします</value>
+  </data>
+  <data name="WSLCCLI_WorkingDirArgDescription" xml:space="preserve">
+    <value>コンテナー内の作業ディレクトリ</value>
+  </data>
+  <data name="WSLCCLI_CIDFileArgDescription" xml:space="preserve">
+    <value>指定されたパスにコンテナー ID を書き込みます</value>
+  </data>
+  <data name="WSLCCLI_DNSArgDescription" xml:space="preserve">
+    <value>resolv.conf 内の DNS ネームサーバーの IP アドレス</value>
+    <comment>{Locked="resolv.conf"}Command line arguments should not be translated</comment>
+  </data>
+  <data name="WSLCCLI_DNSDomainArgDescription" xml:space="preserve">
+    <value>既定の DNS ドメインを設定します</value>
+    <comment>{Locked="DNS"}Command line arguments should not be translated</comment>
+  </data>
+  <data name="WSLCCLI_DNSOptionArgDescription" xml:space="preserve">
+    <value>DNS オプションを設定します</value>
+    <comment>{Locked="DNS"}Command line arguments should not be translated</comment>
+  </data>
+  <data name="WSLCCLI_DNSSearchArgDescription" xml:space="preserve">
+    <value>DNS 検索ドメインを設定します</value>
+    <comment>{Locked="DNS"}Command line arguments should not be translated</comment>
+  </data>
+  <data name="WSLCCLI_DomainnameArgDescription" xml:space="preserve">
+    <value>コンテナー ドメイン名</value>
+  </data>
+  <data name="WSLCCLI_GroupIdArgDescription" xml:space="preserve">
+    <value>プロセスのグループ ID</value>
+  </data>
+  <data name="WSLCCLI_NoDNSArgDescription" xml:space="preserve">
+    <value>コンテナー内に DNS の構成がありません</value>
+    <comment>{Locked="DNS"}Command line arguments should not be translated</comment>
+  </data>
+  <data name="WSLCCLI_ProgressArgDescription" xml:space="preserve">
+    <value>進行状況の種類 (形式: none|ansi) (既定値: ansi)</value>
+    <comment>{Locked="none"}{Locked="ansi"}Command line arguments should not be translated</comment>
+  </data>
+  <data name="WSLCCLI_PullArgDescription" xml:space="preserve">
+    <value>イメージのプル ポリシー (always|missing|never) (既定値: never)</value>
+    <comment>{Locked="always"}{Locked="missing"}{Locked="never"}Command line arguments should not be translated</comment>
+  </data>
+  <data name="WSLCCLI_SchemeArgDescription" xml:space="preserve">
+    <value>レジストリ接続にこのスキームを使用します</value>
+  </data>
+  <data name="WSLCCLI_TMPFSArgDescription" xml:space="preserve">
+    <value>tmpfs を指定されたパスにあるコンテナーにマウントします</value>
+    <comment>{Locked="tmpfs"}Command line arguments should not be translated</comment>
+  </data>
+  <data name="WSLCCLI_UserArgDescription" xml:space="preserve">
+    <value>プロセスのユーザー ID (name|uid|uid:gid)</value>
+    <comment>{Locked="name|uid|uid:gid"}Command line arguments should not be translated</comment>
+  </data>
+  <data name="WSLCCLI_VirtualArgDescription" xml:space="preserve">
+    <value>仮想化機能をコンテナーに公開します</value>
+  </data>
+  <data name="WSLCCLI_ContainerExecForwardArgsDescription" xml:space="preserve">
+    <value>コンテナー内で実行されるコマンドに渡す引数</value>
+  </data>
+  <data name="WSLCCLI_SessionListVerboseArgDescription" xml:space="preserve">
+    <value>一覧表示されたセッションに関する詳細情報を表示します。</value>
+  </data>
+  <data name="WSLCCLI_InvalidFormatError" xml:space="preserve">
+    <value>無効な形式の種類が指定されました。サポートされている形式の種類: json、table</value>
+    <comment>{Locked="json"}{Locked="table"}Command line arguments should not be translated</comment>
+  </data>
+  <data name="WSLCCLI_InvalidInspectError" xml:space="preserve">
+    <value>無効な {} 値: {} は認識された検査の種類ではありません。サポートされている検査の種類: {}。</value>
+    <comment>{FixedPlaceholder="{}"}Command line arguments, file names and string inserts should not be translated</comment>
+  </data>
+  <data name="WSLCCLI_InvalidSignalError" xml:space="preserve">
+    <value>無効な {} 値: {} は認識されたシグナル名または番号ではありません (例: SIGKILL、kill、または 9)。</value>
+    <comment>{FixedPlaceholder="{}"}Command line arguments, file names and string inserts should not be translated</comment>
+  </data>
+  <data name="WSLCCLI_InvalidIntegerArgumentError" xml:space="preserve">
+    <value>無効な {} 引数の値: {}</value>
+    <comment>{FixedPlaceholder="{}"}Command line arguments, file names and string inserts should not be translated</comment>
+  </data>
+  <data name="WSLCCLI_SignalOutOfRangeError" xml:space="preserve">
+    <value>無効な {} 値: {} は有効な範囲外です ({}-{})。</value>
+    <comment>{FixedPlaceholder="{}"}Command line arguments, file names and string inserts should not be translated</comment>
+  </data>
+  <data name="WSLCCLI_InvalidMemorySizeError" xml:space="preserve">
+    <value>無効な {} 引数の値: '{}'。メモリ サイズが予期されます (例: 256M、1G)</value>
+    <comment>{FixedPlaceholder="{}"}Command line arguments, file names and string inserts should not be translated{Locked="256M"}{Locked="1G"}</comment>
+  </data>
+  <data name="WSLCCLI_CIDFileAlreadyExistsError" xml:space="preserve">
+    <value>CID ファイル '{}' は既に存在します</value>
+    <comment>{FixedPlaceholder="{}"}Command line arguments, file names and string inserts should not be translated</comment>
+  </data>
+  <data name="WSLCCLI_ImageNotFoundPulling" xml:space="preserve">
+    <value>イメージ '{}' が見つかりません。プルしています</value>
+    <comment>{FixedPlaceholder="{}"}Command line arguments, file names and string inserts should not be translated</comment>
+  </data>
+  <data name="WSLCCLI_EnvKeyEmptyError" xml:space="preserve">
+    <value>環境変数キーを空にすることはできません</value>
+  </data>
+  <data name="WSLCCLI_EnvKeyWhitespaceError" xml:space="preserve">
+    <value>環境変数キー '{}' に空白を含めることはできません</value>
+    <comment>{FixedPlaceholder="{}"}Command line arguments, file names and string inserts should not be translated</comment>
+  </data>
+  <data name="WSLCCLI_ImageLoadNoInputError" xml:space="preserve">
+    <value>読み込みが要求されましたが、入力が指定されていません。</value>
+  </data>
+  <data name="WSLCCLI_VolumeCommandDesc" xml:space="preserve">
+    <value>ボリュームを管理します。</value>
+  </data>
+  <data name="WSLCCLI_VolumeCommandLongDesc" xml:space="preserve">
+    <value>WSL ボリュームの作成、検査、一覧表示、削除など、ボリュームのライフサイクルを管理します。</value>
+    <comment>{Locked="WSL"}Product names should not be translated</comment>
+  </data>
+  <data name="WSLCCLI_VolumeCreateDesc" xml:space="preserve">
+    <value>ボリュームを作成します。</value>
+  </data>
+  <data name="WSLCCLI_VolumeCreateLongDesc" xml:space="preserve">
+    <value>コンテナーにアタッチできる名前付きボリュームを作成します。</value>
+  </data>
+  <data name="WSLCCLI_VolumeRemoveDesc" xml:space="preserve">
+    <value>1 つ以上のボリュームを削除します。</value>
+  </data>
+  <data name="WSLCCLI_VolumeRemoveLongDesc" xml:space="preserve">
+    <value>1 つ以上のボリュームを削除します。コンテナーで使用中のボリュームは削除できません。</value>
+  </data>
+  <data name="WSLCCLI_VolumeInspectDesc" xml:space="preserve">
+    <value>1 つ以上のボリュームの詳細情報を表示します。</value>
+  </data>
+  <data name="WSLCCLI_VolumeInspectLongDesc" xml:space="preserve">
+    <value>1 つ以上のボリュームの詳細情報を表示します。</value>
+  </data>
+  <data name="WSLCCLI_VolumeListDesc" xml:space="preserve">
+    <value>ボリュームの一覧表示。</value>
+  </data>
+  <data name="WSLCCLI_VolumeListLongDesc" xml:space="preserve">
+    <value>セッション内のすべてのボリュームを一覧表示します。</value>
+  </data>
+  <data name="WSLCCLI_VolumeNameArgDescription" xml:space="preserve">
+    <value>ボリューム名</value>
+  </data>
+  <data name="WSLCCLI_DriverOptionDescription" xml:space="preserve">
+    <value>'guest' や 'vhd' などのボリューム ドライバー名を指定します (既定値: guest)</value>
+    <comment>{Locked="guest"}{Locked="vhd"}Command line arguments, file names and string inserts should not be translated</comment>
+  </data>
+  <data name="WSLCCLI_OptionsArgDescription" xml:space="preserve">
+    <value>ドライバー固有のオプションを設定します</value>
+  </data>
+  <data name="WSLCCLI_VolumeListQuietArgDesc" xml:space="preserve">
+    <value>ボリューム名のみを出力します</value>
+  </data>
+  <data name="WSLCCLI_ImageSaveStdoutIsTerminalError" xml:space="preserve">
+    <value>イメージをターミナルに書き込めません。-o フラグを使用するか、stdout をリダイレクトします。</value>
+  </data>
+  <data name="WSLCCLI_VolumeFormatUsage" xml:space="preserve">
+    <value>必要な形式: &lt;ホスト パス | 名前付きボリューム&gt;:&lt;コンテナー パス&gt;[:モード]</value>
+    <comment>Usage string for volume mount specification.</comment>
+  </data>
+  <data name="WSLCCLI_VolumeInvalidSpec" xml:space="preserve">
+    <value>ボリュームの指定が無効です: '{}'。{}</value>
+    <comment>{FixedPlaceholder="{}"}{FixedPlaceholder="{}"}Command line arguments, file names and string inserts should not be translated</comment>
+  </data>
+  <data name="WSLCCLI_VolumeHostPathEmpty" xml:space="preserve">
+    <value>ボリュームの指定が無効です: '{}'。ホスト パスを空にすることはできません。{}</value>
+    <comment>{FixedPlaceholder="{}"}{FixedPlaceholder="{}"}Command line arguments, file names and string inserts should not be translated</comment>
+  </data>
+  <data name="WSLCCLI_VolumeContainerPathEmpty" xml:space="preserve">
+    <value>ボリュームの指定が無効です: '{}'。コンテナパスは空にできません。{}</value>
+    <comment>{FixedPlaceholder="{}"}{FixedPlaceholder="{}"}Command line arguments, file names and string inserts should not be translated</comment>
+  </data>
+  <data name="WSLCCLI_VolumeContainerPathNotAbsolute" xml:space="preserve">
+    <value>ボリュームの指定が無効です: '{}'。コンテナー パスは絶対パス ('/' で始まる) である必要があります。{}</value>
+    <comment>{FixedPlaceholder="{}"}{FixedPlaceholder="{}"}Command line arguments, file names and string inserts should not be translated</comment>
+  </data>
+  <data name="WSLCCLI_VolumeHostPathInvalid" xml:space="preserve">
+    <value>ボリュームの指定が無効です: '{}'。ホスト パス '{}' は有効な Windows パスではありません。</value>
+    <comment>{FixedPlaceholder="{}"}{FixedPlaceholder="{}"}Command line arguments, file names and string inserts should not be translated</comment>
+  </data>
+  <data name="WSLCCLI_ObjectIdArgDescription" xml:space="preserve">
+    <value>任意のオブジェクトの種類の名前または ID</value>
+  </data>
+  <data name="WSLCCLI_TypeArgDescription" xml:space="preserve">
+    <value>検査するオブジェクトの種類</value>
+  </data>
+  <data name="WSLCCLI_InspectDesc" xml:space="preserve">
+    <value>オブジェクトを検査します。</value>
+  </data>
+  <data name="WSLCCLI_InspectLongDesc" xml:space="preserve">
+    <value>オブジェクトを検査します。</value>
+  </data>
+  <data name="WSLCCLI_ObjectNotFoundError" xml:space="preserve">
+    <value>オブジェクトが見つかりません: {}</value>
+    <comment>{FixedPlaceholder="{}"}Command line arguments, file names and string inserts should not be translated</comment>
+  </data>
+  <data name="WSLCCLI_TableHeaderContainerId" xml:space="preserve">
+    <value>コンテナー ID</value>
+  </data>
+  <data name="WSLCCLI_TableHeaderName" xml:space="preserve">
+    <value>名前</value>
+  </data>
+  <data name="WSLCCLI_TableHeaderImage" xml:space="preserve">
+    <value>画像</value>
+  </data>
+  <data name="WSLCCLI_TableHeaderCreated" xml:space="preserve">
+    <value>作成済み</value>
+  </data>
+  <data name="WSLCCLI_TableHeaderStatus" xml:space="preserve">
+    <value>状態</value>
+  </data>
+  <data name="WSLCCLI_TableHeaderPorts" xml:space="preserve">
+    <value>ポート</value>
+  </data>
+  <data name="WSLCCLI_TableHeaderCpuPercent" xml:space="preserve">
+    <value>CPU %</value>
+  </data>
+  <data name="WSLCCLI_TableHeaderMemUsageLimit" xml:space="preserve">
+    <value>メモリ使用量/上限</value>
+  </data>
+  <data name="WSLCCLI_TableHeaderMemPercent" xml:space="preserve">
+    <value>メモリ使用率</value>
+  </data>
+  <data name="WSLCCLI_TableHeaderNetIo" xml:space="preserve">
+    <value>ネットワーク I/O</value>
+  </data>
+  <data name="WSLCCLI_TableHeaderBlockIo" xml:space="preserve">
+    <value>ブロック I/O</value>
+  </data>
+  <data name="WSLCCLI_TableHeaderPids" xml:space="preserve">
+    <value>PIDS</value>
+  </data>
+  <data name="WSLCUserSettings_Warning_InvalidValue" xml:space="preserve">
+    <value>警告: {}:{} の '{}' の設定値が無効です。</value>
+    <comment>{FixedPlaceholder="{}"}Command line arguments, file names and string inserts should not be translated</comment>
+  </data>
+  <data name="WSLCUserSettings_Warning_InvalidType" xml:space="preserve">
+    <value>警告: {}:{} の '{}' の設定の種類が無効です。</value>
+    <comment>{FixedPlaceholder="{}"}Command line arguments, file names and string inserts should not be translated</comment>
+  </data>
+  <data name="WSLCUserSettings_Warning_NonStringKey" xml:space="preserve">
+    <value>警告: {}:{} のセクション '{}' の文字列以外のキー。</value>
+    <comment>{FixedPlaceholder="{}"}Command line arguments, file names and string inserts should not be translated</comment>
+  </data>
+  <data name="WSLCUserSettings_Warning_UnknownSection" xml:space="preserve">
+    <value>警告: {}:{} の不明な設定セクション '{}'。</value>
+    <comment>{FixedPlaceholder="{}"}Command line arguments, file names and string inserts should not be translated</comment>
+  </data>
+  <data name="WSLCUserSettings_Warning_UnknownKey" xml:space="preserve">
+    <value>警告: {}:{} の設定 '{}' が不明です。</value>
+    <comment>{FixedPlaceholder="{}"}Command line arguments, file names and string inserts should not be translated</comment>
+  </data>
+  <data name="WSLCUserSettings_Warning_FailedToOpen" xml:space="preserve">
+    <value>警告: {} で設定ファイルを開けませんでした。エラー: {}。</value>
+    <comment>{FixedPlaceholder="{}"}Command line arguments, file names and string inserts should not be translated</comment>
+  </data>
+  <data name="WSLCUserSettings_Warning_ParseError" xml:space="preserve">
+    <value>警告: {} の設定ファイルを解析できませんでした。エラー: {}。</value>
+    <comment>{FixedPlaceholder="{}"}Command line arguments, file names and string inserts should not be translated</comment>
+  </data>
+  <data name="WSLCUserSettings_Warning_InvalidStructure" xml:space="preserve">
+    <value>警告: {} の設定ファイルが空であるか、構造が無効です。YAML マッピングが必要です。</value>
+    <comment>{FixedPlaceholder="{}"}Command line arguments, file names and string inserts should not be translated</comment>
   </data>
 </root>

@@ -117,6 +117,22 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <!--
+    Localization Glossary — Technical Terms
+    ========================================
+    The following technical terms appear in many strings throughout this file.
+    Per-string <comment> elements provide guidance for each occurrence, but
+    this glossary serves as a central reference for developers and reviewers.
+
+    "mount"   — Making a disk/filesystem accessible. Translate per locale or keep "mount".
+    "VHD"     — Virtual Hard Disk. Do not translate (file format name).
+    "tar"     — File archive format. Do not translate (file format name).
+    "swap"    — Virtual memory swap space. Translate per locale or keep "swap".
+    "sparse"  — Storage term: file uses disk space only for written data. Translate per locale.
+    "DNS"     — Domain Name System. Do not translate (protocol acronym).
+    "proxy"   — Network proxy server. Translate per locale standard networking term.
+    "safe mode" — Minimal/diagnostic startup mode. Use standard OS term per locale.
+  -->
   <data name="AppName" xml:space="preserve">
     <value>Linux용 Windows 하위 시스템</value>
   </data>
@@ -137,24 +153,27 @@ WSL2가 강제로 디스크를 중지하고 분리하려면 'wsl.exe {}'을(를)
   </data>
   <data name="MessageDiskAlreadyMounted" xml:space="preserve">
     <value>해당 볼륨은 이미 WSL2 내부에 탑재되어 있습니다.</value>
+    <comment>"mount" is a technical term meaning to make a disk/filesystem accessible. Use the standard technical term in your locale, or keep "mount" if commonly used.</comment>
   </data>
   <data name="MessageDiskMountNameAlreadyExists" xml:space="preserve">
     <value>해당 이름의 디스크가 이미 탑재되어 있습니다. 디스크를 분리하거나 새 이름을 선택하고 다시 시도하십시오.</value>
+    <comment>"mount" is a technical term meaning to make a disk/filesystem accessible. Use the standard technical term in your locale, or keep "mount" if commonly used.</comment>
   </data>
   <data name="MessageDiskMountNameInvalid" xml:space="preserve">
     <value>지정한 탑재 이름에 잘못된 '/' 문자가 있습니다. 잘못된 문자 없이 다시 시도하세요.</value>
+    <comment>"mount" is a technical term meaning to make a disk/filesystem accessible. Use the standard technical term in your locale, or keep "mount" if commonly used.</comment>
   </data>
   <data name="MessageDiskMounted" xml:space="preserve">
     <value>디스크가 '/mnt/wsl/{}'(으)로 탑재되었습니다.
 참고: /etc/wsl.conf에서 automount.root 설정을 수정한 경우 위치가 달라집니다.
 디스크를 마운트 해제하고 분리하려면 'wsl.exe {} {}'을(를) 실행합니다.</value>
-    <comment>{FixedPlaceholder="{}"}Command line arguments, file names and string inserts should not be translated</comment>
+    <comment>{FixedPlaceholder="{}"}Command line arguments, file names and string inserts should not be translated. "mount" is a technical term meaning to make a disk/filesystem accessible. Use the standard technical term in your locale, or keep "mount" if commonly used.</comment>
   </data>
   <data name="MessageDiskMountFailed" xml:space="preserve">
     <value>디스크가 연결되었지만 탑재하지 못함: {}.
 자세한 내용은 WSL2 내에서 'dmesg'를 실행합니다.
 디스크를 분리하려면 'wsl.exe {} {}'을(를) 실행합니다.</value>
-    <comment>{FixedPlaceholder="{}"}Command line arguments, file names and string inserts should not be translated</comment>
+    <comment>{FixedPlaceholder="{}"}Command line arguments, file names and string inserts should not be translated. "mount" is a technical term meaning to make a disk/filesystem accessible. Use the standard technical term in your locale, or keep "mount" if commonly used.</comment>
   </data>
   <data name="MessageDistributionListOnline" xml:space="preserve">
     <value>다음은 설치할 수 있는 유효한 배포 목록입니다.
@@ -169,7 +188,7 @@ WSL2가 강제로 디스크를 중지하고 분리하려면 'wsl.exe {}'을(를)
     <value>제공된 설치 위치가 이미 사용 중입니다.</value>
   </data>
   <data name="MessageDistroNameAlreadyExists" xml:space="preserve">
-    <value>제공된 이름의 배포가 이미 있습니다. --name 사용하여 다른 이름을 선택하십시오.</value>
+    <value>제공된 이름의 배포가 이미 있습니다. 다른 이름을 선택하려면 --name 를 사용하세요.</value>
     <comment>{Locked="--name "}Command line arguments, file names and string inserts should not be translated</comment>
   </data>
   <data name="MessageDistroNotFound" xml:space="preserve">
@@ -177,6 +196,7 @@ WSL2가 강제로 디스크를 중지하고 분리하려면 'wsl.exe {}'을(를)
   </data>
   <data name="MessageElevationNeededToMountDisk" xml:space="preserve">
     <value>디스크를 탑재하려면 관리자 액세스 권한이 필요합니다.</value>
+    <comment>"mount" is a technical term meaning to make a disk/filesystem accessible. Use the standard technical term in your locale, or keep "mount" if commonly used.</comment>
   </data>
   <data name="MessageExportFailed" xml:space="preserve">
     <value>배포를 내보내지 못했습니다.</value>
@@ -218,9 +238,6 @@ WSL2가 강제로 디스크를 중지하고 분리하려면 'wsl.exe {}'을(를)
     <value>배포 이름 '{}'이(가) 잘못되었습니다.
 유효한 배포 목록을 보려면 'wsl.exe --list --online' 사용하세요.</value>
     <comment>{FixedPlaceholder="{}"}{Locked="--list "}{Locked="--online'"}Command line arguments, file names and string inserts should not be translated</comment>
-  </data>
-  <data name="MessageInstanceTerminated" xml:space="preserve">
-    <value>Linux용 Windows 하위 시스템 인스턴스가 종료되었습니다.</value>
   </data>
   <data name="MessageInvalidCommandLine" xml:space="preserve">
     <value>잘못된 명령줄 인수: {}
@@ -312,7 +329,7 @@ WSL2가 강제로 디스크를 중지하고 분리하려면 'wsl.exe {}'을(를)
   </data>
   <data name="MessageUserVhdAlreadyAttached" xml:space="preserve">
     <value>VHD가 이미 wsl.exe --mount, 를 통해 마운트되었습니다. 시작하기 전에 디스크를 마운트 해제하세요.</value>
-    <comment>{Locked="--mount,"}Command line arguments, file names and string inserts should not be translated</comment>
+    <comment>{Locked="--mount,"}Command line arguments, file names and string inserts should not be translated. {Locked="VHD"}"VHD" (Virtual Hard Disk) is a technical format name and should not be translated. "mount" is a technical term meaning to make a disk/filesystem accessible. Use the standard technical term in your locale, or keep "mount" if commonly used.</comment>
   </data>
   <data name="MessageWsl1NotSupported" xml:space="preserve">
     <value>현재 컴퓨터 구성에서는 WSL1이 지원되지 않습니다.
@@ -611,7 +628,7 @@ Linux용 Windows 하위 시스템 배포를 관리하기 위한 인수:
 "}{Locked="--version,"}{Locked="--export "}{Locked="--format "}{Locked="--import "}{Locked="--version "}{Locked="--vhd
 "}{Locked="--import-in-place "}{Locked="--list,"}{Locked="--all
 "}{Locked="--running
-"}{Locked="--quiet,"}{Locked="--verbose,"}{Locked="--online,"}{Locked="--install'"}{Locked="--set-default,"}{Locked="--set-version "}{Locked="--terminate,"}{Locked="--unregister "}Command line arguments, file names and string inserts should not be translated</comment>
+"}{Locked="--quiet,"}{Locked="--verbose,"}{Locked="--online,"}{Locked="--install'"}{Locked="--set-default,"}{Locked="--set-version "}{Locked="--terminate,"}{Locked="--unregister "}Command line arguments, file names and string inserts should not be translated. {Locked="tar"}"tar" is a file archive format name and should not be translated. {Locked="VHD"}"VHD" (Virtual Hard Disk) is a technical format name and should not be translated. "mount" is a technical term meaning to make a disk/filesystem accessible. Use the standard technical term in your locale, or keep "mount" if commonly used. "sparse" is a technical storage term meaning the file only uses disk space for written data. Use the technical term in your locale.</comment>
   </data>
   <data name="MessagePackageVersions" xml:space="preserve">
     <value>WSL 버전: {}
@@ -634,8 +651,8 @@ Windows 버전: {}</value>
     <comment>{FixedPlaceholder="{}"}Command line arguments, file names and string inserts should not be translated</comment>
   </data>
   <data name="MessageCustomKernelModulesNotFound" xml:space="preserve">
-    <value>{}에서 사용자 지정 커널 모듈 vhd를 찾을 수 없습니다. '{}'.</value>
-    <comment>{FixedPlaceholder="{}"}Command line arguments, file names and string inserts should not be translated</comment>
+    <value>{}에서 사용자 지정 커널 모듈 VHD를 찾을 수 없습니다. '{}'.</value>
+    <comment>{FixedPlaceholder="{}"}Command line arguments, file names and string inserts should not be translated. {Locked="VHD"}"VHD" (Virtual Hard Disk) is a technical format name and should not be translated.</comment>
   </data>
   <data name="MessageCustomSystemDistroError" xml:space="preserve">
     <value>{}에 지정된 사용자 지정 시스템 배포가 없거나 올바른 형식이 아닙니다.</value>
@@ -696,7 +713,7 @@ Windows 버전: {}</value>
   </data>
   <data name="MessageWslMountNotSupportedOnArm" xml:space="preserve">
     <value>ARM64의 wsl.exe --mount Windows 버전 27653 이상이 필요합니다.</value>
-    <comment>{Locked="--mount "}Command line arguments, file names and string inserts should not be translated</comment>
+    <comment>{Locked="--mount "}Command line arguments, file names and string inserts should not be translated. "mount" is a technical term meaning to make a disk/filesystem accessible. Use the standard technical term in your locale, or keep "mount" if commonly used.</comment>
   </data>
   <data name="MessageUpdateNotNeeded" xml:space="preserve">
     <value>Linux용 Windows 하위 시스템 최신 버전이 이미 설치되어 있습니다.</value>
@@ -728,7 +745,7 @@ Windows 버전: {}</value>
     <value>브리지 네트워킹을 수행하려면 wsl2.vmSwitch를 설정해야 합니다.</value>
   </data>
   <data name="MessageCouldFetchDistributionList" xml:space="preserve">
-    <value>'{}'에서 목록 배포를 가져오지 못했습니다. {}</value>
+    <value>'{}'에서 메일 그룹을 가져오지 못했습니다. {}</value>
     <comment>{FixedPlaceholder="{}"}Command line arguments, file names and string inserts should not be translated</comment>
   </data>
   <data name="MessageFailedToAttachDisk" xml:space="preserve">
@@ -749,6 +766,11 @@ Windows 업데이트를 통해 또는 다음을 통해 필요한 업데이트 �
   </data>
   <data name="MessageAdministratorAccessRequiredForDebugShell" xml:space="preserve">
     <value>디버그 셸을 실행하려면 wsl.exe 관리자 권한으로 실행해야 합니다.</value>
+  </data>
+  <data name="MessageAdminProtectionEnabled" xml:space="preserve">
+    <value>Windows Admin Protection이 활성화되었으며, 배포가 다른 계정에 등록될 수 있습니다.
+Admin Protection에 대해 자세히 알아보려면 https://aka.ms/apdevguide를 방문하세요.</value>
+    <comment>{Locked="Windows Admin Protection"}{Locked="Admin Protection"}{Locked="https://aka.ms/apdevguide"}Command line arguments, file names and string inserts should not be translated</comment>
   </data>
   <data name="MessageInstallProcessFailed" xml:space="preserve">
     <value>배포 '{}'에 대한 설치 프로세스가 종료 코드 {}(으)로 인해 실패했습니다.</value>
@@ -809,7 +831,7 @@ Windows 업데이트를 통해 또는 다음을 통해 필요한 업데이트 �
     <value>EventViewer 열기</value>
   </data>
   <data name="MessageDistributionNameNeeded" xml:space="preserve">
-    <value>이 배포에는 기본 이름이 포함되어 있지 않습니다. --name 사용하여 배포 이름을 선택하십시오.</value>
+    <value>이 배포에는 기본 이름이 포함되어 있지 않습니다. --name 사용하여 배포 이름을 선택합니다.</value>
     <comment>{Locked="--name "}Command line arguments, file names and string inserts should not be translated</comment>
   </data>
   <data name="MessageArgumentsNotValidTogether" xml:space="preserve">
@@ -826,6 +848,7 @@ Windows 업데이트를 통해 또는 다음을 통해 필요한 업데이트 �
   </data>
   <data name="MessageUsingLegacyDistribution" xml:space="preserve">
     <value>레거시 배포 등록을 사용하고 있습니다. tar 기반 배포를 대신 사용하는 것이 좋습니다.</value>
+    <comment>{Locked="tar"}"tar" is a file archive format name and should not be translated.</comment>
   </data>
   <data name="MessageLegacyDistributionVersionArgNotSupported" xml:space="preserve">
     <value>레거시 배포 등록은 --version 인수를 지원하지 않습니다.</value>
@@ -857,6 +880,10 @@ Windows 업데이트를 통해 또는 다음을 통해 필요한 업데이트 �
   </data>
   <data name="MessagedFailedToCreateSwapVhd" xml:space="preserve">
     <value>'{}'에서 스왑 디스크를 만들지 못함: {}</value>
+    <comment>{FixedPlaceholder="{}"}Command line arguments, file names and string inserts should not be translated. "swap" refers to virtual memory swap space. This is a technical term; use the standard OS term in your locale or keep "swap".</comment>
+  </data>
+  <data name="MessageFailedToCreateDisk" xml:space="preserve">
+    <value>디스크 '{}' 생성에 실패했습니다. {}</value>
     <comment>{FixedPlaceholder="{}"}Command line arguments, file names and string inserts should not be translated</comment>
   </data>
   <data name="MessageNestedVirtualizationNotSupported" xml:space="preserve">
@@ -872,6 +899,7 @@ Windows 업데이트를 통해 또는 다음을 통해 필요한 업데이트 �
   </data>
   <data name="MessageSafeModeEnabled" xml:space="preserve">
     <value>안전 모드 사용 - 많은 기능을 사용할 수 없습니다.</value>
+    <comment>"safe mode" refers to a minimal/diagnostic startup mode. Use the standard OS term for safe mode in your locale.</comment>
   </data>
   <data name="MessageMirroredNetworkingNotSupportedReason" xml:space="preserve">
     <value>미러된 네트워킹 모드는 지원되지 않음: {}.
@@ -885,29 +913,39 @@ NAT 네트워킹으로 대체합니다.</value>
     <value>Windows 버전 {}. {}에 필요한 기능이 없습니다.</value>
     <comment>{FixedPlaceholder="{}"}Command line arguments, file names and string inserts should not be translated</comment>
   </data>
+  <data name="MessageMirroredNetworkingNotSupportedIpv6Disabled" xml:space="preserve">
+    <value>호스트에서 지원하지 않는 방식으로 IPv6가 비활성화되어 있습니다(HKLM\SYSTEM\CurrentControlSet\Services\Tcpip6\Parameters DisabledComponents=0xff).</value>
+    <comment>{Locked="HKLM\SYSTEM\CurrentControlSet\Services\Tcpip6\Parameters"}{Locked="DisabledComponents"}{Locked="0xff"}</comment>
+  </data>
   <data name="MessageHyperVFirewallNotSupported" xml:space="preserve">
     <value>Hyper-V 방화벽은 지원되지 않습니다.</value>
   </data>
   <data name="MessageDnsTunnelingNotSupported" xml:space="preserve">
     <value>DNS 터널링은 지원되지 않습니다.</value>
+    <comment>{Locked="DNS"}"DNS" (Domain Name System) should not be translated.</comment>
   </data>
   <data name="MessageLocalhostForwardingNotSupportedMirroredMode" xml:space="preserve">
     <value>미러된 네트워킹 모드를 사용할 때는 wsl2.localhostForwarding 설정이 적용되지 않습니다.</value>
   </data>
   <data name="MessageHttpProxyChangeDetected" xml:space="preserve">
     <value>호스트에서 HTTP 프록시 변경이 검색되었습니다. 변경 내용을 적용하려면 WSL을 다시 시작하세요.</value>
+    <comment>"proxy" refers to a network proxy server. Use the standard networking term in your locale.</comment>
   </data>
   <data name="MessageProxyLocalhostSettingsDropped" xml:space="preserve">
     <value>localhost 프록시 구성이 검색되었지만 WSL로 미러링되지 않았습니다. NAT 모드의 WSL은 localhost 프록시를 지원하지 않습니다.</value>
+    <comment>"proxy" refers to a network proxy server. Use the standard networking term in your locale.</comment>
   </data>
   <data name="MessageProxyV6SettingsDropped" xml:space="preserve">
     <value>IPv6 프록시 구성이 검색되었지만 WSL로 미러링되지 않았습니다. NAT 모드의 WSL은 IPv6을 지원하지 않습니다.</value>
+    <comment>"proxy" refers to a network proxy server. Use the standard networking term in your locale.</comment>
   </data>
   <data name="MessageProxyLoopbackV6SettingsDropped" xml:space="preserve">
     <value>localhost IPv6 프록시 구성이 검색되었지만 WSL에 미러링되지 않았습니다. WSL은 localhost IPv6 프록시를 지원하지 않습니다.</value>
+    <comment>"proxy" refers to a network proxy server. Use the standard networking term in your locale.</comment>
   </data>
   <data name="MessageProxyUnexpectedSettingsDropped" xml:space="preserve">
     <value>프록시 설정을 확인하는 동안 예기치 않은 오류가 발생했습니다. 프록시 설정이 WSL에 미러링되지 않았습니다.</value>
+    <comment>"proxy" refers to a network proxy server. Use the standard networking term in your locale.</comment>
   </data>
   <data name="MessageRegistryError" xml:space="preserve">
     <value>레지스트리에 액세스하는 동안 오류가 발생했습니다. 경로: '{}'. 오류: {}</value>
@@ -950,10 +988,20 @@ NAT 네트워킹으로 대체합니다.</value>
   </data>
   <data name="MessageWSLMountDisabled" xml:space="preserve">
     <value>wsl.exe --mount 가 컴퓨터 정책에 의해 비활성화되었습니다.</value>
-    <comment>{Locked="--mount "}Command line arguments, file names and string inserts should not be translated</comment>
+    <comment>{Locked="--mount "}Command line arguments, file names and string inserts should not be translated. "mount" is a technical term meaning to make a disk/filesystem accessible. Use the standard technical term in your locale, or keep "mount" if commonly used.</comment>
   </data>
   <data name="MessageWSL1Disabled" xml:space="preserve">
     <value>컴퓨터 정책에 따라 WSL1을 사용할 수 없습니다.</value>
+  </data>
+  <data name="MessageWSLContainerDisabled" xml:space="preserve">
+    <value>WSL 컨테이너가 컴퓨터 정책에 의해 비활성화되었습니다.</value>
+  </data>
+  <data name="MessageRegistryBlockedByPolicy" xml:space="preserve">
+    <value>컨테이너 이미지 레지스트리 '{}'이(가) 컴퓨터 정책에 의해 차단되었습니다.</value>
+    <comment>{FixedPlaceholder="{}"}Command line arguments, file names and string inserts should not be translated</comment>
+  </data>
+  <data name="MessageImageBuildBlockedByPolicy" xml:space="preserve">
+    <value>컴퓨터 정책에 따라 컨테이너 레지스트리 허용 목록이 구성되어 컨테이너 이미지 빌드가 차단되었습니다. 이미지 빌드는 임의의 레지스트리에서 기본 이미지를 가져올 수 있으며 허용 목록으로 안정적으로 제한할 수 없습니다.</value>
   </data>
   <data name="MessageUpgradeToWSL2" xml:space="preserve">
     <value>'wsl.exe --set-version {} 2'를 실행하여 WSL2로 업그레이드하세요.</value>
@@ -964,6 +1012,10 @@ NAT 네트워킹으로 대체합니다.</value>
   </data>
   <data name="MessageUpdateFailed" xml:space="preserve">
     <value>업데이트하지 못했습니다(종료 코드: {}).</value>
+    <comment>{FixedPlaceholder="{}"}Command line arguments, file names and string inserts should not be translated</comment>
+  </data>
+  <data name="MessageUninstallNoArguments" xml:space="preserve">
+    <value>{}은(는) 인수를 받지 않습니다. 배포 등록을 취소하려면 대신 {}을(를) 사용하세요.</value>
     <comment>{FixedPlaceholder="{}"}Command line arguments, file names and string inserts should not be translated</comment>
   </data>
   <data name="MessageUninstallFailed" xml:space="preserve">
@@ -1009,7 +1061,7 @@ NAT 네트워킹으로 대체합니다.</value>
   </data>
   <data name="MessageVhdInUse" xml:space="preserve">
     <value>VHD가 현재 사용 중이므로 작업을 완료할 수 없습니다. WSL을 강제로 사용 중지하려면: wsl.exe --shutdown</value>
-    <comment>{Locked="--shutdown"}Command line arguments, file names and string inserts should not be translated</comment>
+    <comment>{Locked="--shutdown"}Command line arguments, file names and string inserts should not be translated. {Locked="VHD"}"VHD" (Virtual Hard Disk) is a technical format name and should not be translated.</comment>
   </data>
   <data name="MessageInvalidBoolean" xml:space="preserve">
     <value>{}은(는) 올바른 부울이 아닙니다&lt;true|false&gt;</value>
@@ -1017,6 +1069,7 @@ NAT 네트워킹으로 대체합니다.</value>
   </data>
   <data name="MessageSparseVhdWsl2Only" xml:space="preserve">
     <value>스파스 VHD는 WSL2에서만 지원됩니다.</value>
+    <comment>{Locked="VHD"}"VHD" (Virtual Hard Disk) is a technical format name and should not be translated. "sparse" is a technical storage term meaning the file only uses disk space for written data. Use the technical term in your locale.</comment>
   </data>
   <data name="MessageLocalSystemNotSupported" xml:space="preserve">
     <value>WSL을 로컬 시스템으로 실행할 수 없습니다.</value>
@@ -1061,12 +1114,12 @@ NAT 네트워킹으로 대체합니다.</value>
     <comment>{FixedPlaceholder="{}"}Command line arguments, file names and string inserts should not be translated</comment>
   </data>
   <data name="MessageCorruptedDistroRegistration" xml:space="preserve">
-    <value>배포 {}에서 속성 '{}'을(를) 읽지 못했습니다. </value>
+    <value>배포 {}에서 '{}' 속성을 읽지 못했습니다.</value>
     <comment>{FixedPlaceholder="{}"}Command line arguments, file names and string inserts should not be translated</comment>
   </data>
   <data name="MessagePassVhdFlag" xml:space="preserve">
     <value>VHD 파일인 것 같습니다. --vhd 사용하여 tar 대신 VHD를 가져옵니다.</value>
-    <comment>{Locked="--vhd "}Command line arguments, file names and string inserts should not be translated</comment>
+    <comment>{Locked="--vhd "}Command line arguments, file names and string inserts should not be translated. {Locked="tar"}"tar" is a file archive format name and should not be translated. {Locked="VHD"}"VHD" (Virtual Hard Disk) is a technical format name and should not be translated.</comment>
   </data>
   <data name="MessageDistroStoreInstallFailed" xml:space="preserve">
     <value>Microsoft Store에서 {}을(를) 설치하지 못함: {}
@@ -1114,23 +1167,26 @@ NAT 네트워킹으로 대체합니다.</value>
   </data>
   <data name="MessageDnsTunnelingDisabled" xml:space="preserve">
     <value>현재 전역 보안 액세스 클라이언트와의 호환성 문제가 발생하여 DNS 터널링이 비활성화되었습니다.</value>
+    <comment>{Locked="DNS"}"DNS" (Domain Name System) should not be translated.</comment>
   </data>
   <data name="MessageSparseVhdDisabled" xml:space="preserve">
     <value>데이터 손상 가능성으로 인해 스파스 VHD 지원은 현재 비활성화되어 있습니다.
 배포 시 강제로 스파스 VHD를 사용하도록 하려면 다음을 실행하세요. 
 wsl.exe --manage &lt;DistributionName&gt; --set-sparse true --allow-unsafe</value>
-    <comment>{Locked="--manage "}{Locked="--set-sparse "}{Locked="--allow-unsafe"}Command line arguments, file names and string inserts should not be translated</comment>
+    <comment>{Locked="--manage "}{Locked="--set-sparse "}{Locked="--allow-unsafe"}Command line arguments, file names and string inserts should not be translated. {Locked="VHD"}"VHD" (Virtual Hard Disk) is a technical format name and should not be translated. "sparse" is a technical storage term meaning the file only uses disk space for written data. Use the technical term in your locale.</comment>
   </data>
   <data name="MessageDrvfsMountFailed" xml:space="preserve">
     <value>{}을(를) 탑재하지 못했습니다. 자세한 내용은 dmesg를 참조하세요.</value>
-    <comment>{FixedPlaceholder="{}"}Command line arguments, file names and string inserts should not be translated</comment>
+    <comment>{FixedPlaceholder="{}"}Command line arguments, file names and string inserts should not be translated. "mount" is a technical term meaning to make a disk/filesystem accessible. Use the standard technical term in your locale, or keep "mount" if commonly used.</comment>
   </data>
   <data name="MessageFstabMountFailed" xml:space="preserve">
     <value>/etc/fstab을 mount -a로 처리하지 못했습니다.</value>
+    <comment>"mount" is a technical term meaning to make a disk/filesystem accessible. Use the standard technical term in your locale, or keep "mount" if commonly used.</comment>
   </data>
   <data name="MessageReadOnlyDistro" xml:space="preserve">
     <value>배포 디스크를 탑재하는 동안 오류가 발생했습니다. 대체로 읽기 전용으로 탑재되었습니다.
 복구 지침 참조: https://aka.ms/wsldiskmountrecovery</value>
+    <comment>"mount" is a technical term meaning to make a disk/filesystem accessible. Use the standard technical term in your locale, or keep "mount" if commonly used.</comment>
   </data>
   <data name="MessageFailedToTranslate" xml:space="preserve">
     <value>'{}'을(를) 번역하지 못했습니다</value>
@@ -1169,28 +1225,35 @@ wsl.exe --manage &lt;DistributionName&gt; --set-sparse true --allow-unsafe</valu
   </data>
   <data name="Settings_AutoProxy.Header" xml:space="preserve">
     <value>자동 프록시 사용</value>
+    <comment>"proxy" refers to a network proxy server. Use the standard networking term in your locale.</comment>
   </data>
   <data name="Settings_AutoProxy.Description" xml:space="preserve">
     <value>WSL에서 Windows의 HTTP 프록시 정보를 사용할 수 있도록 합니다.</value>
+    <comment>"proxy" refers to a network proxy server. Use the standard networking term in your locale.</comment>
   </data>
   <data name="Settings_AutoProxyToggleSwitch.AutomationProperties.Name" xml:space="preserve">
     <value>자동 프록시를 사용하도록 설정했습니다.</value>
+    <comment>"proxy" refers to a network proxy server. Use the standard networking term in your locale.</comment>
   </data>
   <data name="Settings_AutoProxyToggleSwitch.AutomationProperties.HelpText" xml:space="preserve">
     <value>WSL에서 Windows의 HTTP 프록시 정보를 사용할 수 있도록 합니다.</value>
+    <comment>"proxy" refers to a network proxy server. Use the standard networking term in your locale.</comment>
   </data>
   <data name="Settings_BestEffortDNS.Header" xml:space="preserve">
     <value>최상의 DNS 구문 분석 사용</value>
+    <comment>{Locked="DNS"}"DNS" (Domain Name System) should not be translated.</comment>
   </data>
   <data name="Settings_BestEffortDNS.Description" xml:space="preserve">
     <value>wsl2.dnsTunneling true로 설정된 경우에만 적용할 수 있습니다. true로 설정하면 Windows에서 DNS 요청에서 질문을 추출하고 resolve 시도합니다. 알 수 없는 레코드는 무시됩니다.</value>
-    <comment>{Locked="wsl2.dnsTunneling"}.wslconfig property key names should not be translated</comment>
+    <comment>{Locked="wsl2.dnsTunneling"}{Locked="DNS"}.wslconfig property key names should not be translated. "DNS" (Domain Name System) should not be translated.</comment>
   </data>
   <data name="Settings_BestEffortDNSToggleSwitch.AutomationProperties.Name" xml:space="preserve">
     <value>최상의 DNS 구문 분석을 사용합니다.</value>
+    <comment>{Locked="DNS"}"DNS" (Domain Name System) should not be translated.</comment>
   </data>
   <data name="Settings_BestEffortDNSToggleSwitch.AutomationProperties.HelpText" xml:space="preserve">
     <value>wsl2.dnsTunneling이 true로 설정된 경우에만 적용할 수 있습니다. true로 설정하면 Windows에서 DNS 요청에서 질문을 추출하고 resolve 시도합니다. 알 수 없는 레코드는 무시됩니다.</value>
+    <comment>{Locked="DNS"}"DNS" (Domain Name System) should not be translated.</comment>
   </data>
   <data name="Settings_CustomKernelPath.Header" xml:space="preserve">
     <value>사용자 지정 커널</value>
@@ -1212,6 +1275,7 @@ wsl.exe --manage &lt;DistributionName&gt; --set-sparse true --allow-unsafe</valu
   </data>
   <data name="Settings_CustomKernelModulesPath.Description" xml:space="preserve">
     <value>사용자 지정 Linux 커널 모듈 VHD에 대한 절대 Windows 경로입니다.</value>
+    <comment>{Locked="VHD"}"VHD" (Virtual Hard Disk) is a technical format name and should not be translated.</comment>
   </data>
   <data name="Settings_CustomKernelModulesPathBrowseButton.Content" xml:space="preserve">
     <value>커널 모듈 찾아보기</value>
@@ -1221,6 +1285,7 @@ wsl.exe --manage &lt;DistributionName&gt; --set-sparse true --allow-unsafe</valu
   </data>
   <data name="Settings_CustomKernelModulesPathTextBox.AutomationProperties.HelpText" xml:space="preserve">
     <value>사용자 지정 Linux 커널 모듈 VHD에 대한 절대 Windows 경로입니다.</value>
+    <comment>{Locked="VHD"}"VHD" (Virtual Hard Disk) is a technical format name and should not be translated.</comment>
   </data>
   <data name="Settings_CustomSystemDistroPath.Header" xml:space="preserve">
     <value>사용자 지정 시스템 배포판</value>
@@ -1230,7 +1295,7 @@ wsl.exe --manage &lt;DistributionName&gt; --set-sparse true --allow-unsafe</valu
   </data>
   <data name="Settings_CustomSystemDistroPathDescription.Text" xml:space="preserve">
     <value>사용자 지정 시스템 배포판으로 로드되는 VHD의 경로를 지정합니다. 주로 WSL에서 GUI 앱을 제공하는 데 사용됩니다. [] 여기서 시스템 배포판에 대해 자세히 알아보세요.</value>
-    <comment>{Locked="["}{Locked="]"}The text in between the delimiters [ ] is made into a hyperlink in code, and the delimiters are removed</comment>
+    <comment>{Locked="["}{Locked="]"}{Locked="VHD"}The text in between the delimiters [ ] is made into a hyperlink in code, and the delimiters are removed. "VHD" (Virtual Hard Disk) is a technical format name and should not be translated.</comment>
   </data>
   <data name="Settings_CustomSystemDistroPathDescription.NavigateUri" xml:space="preserve">
     <value>https://aka.ms/wslgsystemdistro</value>
@@ -1241,6 +1306,7 @@ wsl.exe --manage &lt;DistributionName&gt; --set-sparse true --allow-unsafe</valu
   </data>
   <data name="Settings_CustomSystemDistroPathTextBox.AutomationProperties.HelpText" xml:space="preserve">
     <value>WSL에서 주로 GUI 앱 구동에 사용하는 사용자 지정 시스템 배포판으로 로드할 VHD의 경로를 지정합니다.</value>
+    <comment>{Locked="VHD"}"VHD" (Virtual Hard Disk) is a technical format name and should not be translated.</comment>
   </data>
   <data name="Settings_DebugConsole.Header" xml:space="preserve">
     <value>디버그 콘솔 사용</value>
@@ -1256,18 +1322,22 @@ wsl.exe --manage &lt;DistributionName&gt; --set-sparse true --allow-unsafe</valu
   </data>
   <data name="Settings_DefaultVHDSize.Header" xml:space="preserve">
     <value>기본 VHD 크기</value>
+    <comment>{Locked="VHD"}"VHD" (Virtual Hard Disk) is a technical format name and should not be translated.</comment>
   </data>
   <data name="Settings_DefaultVHDSize.Description" xml:space="preserve">
     <value>새로 만든 배포에 대해서만 확장 가능한 WSL VHD(가상 하드 디스크)의 기본 최대 크기입니다.</value>
+    <comment>{Locked="VHD"}"VHD" (Virtual Hard Disk) is a technical format name and should not be translated.</comment>
   </data>
   <data name="Settings_DefaultVHDSizeResetButton.Content" xml:space="preserve">
     <value>크기 초기화</value>
   </data>
   <data name="Settings_DefaultVHDSizeTextBox.AutomationProperties.Name" xml:space="preserve">
     <value>기본 VHD 크기</value>
+    <comment>{Locked="VHD"}"VHD" (Virtual Hard Disk) is a technical format name and should not be translated.</comment>
   </data>
   <data name="Settings_DefaultVHDSizeTextBox.AutomationProperties.HelpText" xml:space="preserve">
     <value>새로 만든 배포에 대해서만 확장 가능한 WSL VHD(가상 하드 디스크)의 기본 최대 크기(MB)입니다.</value>
+    <comment>{Locked="VHD"}"VHD" (Virtual Hard Disk) is a technical format name and should not be translated.</comment>
   </data>
   <data name="Settings_DeveloperPageTitle.Text" xml:space="preserve">
     <value>개발자</value>
@@ -1287,28 +1357,35 @@ wsl.exe --manage &lt;DistributionName&gt; --set-sparse true --allow-unsafe</valu
   </data>
   <data name="Settings_DNSProxy.Header" xml:space="preserve">
     <value>DNS 프록시 사용</value>
+    <comment>{Locked="DNS"}"DNS" (Domain Name System) should not be translated. "proxy" refers to a network proxy server. Use the standard networking term in your locale.</comment>
   </data>
   <data name="Settings_DNSProxy.Description" xml:space="preserve">
     <value>wsl2.networkingMode NAT로 설정된 경우에만 적용할 수 있습니다. WSL에 Linux의 DNS 서버를 호스트의 NAT로 구성하도록 알리는 부울입니다. false로 설정하면 DNS 서버가 Windows에서 Linux로 미러.</value>
-    <comment>{Locked="wsl2.networkingMode"}.wslconfig property key names should not be translated</comment>
+    <comment>{Locked="wsl2.networkingMode"}{Locked="DNS"}.wslconfig property key names should not be translated. "DNS" (Domain Name System) should not be translated.</comment>
   </data>
   <data name="Settings_DNSProxyToggleSwitch.AutomationProperties.Name" xml:space="preserve">
     <value>DNS 프록시를 사용하도록 설정했습니다.</value>
+    <comment>{Locked="DNS"}"DNS" (Domain Name System) should not be translated. "proxy" refers to a network proxy server. Use the standard networking term in your locale.</comment>
   </data>
   <data name="Settings_DNSProxyToggleSwitch.AutomationProperties.HelpText" xml:space="preserve">
     <value>wsl2.networkingMode가 NAT로 설정된 경우에만 적용할 수 있습니다. WSL에 Linux의 DNS 서버를 호스트의 NAT로 구성하도록 알리는 부울입니다. false로 설정하면 DNS 서버가 Windows에서 Linux로 미러.</value>
+    <comment>{Locked="DNS"}"DNS" (Domain Name System) should not be translated.</comment>
   </data>
   <data name="Settings_DNSTunneling.Header" xml:space="preserve">
     <value>DNS 터널링 사용</value>
+    <comment>{Locked="DNS"}"DNS" (Domain Name System) should not be translated.</comment>
   </data>
   <data name="Settings_DNSTunneling.Description" xml:space="preserve">
     <value>DNS 요청이 WSL에서 Windows로 프록시되는 방법을 변경합니다.</value>
+    <comment>{Locked="DNS"}"DNS" (Domain Name System) should not be translated.</comment>
   </data>
   <data name="Settings_DNSTunnelingToggleSwitch.AutomationProperties.Name" xml:space="preserve">
     <value>DNS 터널링을 사용하도록 설정했습니다.</value>
+    <comment>{Locked="DNS"}"DNS" (Domain Name System) should not be translated.</comment>
   </data>
   <data name="Settings_DNSTunnelingToggleSwitch.AutomationProperties.HelpText" xml:space="preserve">
     <value>DNS 요청이 WSL에서 Windows로 프록시되는 방법을 변경합니다.</value>
+    <comment>{Locked="DNS"}"DNS" (Domain Name System) should not be translated.</comment>
   </data>
   <data name="Settings_FileSystemPageTitle.Text" xml:space="preserve">
     <value>파일 시스템</value>
@@ -1384,19 +1461,22 @@ wsl.exe --manage &lt;DistributionName&gt; --set-sparse true --allow-unsafe</valu
   </data>
   <data name="Settings_InitialAutoProxyTimeout.Header" xml:space="preserve">
     <value>초기 자동 프록시 시간 제한</value>
+    <comment>"proxy" refers to a network proxy server. Use the standard networking term in your locale.</comment>
   </data>
   <data name="Settings_InitialAutoProxyTimeout.Description" xml:space="preserve">
     <value>wsl2.autoProxy true로 설정된 경우에만 적용할 수 있습니다. WSL 컨테이너를 시작할 때 WSL에서 HTTP 프록시 정보를 검색할 때까지 대기하는 시간(밀리초)을 구성합니다. 이 시간 후에 프록시 설정이 확인되면 검색된 프록시 설정을 사용하려면 WSL instance 다시 시작해야 합니다.</value>
-    <comment>{Locked="wsl2.autoProxy"}.wslconfig property key names should not be translated</comment>
+    <comment>{Locked="wsl2.autoProxy"}.wslconfig property key names should not be translated. "proxy" refers to a network proxy server. Use the standard networking term in your locale.</comment>
   </data>
   <data name="Settings_InitialAutoProxyTimeoutResetButton.Content" xml:space="preserve">
     <value>초기화 시간 제한</value>
   </data>
   <data name="Settings_InitialAutoProxyTimeoutTextBox.AutomationProperties.Name" xml:space="preserve">
     <value>초기 자동 프록시 시간 제한</value>
+    <comment>"proxy" refers to a network proxy server. Use the standard networking term in your locale.</comment>
   </data>
   <data name="Settings_InitialAutoProxyTimeoutTextBox.AutomationProperties.HelpText" xml:space="preserve">
     <value>wsl2.autoProxy가 true로 설정된 경우에만 적용할 수 있습니다. WSL 컨테이너를 시작할 때 WSL에서 HTTP 프록시 정보 검색을 기다리는 시간(밀리초)을 구성합니다. 이 시간 후에 프록시 설정이 확인되면 검색된 프록시 설정을 사용하려면 WSL 인스턴스를 다시 시작해야 합니다.</value>
+    <comment>"proxy" refers to a network proxy server. Use the standard networking term in your locale.</comment>
   </data>
   <data name="Settings_KernelCommandLine.Header" xml:space="preserve">
     <value>커널 명령줄</value>
@@ -1572,6 +1652,7 @@ WSL과 함께 Docker Desktop을 사용할 경우의 이점은 다음과 같습�
 • 동일한 Docker 디먼 및 이미지를 사용하여 WSL 또는 Windows에서 Docker 명령을 실행할 수 있습니다.
 • WSL에서 Windows 드라이브의 자동 탑재를 사용하여 Windows와 Linux 간에 파일 및 폴더를 원활하게 공유할 수 있습니다.
 • WSL의 상호 운용성 덕분에 기본 Windows 도구 및 편집기를 사용하여 Linux 코드 및 파일에서 작업할 수 있으며 그 반대의 경우도 마찬가지입니다.</value>
+    <comment>"mount" is a technical term meaning to make a disk/filesystem accessible. Use the standard technical term in your locale, or keep "mount" if commonly used.</comment>
  </data>
   <data name="Settings_OOBEDockerDesktopIntegration.Title" xml:space="preserve">
     <value>Docker 데스크톱 통합</value>
@@ -1739,15 +1820,19 @@ VS Code 자체 내의 명령 팔레트를 통해 더 많은 VS Code 원격 옵�
   </data>
   <data name="Settings_SafeMode.Header" xml:space="preserve">
     <value>안전 모드 사용</value>
+    <comment>"safe mode" refers to a minimal/diagnostic startup mode. Use the standard OS term for safe mode in your locale.</comment>
   </data>
   <data name="Settings_SafeMode.Description" xml:space="preserve">
     <value>많은 기능을 사용하지 않도록 설정하고 잘못된 상태의 배포를 복구하는 데 사용되는 "안전 모드"에서 WSL을 실행합니다.</value>
+    <comment>"safe mode" refers to a minimal/diagnostic startup mode. Use the standard OS term for safe mode in your locale.</comment>
   </data>
   <data name="Settings_SafeModeToggleSwitch.AutomationProperties.Name" xml:space="preserve">
     <value>안전 모드를 사용하도록 설정합니다.</value>
+    <comment>"safe mode" refers to a minimal/diagnostic startup mode. Use the standard OS term for safe mode in your locale.</comment>
   </data>
   <data name="Settings_SafeModeToggleSwitch.AutomationProperties.HelpText" xml:space="preserve">
     <value>많은 기능을 사용하지 않도록 설정하고 잘못된 상태의 배포를 복구하는 데 사용되는 "안전 모드"에서 WSL을 실행합니다.</value>
+    <comment>"safe mode" refers to a minimal/diagnostic startup mode. Use the standard OS term for safe mode in your locale.</comment>
   </data>
   <data name="Settings_Shell_About.Content" xml:space="preserve">
     <value>정보</value>
@@ -1812,45 +1897,58 @@ VS Code 자체 내의 명령 팔레트를 통해 더 많은 VS Code 원격 옵�
   </data>
   <data name="Settings_SparseVHD.Header" xml:space="preserve">
     <value>기본값으로 스파스 VHD 사용</value>
+    <comment>{Locked="VHD"}"VHD" (Virtual Hard Disk) is a technical format name and should not be translated. "sparse" is a technical storage term meaning the file only uses disk space for written data. Use the technical term in your locale.</comment>
   </data>
   <data name="Settings_SparseVHD.Description" xml:space="preserve">
     <value>새로 생성된 VHD는 활성화하면 자동으로 스파스로 설정됩니다.</value>
+    <comment>{Locked="VHD"}"VHD" (Virtual Hard Disk) is a technical format name and should not be translated. "sparse" is a technical storage term meaning the file only uses disk space for written data. Use the technical term in your locale.</comment>
   </data>
   <data name="Settings_SparseVHDToggleSwitch.AutomationProperties.Name" xml:space="preserve">
     <value>기본값으로 스파스 VHD를 사용하도록 설정합니다.</value>
+    <comment>{Locked="VHD"}"VHD" (Virtual Hard Disk) is a technical format name and should not be translated. "sparse" is a technical storage term meaning the file only uses disk space for written data. Use the technical term in your locale.</comment>
   </data>
   <data name="Settings_SparseVHDToggleSwitch.AutomationProperties.HelpText" xml:space="preserve">
     <value>새로 생성된 VHD는 활성화하면 자동으로 스파스로 설정됩니다.</value>
+    <comment>{Locked="VHD"}"VHD" (Virtual Hard Disk) is a technical format name and should not be translated. "sparse" is a technical storage term meaning the file only uses disk space for written data. Use the technical term in your locale.</comment>
   </data>
   <data name="Settings_SwapFilePath.Header" xml:space="preserve">
     <value>스왑 파일 위치</value>
+    <comment>"swap" refers to virtual memory swap space. This is a technical term; use the standard OS term in your locale or keep "swap".</comment>
   </data>
   <data name="Settings_SwapFilePath.Description" xml:space="preserve">
     <value>스왑 가상 하드 디스크의 절대 Windows 경로입니다.</value>
+    <comment>"swap" refers to virtual memory swap space. This is a technical term; use the standard OS term in your locale or keep "swap".</comment>
   </data>
   <data name="Settings_SwapFilePathBrowseButton.Content" xml:space="preserve">
     <value>스왑 파일 찾아보기</value>
+    <comment>"swap" refers to virtual memory swap space. This is a technical term; use the standard OS term in your locale or keep "swap".</comment>
   </data>
   <data name="Settings_SwapFilePathTextBox.AutomationProperties.Name" xml:space="preserve">
     <value>스왑 파일 위치</value>
+    <comment>"swap" refers to virtual memory swap space. This is a technical term; use the standard OS term in your locale or keep "swap".</comment>
   </data>
   <data name="Settings_SwapFilePathTextBox.AutomationProperties.HelpText" xml:space="preserve">
     <value>스왑 가상 하드 디스크의 절대 Windows 경로입니다.</value>
+    <comment>"swap" refers to virtual memory swap space. This is a technical term; use the standard OS term in your locale or keep "swap".</comment>
   </data>
   <data name="Settings_SwapSize.Header" xml:space="preserve">
     <value>스왑 크기</value>
+    <comment>"swap" refers to virtual memory swap space. This is a technical term; use the standard OS term in your locale or keep "swap".</comment>
   </data>
   <data name="Settings_SwapSize.Description" xml:space="preserve">
     <value>WSL 2 VM에 추가할 스왑 공간의 크기입니다. 스왑 파일이 없으면 0입니다. 스왑 스토리지는 메모리 요구량이 하드웨어 장치의 한도를 초과할 때 사용되는 디스크 기반 RAM입니다.</value>
+    <comment>"swap" refers to virtual memory swap space. This is a technical term; use the standard OS term in your locale or keep "swap".</comment>
   </data>
   <data name="Settings_SwapSizeResetButton.Content" xml:space="preserve">
     <value>크기 초기화</value>
   </data>
   <data name="Settings_SwapSizeTextBox.AutomationProperties.Name" xml:space="preserve">
     <value>전환 크기</value>
+    <comment>"swap" refers to virtual memory swap space. This is a technical term; use the standard OS term in your locale or keep "swap".</comment>
   </data>
   <data name="Settings_SwapSizeTextBox.AutomationProperties.HelpText" xml:space="preserve">
     <value>WSL 2 VM에 추가할 스왑 공간(MB)입니다. 스왑 파일이 없는 경우 0입니다. 스왑 스토리지는 메모리 요구가 하드웨어 장치의 한도를 초과하는 경우 사용되는 디스크 기반 RAM입니다.</value>
+    <comment>"swap" refers to virtual memory swap space. This is a technical term; use the standard OS term in your locale or keep "swap".</comment>
   </data>
   <data name="Settings_Virtio.Header" xml:space="preserve">
     <value>VirtIO 사용</value>
@@ -1863,6 +1961,7 @@ VS Code 자체 내의 명령 팔레트를 통해 더 많은 VS Code 원격 옵�
   </data>
   <data name="Settings_Virtio9p.Description" xml:space="preserve">
     <value>virtio 전송을 사용하여 호스트에서 9P 파일 시스템을 탑재할 수 있도록 합니다.</value>
+    <comment>"mount" is a technical term meaning to make a disk/filesystem accessible. Use the standard technical term in your locale, or keep "mount" if commonly used.</comment>
   </data>
   <data name="Settings_VMIdleTimeout.Header" xml:space="preserve">
     <value>VM 유휴 시간 제한</value>
@@ -1878,5 +1977,1121 @@ VS Code 자체 내의 명령 팔레트를 통해 더 많은 VS Code 원격 옵�
   </data>
   <data name="Settings_VMIdleTimeoutTextBox.AutomationProperties.HelpText" xml:space="preserve">
     <value>VM이 종료되기 전에 유휴 상태인 시간(밀리초)입니다.</value>
+  </data>
+  <data name="Settings_ApplyChangesButton.Content" xml:space="preserve">
+    <value>변경 내용 적용</value>
+  </data>
+  <data name="Settings_ApplyChangesDialogTitle" xml:space="preserve">
+    <value>WSL 종료 필요</value>
+  </data>
+  <data name="Settings_ApplyChangesDialogDescription" xml:space="preserve">
+    <value>변경된 WSL 설정을 완료하려면 WSL을 종료하고 다시 시작해야 합니다. 종료하면 활성 WSL 세션이 종료됩니다.</value>
+  </data>
+  <data name="Settings_ApplyChangesDialogShutdownButton" xml:space="preserve">
+    <value>지금 WSL 종료</value>
+  </data>
+  <data name="Settings_ApplyChangesDialogLaterButton" xml:space="preserve">
+    <value>나중에</value>
+  </data>
+  <data name="Settings_ApplyChangesDialogFailedTitle" xml:space="preserve">
+    <value>변경 내용을 적용할 수 없음</value>
+  </data>
+  <data name="Settings_ApplyChangesDialogCloseButton" xml:space="preserve">
+    <value>닫기</value>
+  </data>
+  <data name="Settings_ApplyChangesDialogCommitFailed" xml:space="preserve">
+    <value>보류 중인 설정 변경 내용을 저장하지 못했습니다. 오류 코드: {0}</value>
+    <comment>{Locked="{0}"}Format placeholder for Win32 error code</comment>
+  </data>
+  <data name="Settings_ApplyChangesDialogShutdownFailed" xml:space="preserve">
+    <value>설정이 저장되었지만 WSL을 종료하지 못했습니다. {0}</value>
+    <comment>{Locked="{0}"}Format placeholder for exception message</comment>
+  </data>
+  <data name="Settings_BooleanTrueText" xml:space="preserve">
+    <value>켜짐</value>
+  </data>
+  <data name="Settings_BooleanFalseText" xml:space="preserve">
+    <value>꺼짐</value>
+  </data>
+  <data name="Settings_OOBEVSIntegration.Title" xml:space="preserve">
+    <value>Visual Studio에서 WSL로 실행 중인 앱을 빌드, 실행, 디버그 및 프로파일링하기</value>
+  </data>
+  <data name="Settings_OOBEVSIntegration.Description" xml:space="preserve">
+    <value>Visual Studio에서 WSL로 앱을 실행하고 디버그하기</value>
+  </data>
+  <data name="Settings_OOBEVSIntegration_VSForDotNetLink.Content" xml:space="preserve">
+    <value>Visual Studio의 .NET 개발자용 WSL에 대해 자세히 알아보기</value>
+  </data>
+  <data name="Settings_OOBEVSIntegration_VSForDotNetLink.NavigateUri" xml:space="preserve">
+    <value>https://learn.microsoft.com/visualstudio/debugger/debug-dotnet-core-in-wsl-2</value>
+    <comment>{locked}Uri should redirect to the correct locale for the browser</comment>
+  </data>
+  <data name="Settings_OOBEVSIntegration_VSForCppLink.Content" xml:space="preserve">
+    <value>C++ 개발자용 Visual Studio 및 WSL에 대해 자세히 알아보기</value>
+  </data>
+  <data name="Settings_OOBEVSIntegration_VSForCppLink.NavigateUri" xml:space="preserve">
+    <value>https://learn.microsoft.com/cpp/linux/?view=msvc-170</value>
+    <comment>{locked}Uri should redirect to the correct locale for the browser</comment>
+  </data>
+  <data name="Settings_OOBEVSIntegration_Description.Text" xml:space="preserve">
+    <value>Linux용 Windows 하위 시스템(WSL)을 사용해 Visual Studio를 종료하지 않고도 Linux에서 .NET Core와 크로스 플랫폼 C++ 앱을 쉽게 실행하고 디버그할 수 있습니다. 크로스 플랫폼 개발자라면 이 방법을 통해 더 많은 대상 환경을 간편하게 테스트할 수 있습니다.</value>
+  </data>
+  <data name="Settings_OOBEVSIntegration_Title.Text" xml:space="preserve">
+    <value>Visual Studio 통합</value>
+  </data>
+  <data name="Settings_Shell_VSIntegration.Content" xml:space="preserve">
+    <value>Visual Studio 통합</value>
+  </data>
+  <data name="MessageWslcUsage" xml:space="preserve">
+    <value>wslc - WSL 컨테이너 CLI
+사용량: 
+  wslc --help</value>
+    <comment>{Locked="--help"}Command line arguments, file names and string inserts should not be translated</comment>
+  </data>
+  <data name="MessageWslcSessionNotFound" xml:space="preserve">
+    <value>세션을 찾을 수 없음: '{}'</value>
+    <comment>{FixedPlaceholder="{}"}Command line arguments, file names and string inserts should not be translated</comment>
+  </data>
+  <data name="MessageInvalidIp" xml:space="preserve">
+    <value>잘못된 IP 주소 '{}'</value>
+    <comment>{FixedPlaceholder="{}"}Command line arguments, file names and string inserts should not be translated</comment>
+  </data>
+  <data name="MessageWslcOpenSessionFailed" xml:space="preserve">
+    <value>OpenSessionByName('{}') 실패</value>
+    <comment>{FixedPlaceholder="{}"}Command line arguments, file names and string inserts should not be translated</comment>
+  </data>
+  <data name="MessageWslcNoSessionsFound" xml:space="preserve">
+    <value>WSLC 세션을 찾을 수 없습니다.</value>
+  </data>
+  <data name="MessageWslcSessionsFound" xml:space="preserve">
+    <value>WSLC 세션 {}개를 찾았습니다.{}:</value>
+    <comment>{FixedPlaceholder="{}"}{FixedPlaceholder="{}"}Command line arguments, file names and string inserts should not be translated</comment>
+  </data>
+  <data name="MessageWslcTerminateSessionFailed" xml:space="preserve">
+    <value>세션 종료 실패: '{}'</value>
+    <comment>{FixedPlaceholder="{}"}Command line arguments, file names and string inserts should not be translated</comment>
+  </data>
+  <data name="MessageWslcDefaultSessionNotFound" xml:space="preserve">
+    <value>기본 세션을 찾을 수 없습니다.</value>
+  </data>
+  <data name="MessageWslcOpenDefaultSessionFailed" xml:space="preserve">
+    <value>기본 세션을 열지 못했습니다.</value>
+  </data>
+  <data name="MessageWslcTerminateDefaultSessionFailed" xml:space="preserve">
+    <value>기본 세션 종료에 실패했습니다.</value>
+  </data>
+  <data name="MessageWslcShellExited" xml:space="preserve">
+    <value>{}이(가) 다음과 함께 종료되었습니다. {}</value>
+    <comment>{FixedPlaceholder="{}"}{FixedPlaceholder="{}"}Command line arguments, file names and string inserts should not be translated</comment>
+  </data>
+  <data name="MessageWslcCreatedSession" xml:space="preserve">
+    <value>세션 생성됨: '{}'</value>
+    <comment>{FixedPlaceholder="{}"}Command line arguments, file names and string inserts should not be translated</comment>
+  </data>
+  <data name="MessageWslcHeaderId" xml:space="preserve">
+    <value>ID</value>
+  </data>
+  <data name="MessageWslcHeaderCreatorPid" xml:space="preserve">
+    <value>작성자 PID</value>
+  </data>
+  <data name="MessageWslcHeaderDisplayName" xml:space="preserve">
+    <value>표시 이름</value>
+  </data>
+  <data name="MessageWslcUnknownCommand" xml:space="preserve">
+    <value>알 수 없는 명령: '{}'</value>
+    <comment>{FixedPlaceholder="{}"}Command line arguments, file names and string inserts should not be translated</comment>
+  </data>
+  <data name="MessageWslcCannotRemoveRunningContainer" xml:space="preserve">
+    <value>컨테이너 '{}'(이)가 실행 중이어서 제거할 수 없습니다. 제거하기 전에 컨테이너를 중지하거나 강제 제거(-f)를 사용하세요.</value>
+    <comment>{FixedPlaceholder="{}"}Command line arguments, file names and string inserts should not be translated</comment>
+  </data>
+  <data name="MessageWslcContainerNotRunning" xml:space="preserve">
+    <value>컨테이너 '{}'(이)가 실행되고 있지 않습니다.</value>
+    <comment>{FixedPlaceholder="{}"}Command line arguments, file names and string inserts should not be translated</comment>
+  </data>
+  <data name="MessageWslcContainerIpAddressNotSupported" xml:space="preserve">
+    <value>ContainerIpAddress는 아직 지원되지 않습니다.</value>
+    <comment>{Locked="ContainerIpAddress"}Command line arguments, file names and string inserts should not be translated</comment>
+  </data>
+  <data name="MessageWslcContainerIsRunning" xml:space="preserve">
+    <value>컨테이너 '{}'(이)가 실행 중입니다.</value>
+    <comment>{FixedPlaceholder="{}"}Command line arguments, file names and string inserts should not be translated</comment>
+  </data>
+  <data name="MessageWslcContainerModeNoAdditionalNetworks" xml:space="preserve">
+    <value>컨테이너 네트워크 모드에서는 추가 네트워크가 허용되지 않습니다.</value>
+  </data>
+  <data name="MessageWslcContainerModeNoPorts" xml:space="preserve">
+    <value>포트 매핑은 컨테이너 네트워크 모드에서 지원되지 않습니다. 포트는 대상 컨테이너에서 소유합니다.</value>
+  </data>
+  <data name="MessageWslcContainerModeRequiresTarget" xml:space="preserve">
+    <value>컨테이너 네트워크 모드에는 대상 컨테이너 이름이 필요합니다.</value>
+  </data>
+  <data name="MessageWslcContainerModeTargetNotFound" xml:space="preserve">
+    <value>'{}' 대상 컨테이너를 찾을 수 없습니다.</value>
+    <comment>{FixedPlaceholder="{}"}Command line arguments, file names and string inserts should not be translated</comment>
+  </data>
+  <data name="MessageWslcContainerNotFound" xml:space="preserve">
+    <value>컨테이너 '{}'을(를) 찾을 수 없습니다.</value>
+    <comment>{FixedPlaceholder="{}"}Command line arguments, file names and string inserts should not be translated</comment>
+  </data>
+  <data name="MessageWslcContainerNetworkNameRequired" xml:space="preserve">
+    <value>사용자 지정 네트워크 유형에는 컨테이너 네트워크 이름이 필요합니다.</value>
+  </data>
+  <data name="MessageWslcNetworkNameRequired" xml:space="preserve">
+    <value>네트워크 이름은 비워 둘 수 없습니다.</value>
+  </data>
+  <data name="WSLCCLI_UnrecognizedCommandError" xml:space="preserve">
+    <value>인식할 수 없는 명령: '{}'</value>
+    <comment>{FixedPlaceholder="{}"}Command line arguments, file names and string inserts should not be translated</comment>
+  </data>
+  <data name="WSLCCLI_RequiredArgumentError" xml:space="preserve">
+    <value>필수 인수가 제공 되지 않음: '{}'</value>
+    <comment>{FixedPlaceholder="{}"}Command line arguments, file names and string inserts should not be translated</comment>
+  </data>
+  <data name="WSLCCLI_TooManyArgumentsError" xml:space="preserve">
+    <value>인수가 허용되는 횟수보다 더 많이 제공됨: '{}'</value>
+    <comment>{FixedPlaceholder="{}"}Command line arguments, file names and string inserts should not be translated</comment>
+  </data>
+  <data name="WSLCCLI_HelpArgDescription" xml:space="preserve">
+    <value>선택한 명령에 대한 도움말을 표시</value>
+  </data>
+  <data name="WSLCCLI_MultipleExclusiveArgumentsProvided" xml:space="preserve">
+    <value>여러 상호 배타적 인수가 제공됨: '{}'</value>
+    <comment>{FixedPlaceholder="{}"}Command line arguments, file names and string inserts should not be translated</comment>
+  </data>
+  <data name="WSLCCLI_DependencyArgumentMissing" xml:space="preserve">
+    <value>{} 인수는 {}과(와) 함께만 사용할 수 있습니다.</value>
+    <comment>{FixedPlaceholder="{}"}{FixedPlaceholder="{}"}Command line arguments, file names and string inserts should not be translated</comment>
+  </data>
+  <data name="WSLCCLI_Usage" xml:space="preserve">
+    <value>사용량: {} {}</value>
+    <comment>{FixedPlaceholder="{}"}{FixedPlaceholder="{}"}Command line arguments, file names and string inserts should not be translated</comment>
+  </data>
+  <data name="WSLCCLI_Command" xml:space="preserve">
+    <value>명령</value>
+  </data>
+  <data name="WSLCCLI_Options" xml:space="preserve">
+    <value>옵션</value>
+  </data>
+  <data name="WSLCCLI_AvailableCommandAliases" xml:space="preserve">
+    <value>다음 명령 별칭을 사용할 수 있습니다.</value>
+  </data>
+  <data name="WSLCCLI_AvailableCommands" xml:space="preserve">
+    <value>다음 명령을 사용할 수 있음</value>
+  </data>
+  <data name="WSLCCLI_AvailableSubcommands" xml:space="preserve">
+    <value>다음 부명령어는 사용 할 수 없음</value>
+  </data>
+  <data name="WSLCCLI_AvailableOptions" xml:space="preserve">
+    <value>다음 선택 사항을 사용할 수 있음</value>
+  </data>
+  <data name="WSLCCLI_AvailableArguments" xml:space="preserve">
+    <value>다음 인수를 사용할 수 있음</value>
+  </data>
+  <data name="WSLCCLI_HelpForDetails" xml:space="preserve">
+    <value>특정 명령에 대한 자세한 내용을 보려면 도움말 인수에 해당 명령을 전달합니다.</value>
+  </data>
+  <data name="WSLCCLI_InvalidNameError" xml:space="preserve">
+    <value>현재 명령에 대해 인수 이름을 인식할 수 없음: '{}'</value>
+    <comment>{FixedPlaceholder="{}"}Command line arguments, file names and string inserts should not be translated</comment>
+  </data>
+  <data name="WSLCCLI_CommandRequiresAdmin" xml:space="preserve">
+    <value>이 명령을 실행하려면 관리자 권한이 필요합니다.</value>
+  </data>
+  <data name="WSLCCLI_SessionIdArgDescription" xml:space="preserve">
+    <value>사용할 세션을 지정하세요.</value>
+  </data>
+  <data name="WSLCCLI_AttachArgDescription" xml:space="preserve">
+    <value>컨테이너의 stdout/stderr에 연결합니다.</value>
+  </data>
+  <data name="WSLCCLI_InteractiveArgDescription" xml:space="preserve">
+    <value>stdin에 연결하고 열린 상태로 유지하세요</value>
+  </data>
+  <data name="WSLCCLI_PortArgDescription" xml:space="preserve">
+    <value>사용할 포트를 지정하세요.</value>
+  </data>
+  <data name="WSLCCLI_ContainerIdArgDescription" xml:space="preserve">
+    <value>컨테이너 ID</value>
+  </data>
+  <data name="WSLCCLI_MissingArgumentError" xml:space="preserve">
+    <value>인수 값이 누락됨: '{}'</value>
+    <comment>{FixedPlaceholder="{}"}Command line arguments, file names and string inserts should not be translated</comment>
+  </data>
+  <data name="WSLCCLI_InvalidAliasError" xml:space="preserve">
+    <value>현재 명령에 대해 인수 별칭을 인식할 수 없음: '{}'</value>
+    <comment>{FixedPlaceholder="{}"}Command line arguments, file names and string inserts should not be translated</comment>
+  </data>
+  <data name="WSLCCLI_InvalidArgumentSpecifierError" xml:space="preserve">
+     <value>잘못된 인수 특정자: '{}'</value>
+     <comment>{FixedPlaceholder="{}"}Command line arguments, file names and string inserts should not be translated</comment>
+  </data>
+  <data name="WSLCCLI_AdjoinedNotFoundError" xml:space="preserve">
+     <value>근접한 플래그 별칭 찾을 수 없음: '{}'</value>
+     <comment>{FixedPlaceholder="{}"}Command line arguments, file names and string inserts should not be translated</comment>
+  </data>
+  <data name="WSLCCLI_AdjoinedNotFlagError" xml:space="preserve">
+     <value>근접한 별칭이 플래그가 아님: '{}'</value>
+     <comment>{FixedPlaceholder="{}"}Command line arguments, file names and string inserts should not be translated</comment>
+  </data>
+  <data name="WSLCCLI_SingleCharAfterDashError" xml:space="preserve">
+     <value>잘못된 인수 특정자: '{}'</value>
+     <comment>{FixedPlaceholder="{}"}Command line arguments, file names and string inserts should not be translated</comment>
+  </data>
+  <data name="WSLCCLI_FlagContainAdjoinedError" xml:space="preserve">
+     <value>플래그 인수는 근접하는 값을 포함할 수 없음: '{}'</value>
+     <comment>{FixedPlaceholder="{}"}Command line arguments, file names and string inserts should not be translated</comment>
+  </data>
+  <data name="WSLCCLI_ExtraPositionalError" xml:space="preserve">
+     <value>필요한 항목이 없을 때 위치 인수를 찾음: '{}'</value>
+     <comment>{FixedPlaceholder="{}"}Command line arguments, file names and string inserts should not be translated</comment>
+  </data>
+  <data name="WSLCCLI_MissingArgumentNameError" xml:space="preserve">
+     <value>인수 이름이 없음: '{}'</value>
+     <comment>{FixedPlaceholder="{}"}Command line arguments, file names and string inserts should not be translated</comment>
+  </data>
+  <data name="WSLCCLI_FailedResolvingForwardError" xml:space="preserve">
+     <value>'{}' 인수에서 시작하는 전달된 인수를 resolve 못했습니다.</value>
+     <comment>{FixedPlaceholder="{}"}Command line arguments, file names and string inserts should not be translated</comment>
+  </data>
+  <data name="WSLCCLI_CommandHasNoForwardArgumentsError" xml:space="preserve">
+     <value>잘못된 추가 인수가 발견됨: '{}'</value>
+     <comment>{FixedPlaceholder="{}"}Command line arguments, file names and string inserts should not be translated</comment>
+  </data>
+  <data name="WSLCCLI_ValueMustBeLastInAliasChainError" xml:space="preserve">
+     <value>값이 있는 별칭 인수는 별칭 체인 '{}'의 마지막이어야 합니다.</value>
+     <comment>{FixedPlaceholder="{}"}Command line arguments, file names and string inserts should not be translated</comment>
+  </data>
+  <data name="WSLCCLI_CopyrightHeader" xml:space="preserve">
+     <value>Copyright (c) Microsoft Corporation. All rights reserved.
+이 제품의 개인 정보 보호에 관한 정보는 https://aka.ms/privacy에서 확인하세요.</value>
+     <comment>Copyright notice and privacy link</comment>
+  </data>
+  <data name="MessageWslcInvalidImage" xml:space="preserve">
+    <value>잘못된 이미지: '{}'</value>
+    <comment>{FixedPlaceholder="{}"}Command line arguments, file names and string inserts should not be translated</comment>
+  </data>
+  <data name="MessageWslcInvalidName" xml:space="preserve">
+    <value>잘못된 이름: '{}'</value>
+    <comment>{FixedPlaceholder="{}"}Command line arguments, file names and string inserts should not be translated</comment>
+  </data>
+  <data name="MessagePathNotAbsolute" xml:space="preserve">
+    <value>경로가 절대 경로가 아님: '{}'</value>
+    <comment>{FixedPlaceholder="{}"}Command line arguments, file names and string inserts should not be translated</comment>
+  </data>
+  <data name="MessageWslcVolumeNotFound" xml:space="preserve">
+    <value>볼륨을 찾을 수 없음: ‘{}’</value>
+    <comment>{FixedPlaceholder="{}"}Command line arguments, file names and string inserts should not be translated</comment>
+  </data>
+  <data name="MessageWslcImageNotFound" xml:space="preserve">
+    <value>이미지 '{}'을(를) 찾을 수 없습니다.</value>
+    <comment>{FixedPlaceholder="{}"}Command line arguments, file names and string inserts should not be translated</comment>
+  </data>
+  <data name="MessageWslcMissingVolumeOption" xml:space="preserve">
+    <value>필수 옵션 누락: '{}'</value>
+    <comment>{FixedPlaceholder="{}"}Command line arguments, file names and string inserts should not be translated</comment>
+  </data>
+  <data name="MessageWslcInvalidVolumeOption" xml:space="preserve">
+    <value>'{}' 옵션에 대한 값이 잘못됨: '{}'</value>
+    <comment>{FixedPlaceholder="{}"}Command line arguments, file names and string inserts should not be translated</comment>
+  </data>
+  <data name="MessageWslcUnknownVolumeOption" xml:space="preserve">
+    <value>알 수 없는 옵션: '{}'</value>
+    <comment>{FixedPlaceholder="{}"}Command line arguments, file names and string inserts should not be translated</comment>
+  </data>
+  <data name="MessageWslcInvalidVolumeType" xml:space="preserve">
+    <value>지원하지 않는 볼륨 유형: '{}'.</value>
+    <comment>{FixedPlaceholder="{}"}Command line arguments, file names and string inserts should not be translated</comment>
+  </data>
+  <data name="MessageWslcUnsupportedVolumeDriverOpts" xml:space="preserve">
+    <value>지원하지 않는 볼륨 드라이버 옵션: {}</value>
+    <comment>{FixedPlaceholder="{}"}Command line arguments, file names and string inserts should not be translated</comment>
+  </data>
+  <data name="MessageWslcVolumeInUse" xml:space="preserve">
+    <value>볼륨 '{}'을(를) 사용 중입니다.</value>
+    <comment>{FixedPlaceholder="{}"}Command line arguments, file names and string inserts should not be translated</comment>
+  </data>
+  <data name="MessageWslcNetworkNotFound" xml:space="preserve">
+    <value>네트워크를 찾을 수 없음: '{}'</value>
+    <comment>{FixedPlaceholder="{}"}Command line arguments, file names and string inserts should not be translated</comment>
+  </data>
+  <data name="MessageWslcInvalidNetworkDriver" xml:space="preserve">
+    <value>지원되지 않는 네트워크 드라이버: '{}'</value>
+    <comment>{FixedPlaceholder="{}"}Command line arguments, file names and string inserts should not be translated</comment>
+  </data>
+  <data name="MessageWslcNetworkInUse" xml:space="preserve">
+    <value>네트워크 '{}'에 활성 엔드포인트가 있습니다.</value>
+    <comment>{FixedPlaceholder="{}"}Command line arguments, file names and string inserts should not be translated</comment>
+  </data>
+  <data name="MessageWslcNetworkAlreadyExists" xml:space="preserve">
+    <value>네트워크 '{}'이(가) 이미 있습니다.</value>
+    <comment>{FixedPlaceholder="{}"}Command line arguments, file names and string inserts should not be translated</comment>
+  </data>
+  <data name="MessageWslcAdditionalNetworksRequirePrimary" xml:space="preserve">
+    <value>기본 네트워크 모드가 'host' 또는 'none'일 때 추가 네트워크는 허용되지 않습니다.</value>
+    <comment>{Locked="host"}{Locked="none"}Command line arguments, file names and string inserts should not be translated</comment>
+  </data>
+  <data name="MessageWslcDuplicateNetwork" xml:space="preserve">
+    <value>중복 네트워크: '{}'</value>
+    <comment>{FixedPlaceholder="{}"}Command line arguments, file names and string inserts should not be translated</comment>
+  </data>
+  <data name="MessageWslcFailedToMountVolume" xml:space="preserve">
+    <value>볼륨 '{}'을(를) 만들지 못함: {}</value>
+    <comment>{FixedPlaceholder="{}"}Command line arguments, file names and string inserts should not be translated</comment>
+  </data>
+  <data name="MessageWslcPortInUse" xml:space="preserve">
+    <value>포트 {}가 이미 사용 중이므로 컨테이너 {}를 시작할 수 없습니다.</value>
+    <comment>{FixedPlaceholder="{}"}Command line arguments, file names and string inserts should not be translated</comment>
+  </data>
+  <data name="MessageWslcBothDockerAndContainerFileFound" xml:space="preserve">
+    <value>Dockerfile과 Containerfile을 모두 찾았습니다. -f를 사용하여 사용할 파일 선택</value>
+    <comment>{FixedPlaceholder="Dockerfile"}{FixedPlaceholder="Containerfile"}{FixedPlaceholder="-f"}Command line arguments, file names and string inserts should not be translated</comment>
+  </data>
+  <data name="MessageWslcFailedToOpenFile" xml:space="preserve">
+    <value>'{}'을(를) 열지 못함: {}</value>
+    <comment>{FixedPlaceholder="{}"}Command line arguments, file names and string inserts should not be translated</comment>
+  </data>
+  <data name="MessageWslcImportPipeNotSupported" xml:space="preserve">
+    <value>파이프에서 가져오기는 지원되지 않습니다. 파일에서 stdin을 리디렉션하세요.</value>
+  </data>
+  <data name="MessageWslcBuildFileNotFound" xml:space="preserve">
+    <value>'{}'에서 Containerfile 또는 Dockerfile을 찾을 수 없습니다.</value>
+    <comment>{FixedPlaceholder="{}"}Command line arguments, file names and string inserts should not be translated</comment>
+  </data>
+  <data name="MessageWslcSessionStorageNotFound" xml:space="preserve">
+    <value>'{}'에서 WSLC 세션을 찾을 수 없습니다.</value>
+    <comment>{FixedPlaceholder="{}"}Command line arguments, file names and string inserts should not be translated</comment>
+  </data>
+  <data name="MessageWslcTagImageInvalidFormat" xml:space="preserve">
+    <value>이미지 태그 형식이 잘못됨: '{}'. 필요한 형식은 'name:tag'입니다.</value>
+    <comment>{FixedPlaceholder="{}"}Command line arguments, file names and string inserts should not be translated</comment>
+  </data>
+  <data name="WSLCCLI_RootCommandDesc" xml:space="preserve">
+    <value>WSLC Linux용 Windows 하위 시스템 컨테이너 CLI 도구입니다.</value>
+    <comment>{Locked="WSLC"}Product names should not be translated</comment>
+  </data>
+  <data name="WSLCCLI_RootCommandLongDesc" xml:space="preserve">
+    <value>WSLC Linux용 Windows 하위 시스템 컨테이너 CLI 도구입니다. 명령줄에서 WSL 컨테이너를 관리하고 상호 작용할 수 있습니다.</value>
+    <comment>{Locked="WSLC"}{Locked="WSL"}Product names should not be translated</comment>
+  </data>
+  <data name="WSLCCLI_ContainerCommandDesc" xml:space="preserve">
+    <value>컨테이너를 관리합니다.</value>
+  </data>
+  <data name="WSLCCLI_ContainerCommandLongDesc" xml:space="preserve">
+    <value>컨테이너 만들기, 시작, 중지 및 제거를 포함하여 WSL 컨테이너의 수명 주기를 관리합니다.</value>
+    <comment>{Locked="WSL"}Product names should not be translated</comment>
+  </data>
+  <data name="WSLCCLI_ContainerAttachDesc" xml:space="preserve">
+    <value>컨테이너에 연결합니다.</value>
+  </data>
+  <data name="WSLCCLI_ContainerAttachLongDesc" xml:space="preserve">
+    <value>컨테이너에 연결합니다.</value>
+  </data>
+  <data name="WSLCCLI_ContainerCreateDesc" xml:space="preserve">
+    <value>컨테이너를 만듭니다.</value>
+  </data>
+  <data name="WSLCCLI_ContainerCreateLongDesc" xml:space="preserve">
+    <value>컨테이너를 만듭니다.</value>
+  </data>
+  <data name="WSLCCLI_ContainerExecDesc" xml:space="preserve">
+    <value>실행 중인 컨테이너에서 명령을 실행합니다.</value>
+  </data>
+  <data name="WSLCCLI_ContainerExecLongDesc" xml:space="preserve">
+    <value>실행 중인 컨테이너에서 명령을 실행합니다.</value>
+  </data>
+  <data name="WSLCCLI_ContainerInspectDesc" xml:space="preserve">
+    <value>컨테이너를 검사합니다.</value>
+  </data>
+  <data name="WSLCCLI_ContainerInspectLongDesc" xml:space="preserve">
+    <value>컨테이너에 대한 자세한 정보를 표시합니다.</value>
+  </data>
+  <data name="WSLCCLI_ContainerKillDesc" xml:space="preserve">
+    <value>컨테이너를 종료합니다.</value>
+  </data>
+  <data name="WSLCCLI_ContainerKillLongDesc" xml:space="preserve">
+    <value>컨테이너를 종료합니다.</value>
+  </data>
+  <data name="WSLCCLI_ContainerListDesc" xml:space="preserve">
+    <value>컨테이너를 나열합니다.</value>
+  </data>
+  <data name="WSLCCLI_ContainerListLongDesc" xml:space="preserve">
+    <value>컨테이너를 나열합니다. 기본적으로 실행 중인 컨테이너만 표시됩니다. --all 을 사용하여 모든 컨테이너를 포함합니다.</value>
+    <comment>{Locked="--all "}Command line arguments, file names and string inserts should not be translated</comment>
+  </data>
+  <data name="WSLCCLI_ContainerLogsDesc" xml:space="preserve">
+    <value>컨테이너 로그를 봅니다.</value>
+  </data>
+  <data name="WSLCCLI_ContainerLogsLongDesc" xml:space="preserve">
+    <value>컨테이너에 대한 로그를 봅니다.</value>
+  </data>
+  <data name="WSLCCLI_ContainerRemoveDesc" xml:space="preserve">
+    <value>컨테이너를 제거합니다.</value>
+  </data>
+  <data name="WSLCCLI_ContainerRemoveLongDesc" xml:space="preserve">
+    <value>컨테이너를 제거합니다.</value>
+  </data>
+  <data name="WSLCCLI_ContainerRunDesc" xml:space="preserve">
+    <value>컨테이너를 실행합니다.</value>
+  </data>
+  <data name="WSLCCLI_ContainerRunLongDesc" xml:space="preserve">
+    <value>컨테이너를 실행합니다. 기본적으로 컨테이너는 포그라운드에서 시작됩니다. --detach 사용하여 백그라운드에서 실행합니다.</value>
+    <comment>{Locked="--detach "}Command line arguments, file names and string inserts should not be translated</comment>
+  </data>
+  <data name="WSLCCLI_ContainerStartDesc" xml:space="preserve">
+    <value>컨테이너를 시작합니다.</value>
+  </data>
+  <data name="WSLCCLI_ContainerStartLongDesc" xml:space="preserve">
+    <value>컨테이너를 시작합니다.</value>
+  </data>
+  <data name="WSLCCLI_ContainerStatsDesc" xml:space="preserve">
+    <value>컨테이너 리소스 사용량 통계를 표시합니다.</value>
+  </data>
+  <data name="WSLCCLI_ContainerStatsLongDesc" xml:space="preserve">
+    <value>실행 중인 컨테이너의 리소스 사용량(CPU, 메모리, 네트워크 I/O, 블록 I/O 및 PID)의 스냅샷을 표시합니다.</value>
+  </data>
+  <data name="WSLCCLI_ContainerStopDesc" xml:space="preserve">
+    <value>컨테이너를 중지합니다.</value>
+  </data>
+  <data name="WSLCCLI_ContainerStopLongDesc" xml:space="preserve">
+    <value>컨테이너를 중지합니다.</value>
+  </data>
+  <data name="WSLCCLI_ImageCommandDesc" xml:space="preserve">
+    <value>이미지를 관리합니다.</value>
+  </data>
+  <data name="WSLCCLI_ImageCommandLongDesc" xml:space="preserve">
+    <value>빌드, 끌어오기, 나열 및 제거를 포함하여 컨테이너 이미지를 관리합니다.</value>
+  </data>
+  <data name="WSLCCLI_ImageBuildDesc" xml:space="preserve">
+    <value>Dockerfile에서 이미지를 빌드합니다.</value>
+    <comment>{Locked="Dockerfile"}Command line arguments should not be translated</comment>
+  </data>
+  <data name="WSLCCLI_ImageBuildLongDesc" xml:space="preserve">
+    <value>Dockerfile 및 빌드 컨텍스트 디렉터리에서 이미지를 빌드합니다.</value>
+    <comment>{Locked="Dockerfile"}Command line arguments should not be translated</comment>
+  </data>
+  <data name="WSLCCLI_ImageInspectDesc" xml:space="preserve">
+    <value>이미지를 검사합니다.</value>
+  </data>
+  <data name="WSLCCLI_ImageInspectLongDesc" xml:space="preserve">
+    <value>이미지를 검사합니다.</value>
+  </data>
+  <data name="WSLCCLI_ImageImportDesc" xml:space="preserve">
+    <value>tarball에서 이미지를 가져옵니다.</value>
+  </data>
+  <data name="WSLCCLI_ImageImportLongDesc" xml:space="preserve">
+    <value>tarball의 콘텐츠를 가져와서 파일 시스템 이미지를 만듭니다. 필요에 따라 리포지토리 및 태그 이름으로 이미지에 태그를 지정합니다.</value>
+  </data>
+  <data name="WSLCCLI_ImageListDesc" xml:space="preserve">
+    <value>이미지를 나열합니다.</value>
+  </data>
+  <data name="WSLCCLI_ImageListLongDesc" xml:space="preserve">
+    <value>이미지를 나열합니다.</value>
+  </data>
+  <data name="WSLCCLI_ImageLoadDesc" xml:space="preserve">
+    <value>이미지를 로드합니다.</value>
+  </data>
+  <data name="WSLCCLI_ImageLoadLongDesc" xml:space="preserve">
+    <value>이미지를 로드합니다.</value>
+  </data>
+  <data name="WSLCCLI_ImagePullDesc" xml:space="preserve">
+    <value>이미지를 끌어옵니다.</value>
+  </data>
+  <data name="WSLCCLI_ImagePullLongDesc" xml:space="preserve">
+    <value>이미지를 끌어옵니다.</value>
+  </data>
+  <data name="WSLCCLI_ImagePruneAllArgDescription" xml:space="preserve">
+    <value>단순히 연결되지 않은 이미지뿐만 아니라, 사용되지 않는 모든 이미지를 제거합니다.</value>
+  </data>
+  <data name="WSLCCLI_ImagePruneDeleted" xml:space="preserve">
+    <value>삭제함: {}</value>
+    <comment>{FixedPlaceholder="{}"}Command line arguments, file names and string inserts should not be translated</comment>
+  </data>
+  <data name="WSLCCLI_ImagePruneDesc" xml:space="preserve">
+    <value>사용하지 않는 이미지를 제거합니다.</value>
+  </data>
+  <data name="WSLCCLI_ImagePruneLongDesc" xml:space="preserve">
+    <value>연결되지 않은 모든 이미지를 제거합니다. --all 이 지정된 경우 컨테이너에서 사용되지 않는 모든 이미지를 제거합니다.</value>
+    <comment>{Locked="--all "}Command line arguments, file names and string inserts should not be translated</comment>
+  </data>
+  <data name="WSLCCLI_ImagePruneSpaceReclaimed" xml:space="preserve">
+    <value>회수된 총 공간: {:.2f}MB</value>
+    <comment>{FixedPlaceholder="{:.2f}"}Command line arguments, file names and string inserts should not be translated</comment>
+  </data>
+  <data name="WSLCCLI_ImagePruneUntagged" xml:space="preserve">
+    <value>태그가 지정되지 않음: {}</value>
+    <comment>{FixedPlaceholder="{}"}Command line arguments, file names and string inserts should not be translated</comment>
+  </data>
+  <data name="WSLCCLI_ImagePushDesc" xml:space="preserve">
+    <value>레지스트리에 이미지를 업로드합니다.</value>
+  </data>
+  <data name="WSLCCLI_ImagePushLongDesc" xml:space="preserve">
+    <value>레지스트리에 이미지를 업로드합니다.</value>
+  </data>
+  <data name="WSLCCLI_ImageRemoveDesc" xml:space="preserve">
+    <value>이미지를 제거합니다.</value>
+  </data>
+  <data name="WSLCCLI_ImageRemoveLongDesc" xml:space="preserve">
+    <value>이미지를 제거합니다.</value>
+  </data>
+  <data name="WSLCCLI_ImageSaveDesc" xml:space="preserve">
+    <value>이미지를 저장합니다.</value>
+  </data>
+  <data name="WSLCCLI_ImageSaveLongDesc" xml:space="preserve">
+    <value>이미지를 저장합니다.</value>
+  </data>
+  <data name="WSLCCLI_LoginDesc" xml:space="preserve">
+    <value>레지스트리에 로그인합니다.</value>
+  </data>
+  <data name="WSLCCLI_LoginLongDesc" xml:space="preserve">
+    <value>레지스트리에 로그인합니다. 서버를 지정하지 않으면 세션에서 기본값을 정의합니다.</value>
+  </data>
+  <data name="WSLCCLI_LogoutDesc" xml:space="preserve">
+    <value>레지스트리에서 로그아웃합니다.</value>
+  </data>
+  <data name="WSLCCLI_LogoutLongDesc" xml:space="preserve">
+    <value>레지스트리에서 로그아웃합니다. 서버를 지정하지 않으면 세션에서 기본값을 정의합니다.</value>
+  </data>
+  <data name="WSLCCLI_LoginSucceeded" xml:space="preserve">
+    <value>로그인 성공</value>
+  </data>
+  <data name="WSLCCLI_LogoutSucceeded" xml:space="preserve">
+    <value>{}에 대한 로그인 자격 증명을 제거하는 중</value>
+    <comment>{FixedPlaceholder="{}"}Command line arguments, file names and string inserts should not be translated</comment>
+  </data>
+  <data name="WSLCCLI_LogoutNotFound" xml:space="preserve">
+    <value>{}에 로그인되지 않음</value>
+    <comment>{FixedPlaceholder="{}"}Command line arguments, file names and string inserts should not be translated</comment>
+  </data>
+  <data name="WSLCCLI_CredentialFileCorrupt" xml:space="preserve">
+    <value>자격 증명 파일 '{}'을(를) 구문 분석하지 못했습니다. 파일이 손상되었을 수 있습니다.</value>
+    <comment>{FixedPlaceholder="{}"}Command line arguments, file names and string inserts should not be translated</comment>
+  </data>
+  <data name="MessageWslcFailedToWriteFile" xml:space="preserve">
+    <value>'{}'을(를) 쓰지 못했습니다. {}</value>
+    <comment>{FixedPlaceholder="{}"}Command line arguments, file names and string inserts should not be translated</comment>
+  </data>
+  <data name="WSLCCLI_LoginServerArgDescription" xml:space="preserve">
+    <value>서버</value>
+  </data>
+  <data name="WSLCCLI_LoginUsernameArgDescription" xml:space="preserve">
+    <value>사용자 이름</value>
+  </data>
+  <data name="WSLCCLI_LoginPasswordArgDescription" xml:space="preserve">
+    <value>암호 또는 PAT(개인용 액세스 토큰)</value>
+    <comment>{Locked="PAT"}Acronym should not be translated</comment>
+  </data>
+  <data name="WSLCCLI_LoginPasswordStdinArgDescription" xml:space="preserve">
+    <value>stdin에서 암호 또는 PAT(개인용 액세스 토큰) 가져오기</value>
+    <comment>{Locked="PAT"}{Locked="stdin"}Technical terms should not be translated</comment>
+  </data>
+  <data name="WSLCCLI_LoginPasswordAndStdinMutuallyExclusive" xml:space="preserve">
+    <value>--password 와 --password-stdin 은 함께 사용할 수 없습니다.</value>
+    <comment>{Locked="--password "}{Locked="--password-stdin "}Command line arguments, file names and string inserts should not be translated</comment>
+  </data>
+  <data name="WSLCCLI_LoginPasswordStdinRequiresUsername" xml:space="preserve">
+    <value>--password-stdin 과 함께 --username 을 제공해야 합니다.</value>
+    <comment>{Locked="--username "}{Locked="--password-stdin"}Command line arguments, file names and string inserts should not be translated</comment>
+  </data>
+  <data name="WSLCCLI_LoginUsernamePrompt" xml:space="preserve">
+    <value>사용자 이름: </value>
+  </data>
+  <data name="WSLCCLI_LoginPasswordPrompt" xml:space="preserve">
+    <value>암호: </value>
+  </data>
+  <data name="WSLCCLI_RegistryCommandDesc" xml:space="preserve">
+    <value>레지스트리 자격 증명을 관리합니다.</value>
+  </data>
+  <data name="WSLCCLI_RegistryCommandLongDesc" xml:space="preserve">
+    <value>컨테이너 레지스트리 로그인 및 로그아웃을 포함하여 레지스트리 자격 증명을 관리합니다.</value>
+  </data>
+  <data name="WSLCCLI_SystemCommandDesc" xml:space="preserve">
+    <value>시스템 수준 명령</value>
+  </data>
+  <data name="WSLCCLI_SystemCommandLongDesc" xml:space="preserve">
+    <value>시스템 수준 관리 명령입니다.</value>
+  </data>
+  <data name="WSLCCLI_ImageTagDesc" xml:space="preserve">
+    <value>이미지에 태그를 지정합니다.</value>
+  </data>
+  <data name="WSLCCLI_ImageTagLongDesc" xml:space="preserve">
+    <value>이미지에 태그를 지정합니다.</value>
+  </data>
+  <data name="WSLCCLI_SessionCommandDesc" xml:space="preserve">
+    <value>세션을 관리합니다.</value>
+  </data>
+  <data name="WSLCCLI_SessionCommandLongDesc" xml:space="preserve">
+    <value>활성 세션 나열 및 대화형 셸 시작을 포함하여 WSL 컨테이너 세션을 관리합니다.</value>
+    <comment>{Locked="WSL"}Product names should not be translated</comment>
+  </data>
+  <data name="WSLCCLI_SessionListDesc" xml:space="preserve">
+    <value>세션을 나열합니다.</value>
+  </data>
+  <data name="WSLCCLI_SessionListLongDesc" xml:space="preserve">
+    <value>활성 세션을 나열합니다.</value>
+  </data>
+  <data name="WSLCCLI_SessionShellDesc" xml:space="preserve">
+    <value>세션에 연결합니다.</value>
+  </data>
+  <data name="WSLCCLI_SessionShellLongDesc" xml:space="preserve">
+    <value>활성 세션에 연결합니다. 세션 ID를 제공하지 않으면 wslc 기본 세션이 사용됩니다.</value>
+    <comment>{Locked="wslc"}Command line arguments should not be translated</comment>
+  </data>
+  <data name="WSLCCLI_SessionTerminateDesc" xml:space="preserve">
+    <value>세션을 종료합니다.</value>
+  </data>
+  <data name="WSLCCLI_SessionTerminateLongDesc" xml:space="preserve">
+    <value>활성 세션을 종료합니다. 세션을 지정하지 않으면 기본 세션이 종료됩니다.</value>
+  </data>
+  <data name="WSLCCLI_SessionEnterDesc" xml:space="preserve">
+    <value>임시 세션에 들어갑니다.</value>
+  </data>
+  <data name="WSLCCLI_SessionEnterLongDesc" xml:space="preserve">
+    <value>지정된 저장 경로를 사용하여 비영구 세션을 만들고, 해당 세션으로 셸을 엽니다. 셸이 종료되면 세션이 삭제됩니다. 이름이 제공되지 않으면 GUID가 생성되어 stderr에 출력됩니다.</value>
+    <comment>{Locked="GUID"}{Locked="stderr"}Technical terms should not be translated</comment>
+  </data>
+  <data name="WSLCCLI_SessionEnterNameArgDescription" xml:space="preserve">
+    <value>세션의 이름입니다. 제공하지 않으면 GUID 생성됩니다.</value>
+    <comment>{Locked="GUID"}Technical terms should not be translated</comment>
+  </data>
+  <data name="WSLCCLI_SettingsCommandDesc" xml:space="preserve">
+    <value>기본 편집기에서 설정 파일을 엽니다.</value>
+  </data>
+  <data name="WSLCCLI_SettingsCommandLongDesc" xml:space="preserve">
+    <value>.yaml 파일의 시스템 기본 편집기에서 wslc 사용자 설정 파일을 엽니다.
+처음 실행 시 모든 설정이 기본값으로 주석 처리된 파일을 만듭니다.</value>
+    <comment>{Locked="wslc"}{Locked=".yaml"}Command line arguments should not be translated</comment>
+  </data>
+  <data name="WSLCCLI_SettingsResetDesc" xml:space="preserve">
+    <value>기본 제공 기본값으로 설정을 다시 설정합니다.</value>
+  </data>
+  <data name="WSLCCLI_SettingsResetLongDesc" xml:space="preserve">
+    <value>주석 처리된 기본 서식 파일로 설정 파일을 덮어씁니다.</value>
+  </data>
+  <data name="WSLCCLI_SettingsResetConfirm" xml:space="preserve">
+    <value>설정이 기본값으로 재설정되었습니다.</value>
+  </data>
+  <data name="WSLCCLI_VersionDesc" xml:space="preserve">
+    <value>버전 정보를 표시합니다.</value>
+  </data>
+  <data name="WSLCCLI_VersionLongDesc" xml:space="preserve">
+    <value>이 도구의 버전 정보를 표시합니다.</value>
+  </data>
+  <data name="WSLCCLI_AllArgDescription" xml:space="preserve">
+    <value>상태에 관계없이 모두 표시합니다.</value>
+  </data>
+  <data name="WSLCCLI_BuildArgDescription" xml:space="preserve">
+    <value>빌드 시간 변수 설정(KEY=VALUE)</value>
+    <comment>{Locked="KEY=VALUE"}Command line arguments should not be translated</comment>
+  </data>
+  <data name="WSLCCLI_BuildPullArgDescription" xml:space="preserve">
+    <value>항상 최신 버전의 이미지를 가져오려고 시도합니다.</value>
+  </data>
+  <data name="WSLCCLI_BuildTargetArgDescription" xml:space="preserve">
+    <value>빌드할 대상 빌드 단계 설정</value>
+  </data>
+  <data name="WSLCCLI_CommandArgDescription" xml:space="preserve">
+    <value>실행할 명령</value>
+  </data>
+  <data name="WSLCCLI_ForceArgDescription" xml:space="preserve">
+    <value>컨테이너가 실행되고 있더라도 삭제</value>
+  </data>
+  <data name="WSLCCLI_DetachArgDescription" xml:space="preserve">
+    <value>분리된 모드에서 컨테이너 실행</value>
+  </data>
+  <data name="WSLCCLI_EntrypointArgDescription" xml:space="preserve">
+    <value>컨테이너 초기화 프로세스 실행 파일을 지정합니다.</value>
+  </data>
+  <data name="WSLCCLI_EnvArgDescription" xml:space="preserve">
+    <value>환경 변수에 대한 Key=Value 쌍</value>
+    <comment>{Locked="Key=Value"}Command line arguments should not be translated</comment>
+  </data>
+  <data name="WSLCCLI_EnvFileArgDescription" xml:space="preserve">
+    <value>env 변수의 key=value 쌍을 포함하는 파일</value>
+    <comment>{Locked="key=value"}Command line arguments should not be translated</comment>
+  </data>
+  <data name="WSLCCLI_FileArgDescription" xml:space="preserve">
+    <value>Dockerfile 경로(stdin 읽으려면 "-" 사용)</value>
+    <comment>{Locked="Dockerfile"}{Locked="stdin"}{Locked="-"}Command line arguments should not be translated</comment>
+  </data>
+  <data name="WSLCCLI_FilterArgDescription" xml:space="preserve">
+    <value>제공된 조건에 따라 출력 필터링</value>
+  </data>
+  <data name="WSLCCLI_InvalidFilterError" xml:space="preserve">
+    <value>'-f, --filter' 플래그에 대한 인수 "{}"가 잘못되었습니다: 필터 형식이 잘못되었습니다(name=value 형식이어야 함).</value>
+    <comment>{FixedPlaceholder="{}"}{Locked="--filter'"}Command line arguments, file names and string inserts should not be translated</comment>  </data>
+  <data name="WSLCCLI_FollowArgDescription" xml:space="preserve">
+    <value>로그 출력 따라가기</value>
+  </data>
+  <data name="WSLCCLI_FormatArgDescription" xml:space="preserve">
+    <value>출력 형식(json 또는 table) (기본값: table)</value>
+    <comment>{Locked="json"}{Locked="table"}Command line arguments should not be translated</comment>
+  </data>
+  <data name="WSLCCLI_ForwardArgsDescription" xml:space="preserve">
+    <value>컨테이너의 초기화 프로세스에 전달할 인수</value>
+  </data>
+  <data name="WSLCCLI_GpusArgDescription" xml:space="preserve">
+    <value>Add GPU devices to the container ('all' to pass all GPUs)</value>
+    <comment>{Locked="all"}</comment>
+  </data>
+  <data name="WSLCCLI_GpusInvalidValue" xml:space="preserve">
+    <value>잘못된 {} 값: '{}'. 'all'만 지원됩니다.</value>
+    <comment>{FixedPlaceholder="{}"}Command line arguments, file names and string inserts should not be translated</comment>
+  </data>
+  <data name="WSLCCLI_ImageForceArgDescription" xml:space="preserve">
+    <value>사용 중인 경우에도 이미지 삭제</value>
+  </data>
+  <data name="WSLCCLI_ImageIdArgDescription" xml:space="preserve">
+    <value>이미지 이름</value>
+  </data>
+  <data name="WSLCCLI_ImportFileArgDescription" xml:space="preserve">
+    <value>stdin에서 읽으려면 파일 또는 -</value>
+  </data>
+  <data name="WSLCCLI_InputArgDescription" xml:space="preserve">
+    <value>이미지가 포함된 tar 보관 파일의 경로를 제공합니다.</value>
+  </data>
+  <data name="WSLCCLI_LabelArgDescription" xml:space="preserve">
+    <value>개체에 대한 메타데이터 설정</value>
+  </data>
+  <data name="WSLCCLI_LabelKeyEmptyError" xml:space="preserve">
+    <value>레이블 키는 비워 둘 수 없습니다.</value>
+  </data>
+  <data name="WSLCCLI_LastArgDescription" xml:space="preserve">
+    <value>최근에 생성된 컨테이너 n개 표시(모든 상태 포함)</value>
+  </data>
+  <data name="WSLCCLI_LatestArgDescription" xml:space="preserve">
+    <value>가장 최근에 만든 컨테이너 표시(모든 상태 포함)</value>
+  </data>
+  <data name="WSLCCLI_HostnameArgDescription" xml:space="preserve">
+    <value>컨테이너 호스트 이름</value>
+  </data>
+  <data name="WSLCCLI_NameArgDescription" xml:space="preserve">
+    <value>컨테이너의 이름</value>
+  </data>
+  <data name="WSLCCLI_NoCacheArgDescription" xml:space="preserve">
+    <value>이미지를 빌드할 때 캐시를 사용하지 마세요.</value>
+  </data>
+  <data name="WSLCCLI_NoPruneArgDescription" xml:space="preserve">
+    <value>태그가 지정되지 않은 부모 삭제 안 함</value>
+  </data>
+  <data name="WSLCCLI_NoTruncArgDescription" xml:space="preserve">
+    <value>출력 자르기 안 함</value>
+  </data>
+  <data name="WSLCCLI_OutputArgDescription" xml:space="preserve">
+    <value>저장된 이미지의 경로</value>
+  </data>
+  <data name="WSLCCLI_PathArgDescription" xml:space="preserve">
+    <value>빌드 컨텍스트 디렉터리의 경로</value>
+  </data>
+  <data name="WSLCCLI_PublishArgDescription" xml:space="preserve">
+    <value>컨테이너에서 호스트로 포트 게시</value>
+  </data>
+  <data name="WSLCCLI_PublishAllArgDescription" xml:space="preserve">
+    <value>모든 노출된 포트를 임의 호스트 포트에 게시</value>
+  </data>
+  <data name="WSLCCLI_QuietArgDescription" xml:space="preserve">
+    <value>컨테이너 ID만 출력합니다.</value>
+  </data>
+  <data name="WSLCCLI_RemoveArgDescription" xml:space="preserve">
+    <value>중지된 후 컨테이너 제거</value>
+  </data>
+  <data name="WSLCCLI_StopSignalArgDescription" xml:space="preserve">
+    <value>컨테이너를 중지하라는 신호</value>
+  </data>
+  <data name="WSLCCLI_ShmSizeArgDescription" xml:space="preserve">
+    <value>/dev/shm의 크기(예: 64M, 1G)</value>
+    <comment>{Locked="/dev/shm"}Command line arguments should not be translated</comment>
+  </data>
+  <data name="WSLCCLI_SessionIdPositionalArgDescription" xml:space="preserve">
+    <value>세션 ID</value>
+  </data>
+  <data name="WSLCCLI_SessionStoragePositionalArgDescription" xml:space="preserve">
+    <value>세션 저장소 경로</value>
+  </data>
+  <data name="WSLCCLI_SignalArgDescription" xml:space="preserve">
+    <value>보낼 신호</value>
+  </data>
+  <data name="WSLCCLI_SourceArgDescription" xml:space="preserve">
+    <value>image-name[:tag] 형식의 현재 또는 기존 이미지 참조</value>
+  </data>
+  <data name="WSLCCLI_TagArgDescription" xml:space="preserve">
+    <value>빌드된 이미지의 태그</value>
+  </data>
+  <data name="WSLCCLI_TailArgDescription" xml:space="preserve">
+    <value>로그의 끝에서 표시할 줄 수</value>
+  </data>
+  <data name="WSLCCLI_TargetArgDescription" xml:space="preserve">
+    <value>image-name[:tag] 형식의 새 이미지 참조</value>
+  </data>
+  <data name="WSLCCLI_TimeArgDescription" xml:space="preserve">
+    <value>실행하기 전에 대기하는 시간(초)(기본값 5)</value>
+  </data>
+  <data name="WSLCCLI_TTYArgDescription" xml:space="preserve">
+    <value>컨테이너 프로세스를 사용하여 TTY를 엽니다.</value>
+    <comment>{Locked="TTY"}Command line arguments should not be translated</comment>
+  </data>
+  <data name="WSLCCLI_VerboseArgDescription" xml:space="preserve">
+    <value>자세한 정보 출력</value>
+  </data>
+  <data name="WSLCCLI_VersionArgDescription" xml:space="preserve">
+    <value>이 도구의 버전 정보 표시</value>
+  </data>
+  <data name="WSLCCLI_VolumeArgDescription" xml:space="preserve">
+    <value>컨테이너에 볼륨 탑재 바인딩</value>
+  </data>
+  <data name="WSLCCLI_WorkingDirArgDescription" xml:space="preserve">
+    <value>컨테이너 내부의 작업 디렉터리</value>
+  </data>
+  <data name="WSLCCLI_CIDFileArgDescription" xml:space="preserve">
+    <value>제공된 경로에 컨테이너 ID 쓰기</value>
+  </data>
+  <data name="WSLCCLI_DNSArgDescription" xml:space="preserve">
+    <value>resolv.conf DNS 이름 서버의 IP 주소</value>
+    <comment>{Locked="resolv.conf"}Command line arguments should not be translated</comment>
+  </data>
+  <data name="WSLCCLI_DNSDomainArgDescription" xml:space="preserve">
+    <value>기본 DNS 도메인 설정</value>
+    <comment>{Locked="DNS"}Command line arguments should not be translated</comment>
+  </data>
+  <data name="WSLCCLI_DNSOptionArgDescription" xml:space="preserve">
+    <value>DNS 옵션 설정</value>
+    <comment>{Locked="DNS"}Command line arguments should not be translated</comment>
+  </data>
+  <data name="WSLCCLI_DNSSearchArgDescription" xml:space="preserve">
+    <value>DNS 검색 도메인 설정</value>
+    <comment>{Locked="DNS"}Command line arguments should not be translated</comment>
+  </data>
+  <data name="WSLCCLI_DomainnameArgDescription" xml:space="preserve">
+    <value>컨테이너 도메인 이름</value>
+  </data>
+  <data name="WSLCCLI_GroupIdArgDescription" xml:space="preserve">
+    <value>프로세스의 그룹 ID</value>
+  </data>
+  <data name="WSLCCLI_NoDNSArgDescription" xml:space="preserve">
+    <value>컨테이너에 DNS 구성이 없습니다.</value>
+    <comment>{Locked="DNS"}Command line arguments should not be translated</comment>
+  </data>
+  <data name="WSLCCLI_ProgressArgDescription" xml:space="preserve">
+    <value>진행 유형(형식: none|ansi) (기본값: ansi)</value>
+    <comment>{Locked="none"}{Locked="ansi"}Command line arguments should not be translated</comment>
+  </data>
+  <data name="WSLCCLI_PullArgDescription" xml:space="preserve">
+    <value>이미지 끌어오기 정책(always|missing|never) (default:never)</value>
+    <comment>{Locked="always"}{Locked="missing"}{Locked="never"}Command line arguments should not be translated</comment>
+  </data>
+  <data name="WSLCCLI_SchemeArgDescription" xml:space="preserve">
+    <value>레지스트리 연결에 이 체계 사용</value>
+  </data>
+  <data name="WSLCCLI_TMPFSArgDescription" xml:space="preserve">
+    <value>지정된 경로의 컨테이너에 tmpfs 탑재</value>
+    <comment>{Locked="tmpfs"}Command line arguments should not be translated</comment>
+  </data>
+  <data name="WSLCCLI_UserArgDescription" xml:space="preserve">
+    <value>프로세스 사용자 ID(name|uid|uid:gid)</value>
+    <comment>{Locked="name|uid|uid:gid"}Command line arguments should not be translated</comment>
+  </data>
+  <data name="WSLCCLI_VirtualArgDescription" xml:space="preserve">
+    <value>컨테이너에 가상화 기능 노출</value>
+  </data>
+  <data name="WSLCCLI_ContainerExecForwardArgsDescription" xml:space="preserve">
+    <value>컨테이너 내에서 실행 중인 명령에 전달할 인수</value>
+  </data>
+  <data name="WSLCCLI_SessionListVerboseArgDescription" xml:space="preserve">
+    <value>나열된 세션에 대한 자세한 정보를 표시합니다.</value>
+  </data>
+  <data name="WSLCCLI_InvalidFormatError" xml:space="preserve">
+    <value>잘못된 형식 유형이 지정되었습니다. 지원되는 형식 유형은 json, table입니다.</value>
+    <comment>{Locked="json"}{Locked="table"}Command line arguments should not be translated</comment>
+  </data>
+  <data name="WSLCCLI_InvalidInspectError" xml:space="preserve">
+    <value>잘못된 {} 값: {}은(는) 인식할 수 있는 검사 유형이 아닙니다. 지원되는 검사 유형은 {}입니다.</value>
+    <comment>{FixedPlaceholder="{}"}Command line arguments, file names and string inserts should not be translated</comment>
+  </data>
+  <data name="WSLCCLI_InvalidSignalError" xml:space="preserve">
+    <value>잘못된 {} 값: {}은(는) 인식할 수 있는 신호 이름 또는 번호가 아닙니다(예: SIGKILL, kill 또는 9).</value>
+    <comment>{FixedPlaceholder="{}"}Command line arguments, file names and string inserts should not be translated</comment>
+  </data>
+  <data name="WSLCCLI_InvalidIntegerArgumentError" xml:space="preserve">
+    <value>잘못된 {} 인수 값: {}</value>
+    <comment>{FixedPlaceholder="{}"}Command line arguments, file names and string inserts should not be translated</comment>
+  </data>
+  <data name="WSLCCLI_SignalOutOfRangeError" xml:space="preserve">
+    <value>잘못된 {} 값: {}이(가) 유효한 범위({}-{})를 벗어났습니다.</value>
+    <comment>{FixedPlaceholder="{}"}Command line arguments, file names and string inserts should not be translated</comment>
+  </data>
+  <data name="WSLCCLI_InvalidMemorySizeError" xml:space="preserve">
+    <value>잘못된 {} 인수 값: '{}'. 메모리 크기가 필요합니다(예: 256M, 1G).</value>
+    <comment>{FixedPlaceholder="{}"}Command line arguments, file names and string inserts should not be translated{Locked="256M"}{Locked="1G"}</comment>
+  </data>
+  <data name="WSLCCLI_CIDFileAlreadyExistsError" xml:space="preserve">
+    <value>CID 파일 '{}'이(가) 이미 존재합니다.</value>
+    <comment>{FixedPlaceholder="{}"}Command line arguments, file names and string inserts should not be translated</comment>
+  </data>
+  <data name="WSLCCLI_ImageNotFoundPulling" xml:space="preserve">
+    <value>이미지 '{}'을(를) 찾을 수 없습니다. 끌어오는 중</value>
+    <comment>{FixedPlaceholder="{}"}Command line arguments, file names and string inserts should not be translated</comment>
+  </data>
+  <data name="WSLCCLI_EnvKeyEmptyError" xml:space="preserve">
+    <value>환경 변수 키는 비워 둘 수 없습니다.</value>
+  </data>
+  <data name="WSLCCLI_EnvKeyWhitespaceError" xml:space="preserve">
+    <value>환경 변수 키 '{}'은(는) 공백을 포함할 수 없습니다.</value>
+    <comment>{FixedPlaceholder="{}"}Command line arguments, file names and string inserts should not be translated</comment>
+  </data>
+  <data name="WSLCCLI_ImageLoadNoInputError" xml:space="preserve">
+    <value>로드를 요청했지만 입력이 제공되지 않았습니다.</value>
+  </data>
+  <data name="WSLCCLI_VolumeCommandDesc" xml:space="preserve">
+    <value>볼륨을 관리합니다.</value>
+  </data>
+  <data name="WSLCCLI_VolumeCommandLongDesc" xml:space="preserve">
+    <value>WSL 볼륨 만들기, 검사, 나열 및 삭제를 포함하여 볼륨의 수명 주기를 관리합니다.</value>
+    <comment>{Locked="WSL"}Product names should not be translated</comment>
+  </data>
+  <data name="WSLCCLI_VolumeCreateDesc" xml:space="preserve">
+    <value>볼륨을 만듭니다.</value>
+  </data>
+  <data name="WSLCCLI_VolumeCreateLongDesc" xml:space="preserve">
+    <value>컨테이너에 연결할 수 있는 명명된 볼륨을 만듭니다.</value>
+  </data>
+  <data name="WSLCCLI_VolumeRemoveDesc" xml:space="preserve">
+    <value>볼륨을 하나 이상 제거하세요.</value>
+  </data>
+  <data name="WSLCCLI_VolumeRemoveLongDesc" xml:space="preserve">
+    <value>하나 이상의 볼륨을 제거합니다. 볼륨이 컨테이너에서 사용 중인 경우 제거할 수 없습니다.</value>
+  </data>
+  <data name="WSLCCLI_VolumeInspectDesc" xml:space="preserve">
+    <value>하나 이상의 볼륨에 대한 자세한 정보를 표시합니다.</value>
+  </data>
+  <data name="WSLCCLI_VolumeInspectLongDesc" xml:space="preserve">
+    <value>하나 이상의 볼륨에 대한 자세한 정보를 표시합니다.</value>
+  </data>
+  <data name="WSLCCLI_VolumeListDesc" xml:space="preserve">
+    <value>볼륨을 나열합니다.</value>
+  </data>
+  <data name="WSLCCLI_VolumeListLongDesc" xml:space="preserve">
+    <value>세션의 모든 볼륨을 나열합니다.</value>
+  </data>
+  <data name="WSLCCLI_VolumeNameArgDescription" xml:space="preserve">
+    <value>볼륨 이름</value>
+  </data>
+  <data name="WSLCCLI_DriverOptionDescription" xml:space="preserve">
+    <value>볼륨 드라이버 이름을 지정합니다. 예: 'guest' 또는 'vhd' (기본값: guest)</value>
+    <comment>{Locked="guest"}{Locked="vhd"}Command line arguments, file names and string inserts should not be translated</comment>
+  </data>
+  <data name="WSLCCLI_OptionsArgDescription" xml:space="preserve">
+    <value>드라이버별 옵션 설정</value>
+  </data>
+  <data name="WSLCCLI_VolumeListQuietArgDesc" xml:space="preserve">
+    <value>볼륨 이름만 출력합니다.</value>
+  </data>
+  <data name="WSLCCLI_ImageSaveStdoutIsTerminalError" xml:space="preserve">
+    <value>이미지를 터미널에 쓸 수 없습니다. -o 플래그를 사용하거나 stdout을 리디렉션합니다.</value>
+  </data>
+  <data name="WSLCCLI_VolumeFormatUsage" xml:space="preserve">
+    <value>필요한 형식: &lt;host path | named volume&gt;:&lt;container path&gt;[:mode]</value>
+    <comment>Usage string for volume mount specification.</comment>
+  </data>
+  <data name="WSLCCLI_VolumeInvalidSpec" xml:space="preserve">
+    <value>잘못된 볼륨 사양: '{}'. {}</value>
+    <comment>{FixedPlaceholder="{}"}{FixedPlaceholder="{}"}Command line arguments, file names and string inserts should not be translated</comment>
+  </data>
+  <data name="WSLCCLI_VolumeHostPathEmpty" xml:space="preserve">
+    <value>잘못된 볼륨 사양: '{}'. 호스트 경로는 비워 둘 수 없습니다. {}</value>
+    <comment>{FixedPlaceholder="{}"}{FixedPlaceholder="{}"}Command line arguments, file names and string inserts should not be translated</comment>
+  </data>
+  <data name="WSLCCLI_VolumeContainerPathEmpty" xml:space="preserve">
+    <value>잘못된 볼륨 사양: '{}'. 컨테이너 경로는 비워 둘 수 없습니다. {}</value>
+    <comment>{FixedPlaceholder="{}"}{FixedPlaceholder="{}"}Command line arguments, file names and string inserts should not be translated</comment>
+  </data>
+  <data name="WSLCCLI_VolumeContainerPathNotAbsolute" xml:space="preserve">
+    <value>잘못된 볼륨 사양: '{}'. 컨테이너 경로는 절대 경로여야 하며 '/'로 시작해야 합니다. {}</value>
+    <comment>{FixedPlaceholder="{}"}{FixedPlaceholder="{}"}Command line arguments, file names and string inserts should not be translated</comment>
+  </data>
+  <data name="WSLCCLI_VolumeHostPathInvalid" xml:space="preserve">
+    <value>잘못된 볼륨 사양: '{}'. 호스트 경로 '{}'은(는) 유효한 Windows 경로가 아닙니다.</value>
+    <comment>{FixedPlaceholder="{}"}{FixedPlaceholder="{}"}Command line arguments, file names and string inserts should not be translated</comment>
+  </data>
+  <data name="WSLCCLI_ObjectIdArgDescription" xml:space="preserve">
+    <value>모든 개체 유형의 이름 또는 ID</value>
+  </data>
+  <data name="WSLCCLI_TypeArgDescription" xml:space="preserve">
+    <value>검사할 개체 유형</value>
+  </data>
+  <data name="WSLCCLI_InspectDesc" xml:space="preserve">
+    <value>개체를 검사합니다.</value>
+  </data>
+  <data name="WSLCCLI_InspectLongDesc" xml:space="preserve">
+    <value>개체를 검사합니다.</value>
+  </data>
+  <data name="WSLCCLI_ObjectNotFoundError" xml:space="preserve">
+    <value>개체를 찾을 수 없음: {}</value>
+    <comment>{FixedPlaceholder="{}"}Command line arguments, file names and string inserts should not be translated</comment>
+  </data>
+  <data name="WSLCCLI_TableHeaderContainerId" xml:space="preserve">
+    <value>컨테이너 ID</value>
+  </data>
+  <data name="WSLCCLI_TableHeaderName" xml:space="preserve">
+    <value>이름</value>
+  </data>
+  <data name="WSLCCLI_TableHeaderImage" xml:space="preserve">
+    <value>IMAGE</value>
+  </data>
+  <data name="WSLCCLI_TableHeaderCreated" xml:space="preserve">
+    <value>생성됨</value>
+  </data>
+  <data name="WSLCCLI_TableHeaderStatus" xml:space="preserve">
+    <value>상태</value>
+  </data>
+  <data name="WSLCCLI_TableHeaderPorts" xml:space="preserve">
+    <value>포트</value>
+  </data>
+  <data name="WSLCCLI_TableHeaderCpuPercent" xml:space="preserve">
+    <value>CPU %</value>
+  </data>
+  <data name="WSLCCLI_TableHeaderMemUsageLimit" xml:space="preserve">
+    <value>최대 사용량/제한</value>
+  </data>
+  <data name="WSLCCLI_TableHeaderMemPercent" xml:space="preserve">
+    <value>MEM %</value>
+  </data>
+  <data name="WSLCCLI_TableHeaderNetIo" xml:space="preserve">
+    <value>NET I/O</value>
+  </data>
+  <data name="WSLCCLI_TableHeaderBlockIo" xml:space="preserve">
+    <value>블록 I/O</value>
+  </data>
+  <data name="WSLCCLI_TableHeaderPids" xml:space="preserve">
+    <value>PIDS</value>
+  </data>
+  <data name="WSLCUserSettings_Warning_InvalidValue" xml:space="preserve">
+    <value>경고: {}:{}의 '{}' 설정 값이 잘못되었습니다.</value>
+    <comment>{FixedPlaceholder="{}"}Command line arguments, file names and string inserts should not be translated</comment>
+  </data>
+  <data name="WSLCUserSettings_Warning_InvalidType" xml:space="preserve">
+    <value>경고: {}:{}에 '{}'를 설정하는 형식이 잘못되었습니다.</value>
+    <comment>{FixedPlaceholder="{}"}Command line arguments, file names and string inserts should not be translated</comment>
+  </data>
+  <data name="WSLCUserSettings_Warning_NonStringKey" xml:space="preserve">
+    <value>경고: {}:{}의 '{}' 섹션에 문자열이 아닌 키가 있습니다.</value>
+    <comment>{FixedPlaceholder="{}"}Command line arguments, file names and string inserts should not be translated</comment>
+  </data>
+  <data name="WSLCUserSettings_Warning_UnknownSection" xml:space="preserve">
+    <value>경고: {}:{}에 알 수 없는 설정 섹션 '{}'이(가) 있음.</value>
+    <comment>{FixedPlaceholder="{}"}Command line arguments, file names and string inserts should not be translated</comment>
+  </data>
+  <data name="WSLCUserSettings_Warning_UnknownKey" xml:space="preserve">
+    <value>경고: {}:{}에 알 수 없는 설정 '{}'이(가) 있음.</value>
+    <comment>{FixedPlaceholder="{}"}Command line arguments, file names and string inserts should not be translated</comment>
+  </data>
+  <data name="WSLCUserSettings_Warning_FailedToOpen" xml:space="preserve">
+    <value>경고: {}에서 설정 파일을 열지 못했습니다. 오류: {}.</value>
+    <comment>{FixedPlaceholder="{}"}Command line arguments, file names and string inserts should not be translated</comment>
+  </data>
+  <data name="WSLCUserSettings_Warning_ParseError" xml:space="preserve">
+    <value>경고: {}의 설정 파일을 구문 분석할 수 없습니다. 오류: {}.</value>
+    <comment>{FixedPlaceholder="{}"}Command line arguments, file names and string inserts should not be translated</comment>
+  </data>
+  <data name="WSLCUserSettings_Warning_InvalidStructure" xml:space="preserve">
+    <value>경고: {}의 설정 파일이 비어 있거나 구조가 잘못되었습니다. YAML 매핑이 필요합니다.</value>
+    <comment>{FixedPlaceholder="{}"}Command line arguments, file names and string inserts should not be translated</comment>
   </data>
 </root>
